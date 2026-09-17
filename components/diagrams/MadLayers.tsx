@@ -48,7 +48,7 @@ export function MadLayers() {
         Morphic Architecture Design: four logical layers
       </div>
       <div className="diagram-grid p-4">
-        <div className="mx-auto flex max-w-xl flex-col gap-2">
+        <div className="mx-auto flex w-full max-w-none flex-col gap-2">
           {layers.map((layer, index) => {
             const active = open === layer.id;
             return (
