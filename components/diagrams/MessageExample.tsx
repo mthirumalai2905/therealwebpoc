@@ -20,8 +20,8 @@ export function MessageExample() {
           {rows.map((row) => (
             <tr key={row.layer} className="border-b border-[var(--line)] last:border-0">
               <td className="px-4 py-3 text-[var(--accent)]">{row.layer}</td>
-              <td className="px-4 py-3 text-[#c5c9d0]">{row.who}</td>
-              <td className="px-4 py-3 text-[#c5c9d0]">{row.act}</td>
+              <td className="px-4 py-3 text-[var(--muted)]">{row.who}</td>
+              <td className="px-4 py-3 text-[var(--muted)]">{row.act}</td>
             </tr>
           ))}
         </tbody>

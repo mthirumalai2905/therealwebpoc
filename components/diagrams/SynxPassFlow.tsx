@@ -74,7 +74,7 @@ export function SynxPassFlow() {
                   "flex w-full items-center gap-3 px-4 py-2.5 text-left text-[13px] " +
                   (open === step.id
                     ? "bg-[var(--accent-dim)] text-[var(--ink)]"
-                    : "text-[#b7bcc4] hover:text-[var(--ink)]")
+                    : "text-[var(--muted)] hover:text-[var(--ink)]")
                 }
               >
                 <span className="font-mono text-[10px] text-[var(--accent)]">
@@ -98,7 +98,7 @@ export function SynxPassFlow() {
                   Expandable node
                 </div>
                 <div className="mt-1 text-[18px] text-[var(--ink)]">{step.title}</div>
-                <p className="mt-3 text-[14px] leading-relaxed text-[#c5c9d0]">{step.text}</p>
+                <p className="mt-3 text-[14px] leading-relaxed text-[var(--muted)]">{step.text}</p>
                 <p className="mt-4 text-[13px] text-[var(--muted)]">
                   Cryptographic mechanism, token format, signing algorithm, claims, and key
                   management are not specified in the current source.

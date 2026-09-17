@@ -29,7 +29,7 @@ export function SpecStatus({ status, children }: Props) {
   return (
     <aside
       className={clsx(
-        "mb-8 border border-[var(--line)] bg-[var(--bg-elev)] px-4 py-3 text-[13px] leading-relaxed text-[#c5c9d0]",
+        "mb-8 border border-[var(--line)] bg-[var(--bg-elev)] px-4 py-3 text-[13px] leading-relaxed text-[var(--muted)]",
       )}
     >
       <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--accent)]">

@@ -17,7 +17,7 @@ export function FlowArrow({
   y1,
   x2,
   y2,
-  color = "#7fd3c3",
+  color = "var(--accent)",
   width = 1.4,
   marker = true,
 }: Props) {

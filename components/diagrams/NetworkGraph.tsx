@@ -47,8 +47,8 @@ export function NetworkGraph({ className = "" }: { className?: string }) {
     >
       <defs>
         <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#7fd3c3" stopOpacity="0.18" />
-          <stop offset="100%" stopColor="#7fd3c3" stopOpacity="0" />
+          <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
         </radialGradient>
       </defs>
       <rect width="1000" height="256" fill="url(#glow)" />
@@ -71,7 +71,7 @@ export function NetworkGraph({ className = "" }: { className?: string }) {
           cx={node.x}
           cy={node.y}
           r={node.r}
-          fill="#7fd3c3"
+          fill="var(--accent)"
           style={{ animation: `pulse-node 4.8s ease-in-out ${node.delay}s infinite` }}
         />
       ))}

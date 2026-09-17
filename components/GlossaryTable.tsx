@@ -17,7 +17,7 @@ export function GlossaryTable() {
               <td className="px-4 py-3 align-top text-[var(--ink)]">
                 {item.href ? <Link href={item.href}>{item.term}</Link> : item.term}
               </td>
-              <td className="px-4 py-3 text-[#c5c9d0]">{item.def}</td>
+              <td className="px-4 py-3 text-[var(--muted)]">{item.def}</td>
             </tr>
           ))}
         </tbody>

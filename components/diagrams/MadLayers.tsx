@@ -63,7 +63,7 @@ export function MadLayers() {
                     "border px-4 py-3 transition-colors " +
                     (active
                       ? "border-[rgba(127,211,195,0.45)] bg-[var(--accent-dim)]"
-                      : "border-[var(--line)] bg-[rgb(13_15_18_/_0.7)] hover:border-[rgba(127,211,195,0.25)]")
+                      : "border-[var(--line)] bg-[var(--node)] hover:border-[color-mix(in_srgb,var(--accent)_40%,transparent)]")
                   }
                 >
                   <div className="flex items-center justify-between gap-3">
@@ -76,7 +76,7 @@ export function MadLayers() {
                     </span>
                   </div>
                   {active ? (
-                    <div className="mt-3 space-y-2 text-[13px] leading-relaxed text-[#c5c9d0]">
+                    <div className="mt-3 space-y-2 text-[13px] leading-relaxed text-[var(--muted)]">
                       <p>
                         <span className="font-mono text-[10px] uppercase tracking-wider text-[var(--muted)]">
                           Purpose

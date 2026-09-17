@@ -43,7 +43,7 @@ export function DocsNav() {
                           "flex items-center justify-between gap-2 rounded-sm px-2 py-[5px] text-[13px] leading-snug",
                           active
                             ? "bg-[var(--accent-dim)] text-[var(--ink)]"
-                            : "text-[#b7bcc4] hover:text-[var(--ink)]",
+                            : "text-[var(--muted)] hover:text-[var(--ink)]",
                         )}
                       >
                         <span>{item.title}</span>

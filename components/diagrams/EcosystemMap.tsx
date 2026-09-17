@@ -40,7 +40,7 @@ export function EcosystemMap() {
               {item.kicker}
             </div>
             <div className="mt-2 text-[16px] text-[var(--ink)]">{item.name}</div>
-            <p className="mt-2 text-[13px] leading-relaxed text-[#c5c9d0]">{item.role}</p>
+            <p className="mt-2 text-[13px] leading-relaxed text-[var(--muted)]">{item.role}</p>
             <p className="mt-3 font-mono text-[11px] text-[var(--muted)]">{item.action}</p>
           </div>
         ))}

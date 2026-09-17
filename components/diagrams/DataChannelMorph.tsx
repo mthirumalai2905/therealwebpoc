@@ -17,15 +17,15 @@ export function DataChannelMorph() {
             { x: 650, label: "User ghost", sub: "data channel" },
           ].map((node) => (
             <g key={node.x}>
-              <rect x={node.x} y="70" width="170" height="70" fill="#0d0f12" stroke="rgba(214,222,230,0.18)" />
-              <text x={node.x + 85} y="100" textAnchor="middle" fill="#e8eaed" fontSize="13">
+              <rect x={node.x} y="70" width="170" height="70" fill="var(--node)" stroke="var(--line)" />
+              <text x={node.x + 85} y="100" textAnchor="middle" fill="var(--ink)" fontSize="13">
                 {node.label}
               </text>
               <text
                 x={node.x + 85}
                 y="120"
                 textAnchor="middle"
-                fill="#8d949e"
+                fill="var(--muted)"
                 fontSize="11"
                 fontFamily="ui-monospace, monospace"
               >
@@ -36,15 +36,15 @@ export function DataChannelMorph() {
           {[190, 400, 610].map((x) => (
             <g key={x}>
               <FlowArrow x1={x} y1={105} x2={x + 40} y2={105} />
-              <text x={x + 20} y="96" textAnchor="middle" fill="#7fd3c3" fontSize="9" fontFamily="ui-monospace, monospace">
+              <text x={x + 20} y="96" textAnchor="middle" fill="var(--accent)" fontSize="9" fontFamily="ui-monospace, monospace">
                 morph
               </text>
             </g>
           ))}
-          <text x="430" y="30" textAnchor="middle" fill="#8d949e" fontSize="11">
+          <text x="430" y="30" textAnchor="middle" fill="var(--muted)" fontSize="11">
             Each node operates only on local data structures
           </text>
-          <text x="430" y="190" textAnchor="middle" fill="#8d949e" fontSize="11">
+          <text x="430" y="190" textAnchor="middle" fill="var(--muted)" fontSize="11">
             Data is consumed at the endpoint when ghosts at both ends are owned by the same user
           </text>
         </svg>

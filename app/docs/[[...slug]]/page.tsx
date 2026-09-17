@@ -32,7 +32,7 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_220px]">
-      <article className="px-4 py-10 md:px-10">
+      <article className="px-5 py-12 md:px-12 lg:px-16">
         <p className="mb-3 font-mono text-[11px] tracking-[0.16em] text-[var(--muted)]">
           DOCUMENTATION
         </p>
@@ -42,13 +42,13 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
           ) : null}
           <h1>{doc.frontmatter.title}</h1>
           {doc.frontmatter.description ? (
-            <p className="!text-[17px] !text-[#d5d8dc]">{doc.frontmatter.description}</p>
+            <p className="lead">{doc.frontmatter.description}</p>
           ) : null}
           <MDXRemote source={doc.content} components={mdxComponents} />
         </div>
       </article>
       <aside className="hidden border-l border-[var(--line)] xl:block">
-        <div className="sticky top-12 px-4 py-10">
+        <div className="sticky top-14 px-4 py-10">
           <OnThisPage />
         </div>
       </aside>

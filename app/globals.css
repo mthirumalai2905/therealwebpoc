@@ -14,21 +14,23 @@ body[data-theme="dark"],
   --accent-dim: rgba(127, 211, 195, 0.12);
   --warn: #d4b37a;
   --corner: #7fd3c3;
+  --node: #0d0f12;
 }
 
 html[data-theme="light"],
 body[data-theme="light"] {
   color-scheme: light;
-  --bg: #f3f0ea;
-  --bg-elev: #fffdf8;
-  --line: rgba(28, 26, 22, 0.1);
-  --text: #1c1a16;
+  --bg: #f6f3ed;
+  --bg-elev: #fffcf7;
+  --line: rgba(28, 26, 22, 0.12);
+  --text: #161410;
   --ink: var(--text);
-  --muted: #6b675e;
-  --accent: #1f6f63;
-  --accent-dim: rgba(31, 111, 99, 0.12);
+  --muted: #5a554c;
+  --accent: #1a5f55;
+  --accent-dim: rgba(26, 95, 85, 0.1);
   --warn: #8a6a2f;
   --corner: #7fd3c3;
+  --node: #ebe7de;
 }
 
 @theme inline {
@@ -63,7 +65,7 @@ body {
 }
 
 .nav-scroll:hover {
-  scrollbar-color: rgba(127, 211, 195, 0.28) transparent;
+  scrollbar-color: color-mix(in srgb, var(--accent) 40%, transparent) transparent;
 }
 
 .nav-scroll::-webkit-scrollbar {
@@ -80,11 +82,12 @@ body {
 }
 
 .nav-scroll:hover::-webkit-scrollbar-thumb {
-  background: rgba(127, 211, 195, 0.22);
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .prose-rtw {
-  max-width: 42rem;
+  max-width: 40.5rem;
+  color: var(--text);
 }
 
 .prose-rtw h1 {
@@ -93,6 +96,7 @@ body {
   letter-spacing: -0.03em;
   line-height: 1.2;
   margin: 0 0 0.85rem;
+  color: var(--ink);
 }
 
 .prose-rtw h2 {
@@ -102,20 +106,28 @@ body {
   margin: 2.4rem 0 0.75rem;
   padding-top: 1.4rem;
   border-top: 1px solid var(--line);
+  color: var(--ink);
 }
 
 .prose-rtw h3 {
   font-size: 0.95rem;
   font-weight: 550;
   margin: 1.6rem 0 0.5rem;
-  color: #d5d8dc;
+  color: var(--ink);
 }
 
 .prose-rtw p,
 .prose-rtw li {
-  color: #c5c9d0;
-  font-size: 0.965rem;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.prose-rtw .lead {
+  font-size: 1.125rem;
   line-height: 1.75;
+  color: color-mix(in srgb, var(--text) 82%, var(--muted));
+  margin-bottom: 1.65rem;
 }
 
 .prose-rtw p {
@@ -135,16 +147,15 @@ body {
 .prose-rtw a {
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid rgba(127, 211, 195, 0.28);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 .prose-rtw a:hover {
   border-bottom-color: var(--accent);
 }
 
-.prose-rtw strong {
-  color: var(--text);
-  font-weight: 550;
+.prose-rtw table {
+  background: var(--bg-elev);
 }
 
 .prose-rtw code {
@@ -156,11 +167,21 @@ body {
   border-radius: 3px;
 }
 
+.diagram-block {
+  background: var(--bg-elev);
+}
+
 .diagram-grid {
   background-image:
-    linear-gradient(rgba(127, 211, 195, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(127, 211, 195, 0.04) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--accent) 12%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 12%, transparent) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+html[data-theme="light"] .diagram-grid {
+  background-image:
+    linear-gradient(rgba(26, 95, 85, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 95, 85, 0.08) 1px, transparent 1px);
 }
 
 @keyframes pulse-node {

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function ClarificationBanner() {
   return (
-    <div className="border border-[var(--line)] bg-[var(--bg-elev)] px-4 py-3 text-[13px] leading-relaxed text-[#c5c9d0]">
+    <div className="border border-[var(--line)] bg-[var(--bg-elev)] px-4 py-3 text-[13px] leading-relaxed text-[var(--muted)]">
       <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--warn)]">
         Needs team approval for placement
       </div>
