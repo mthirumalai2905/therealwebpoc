@@ -6,12 +6,12 @@ export function TrackingRecord() {
     <section className="border-t border-[var(--line)]">
       <div className="mx-auto grid max-w-[1080px] items-center gap-12 px-6 py-24 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:py-32">
         <div className="relative mx-auto w-full max-w-[340px]">
-          <div className="relative aspect-[3/4] overflow-hidden bg-black">
+          <div className="relative aspect-[3/4] overflow-hidden rounded-none bg-black">
             <Image
               src="/tracking-record.png"
               alt="A walking figure mapped by pose tracking, bounding boxes, and a targeting line."
               fill
-              className="object-cover object-center scale-[1.12]"
+              className="rounded-none object-cover object-center scale-[1.22]"
               sizes="340px"
             />
             <CornerMarks />
