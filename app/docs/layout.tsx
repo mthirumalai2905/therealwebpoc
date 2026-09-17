@@ -1,4 +1,5 @@
 import { DocsNav } from "@/components/DocsNav";
+import { DocsBrowseBar } from "@/components/NavPalette";
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -8,7 +9,10 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
           <DocsNav />
         </div>
       </aside>
-      {children}
+      <div className="min-w-0">
+        <DocsBrowseBar />
+        {children}
+      </div>
     </div>
   );
 }

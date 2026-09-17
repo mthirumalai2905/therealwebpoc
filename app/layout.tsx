@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { NavPaletteProvider } from "@/components/NavPalette";
 
 const sans = Instrument_Sans({
   subsets: ["latin"],
@@ -66,15 +67,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen font-sans antialiased">
         <ThemeProvider>
-          <a
-            href="#main"
-            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:bg-[var(--bg-elev)] focus:px-3 focus:py-2 focus:text-[var(--ink)]"
-          >
-            Skip to content
-          </a>
-          <SiteHeader />
-          <div id="main">{children}</div>
-          <SiteFooter />
+          <NavPaletteProvider>
+            <a
+              href="#main"
+              className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:bg-[var(--bg-elev)] focus:px-3 focus:py-2 focus:text-[var(--ink)]"
+            >
+              Skip to content
+            </a>
+            <SiteHeader />
+            <div id="main">{children}</div>
+            <SiteFooter />
+          </NavPaletteProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { nav } from "@/lib/navigation";
 import { clsx } from "clsx";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useNavPalette } from "@/components/NavPalette";
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useNavPalette();
   const onLanding = pathname === "/";
   const onDocs = pathname.startsWith("/docs");
   const onBlog = pathname.startsWith("/blog");
@@ -77,40 +76,14 @@ export function SiteHeader() {
           <button
             type="button"
             className={overHero ? "text-white/70" : "text-[var(--muted)]"}
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Open navigation"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-expanded={open}
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>
-      {open ? (
-        <div className="border-t border-[var(--line)] bg-[var(--bg)] px-4 py-4 md:hidden">
-          <a href="https://morph.space" rel="noreferrer" className="mb-3 block text-sm text-[var(--accent)]">
-            Join on Morph.Space
-          </a>
-          <Link href="/blog" className="mb-4 block py-1 text-sm text-[var(--ink)]" onClick={() => setOpen(false)}>
-            Journal
-          </Link>
-          {nav.map((group) => (
-            <div key={group.title} className="mb-4">
-              <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">
-                {group.title}
-              </div>
-              {group.items.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block py-1 text-sm text-[var(--ink)]"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-          ))}
-        </div>
-      ) : null}
     </header>
   );
 }
