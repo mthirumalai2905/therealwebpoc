@@ -2,6 +2,11 @@ import Link from "next/link";
 
 const starts = [
   {
+    href: "/docs/introduction/onboarding",
+    label: "Join the network",
+    text: "The onboarding path through Morph.Space, SynxPass, and ghosts.",
+  },
+  {
     href: "/docs/introduction",
     label: "Introduction",
     text: "What Real Time Web is, in specification language.",
@@ -10,11 +15,6 @@ const starts = [
     href: "/docs/architecture",
     label: "Architecture",
     text: "MAD, Ghost Space, and the layers of the network.",
-  },
-  {
-    href: "/docs/specification",
-    label: "Specification",
-    text: "The evolving protocol overview. Marked where it is still pending.",
   },
   {
     href: "/blog",

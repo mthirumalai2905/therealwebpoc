@@ -18,6 +18,7 @@ export const nav: NavGroup[] = [
       { title: "What is Real Time Web?", href: "/docs/introduction" },
       { title: "Why Real Time Web?", href: "/docs/introduction/why" },
       { title: "How it works", href: "/docs/introduction/how-it-works" },
+      { title: "How a user joins", href: "/docs/introduction/onboarding", status: "draft" },
       { title: "Vision and principles", href: "/docs/introduction/vision" },
     ],
   },

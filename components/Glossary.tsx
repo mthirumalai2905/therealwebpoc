@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TermHint } from "@/components/TermHint";
 
 type Term = { id: string; term: string; def: string; href?: string };
 
@@ -14,6 +14,18 @@ export const glossary: Term[] = [
     term: "Morphic Architecture Design (MAD)",
     def: "Architectural model introduced by Paal Kristian Levang in 2008. RTW is based on MAD and coordinates at least four logical ownership and operational layers.",
     href: "/docs/architecture",
+  },
+  {
+    id: "morphic-service",
+    term: "Morphic service",
+    def: "An application-layer service on MAD. When it is created, the service owner is the primary owner of allocated ghosts. After a user confirms a transfer, the user owns the data layer; the service owner keeps the application layer.",
+    href: "/docs/architecture",
+  },
+  {
+    id: "domain",
+    term: "Domain",
+    def: "An address space in the network. If an identified user owns and controls the whole stack of a domain, that user controls allocated ghosts for endpoints connecting against that address space.",
+    href: "/docs/architecture/domains",
   },
   {
     id: "ghost",
@@ -100,12 +112,6 @@ export const glossary: Term[] = [
   },
 ];
 
-export function GlossaryTerm({ id }: { id: string }) {
-  const term = glossary.find((item) => item.id === id);
-  if (!term) return null;
-  return (
-    <span className="border-b border-dotted border-[rgba(127,211,195,0.45)]" title={term.def}>
-      {term.href ? <Link href={term.href}>{term.term}</Link> : term.term}
-    </span>
-  );
+export function GlossaryTerm({ id, children }: { id: string; children?: React.ReactNode }) {
+  return <TermHint id={id}>{children}</TermHint>;
 }

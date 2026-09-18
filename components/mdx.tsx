@@ -10,6 +10,7 @@ import { DataChannelMorph } from "@/components/diagrams/DataChannelMorph";
 import { WwwVsRtw } from "@/components/diagrams/WwwVsRtw";
 import { MessageExample } from "@/components/diagrams/MessageExample";
 import { ConceptRtw } from "@/components/diagrams/ConceptRtw";
+import { OnboardingFlow } from "@/components/diagrams/OnboardingFlow";
 import { NetworkGraph } from "@/components/diagrams/NetworkGraph";
 import { GlossaryTerm } from "@/components/Glossary";
 import { GlossaryTable } from "@/components/GlossaryTable";
@@ -42,6 +43,7 @@ export const mdxComponents: MDXRemoteProps["components"] = {
   WwwVsRtw,
   MessageExample,
   ConceptRtw,
+  OnboardingFlow,
   NetworkGraph,
   GlossaryTerm,
   GlossaryTable,

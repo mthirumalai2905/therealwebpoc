@@ -1,0 +1,65 @@
+---
+title: How a user joins
+description: Step-by-step onboarding through Morph.Space, SynxPass, domains, and ghost ownership. Only what the source states.
+status: draft
+---
+
+<ClarificationBanner />
+
+<SpecStatus status="draft">
+  Morph.Space joining FAQs in the source are unanswered. This page maps the path that is written. It does not invent screens, forms, or timing.
+</SpecStatus>
+
+A person does not onboard on RealTimeWeb.org. This site is for understanding. Joining happens on Morph.Space. Synx tools keep the connection running after that.
+
+<OnboardingFlow />
+
+## What happens, in order
+
+### 1. Read the architecture (optional)
+
+Real Time Web is a network concept and architecture. Use this documentation to learn MAD, Ghost Space, and ownership layers. Nothing here creates an account.
+
+### 2. Go to Morph.Space
+
+Morph Space is the marketplace and environment through which users can establish domains, publish resources, and join the network. Recommended Morph sections in the source include register or connect a domain, create an RTW identity, and set up a service or data channel. Those headings do not yet have body copy.
+
+### 3. Register an identity with SynxPass
+
+Morph Space uses Synx Pass for authorization. SynxPass is part of Synx Tools. It is token-based. Once a user has been registered in SynxPass they are allowed to participate in RTW and become members of services by getting access to ghosts.
+
+How a pass is created, what a token contains, and how identity is bound to a person or machine is not specified here. Those answers belong in Synx Pass documentation.
+
+### 4. Work inside a domain
+
+If an identified user owns and controls the whole stack of a domain, that user also controls ownership of allocated ghosts for endpoints connecting against that domain address space.
+
+The source lists these Morph questions as unanswered: whether you need an existing public domain name, whether you can register an RTW domain through Morph Space, whether you can connect a domain you already own, and how long setup takes.
+
+### 5. Confirm ghost ownership
+
+When a new Morphic service is created, the service owner becomes the primary owner of all ghosts allocated on the service. When a user registers for the service, the service owner transfers the ghostid to the user. When the user confirms ownership, the ghost data layer belongs to the user. The application layer on the ghost still belongs to the service owner. The service owner has access to a local copy of the data.
+
+The data source is owned by the user that controls the endpoint and has registered it against the endpoint ghost. The ghost can be transferred to another person.
+
+### 6. Share live data, then take it back
+
+By morphing the ghost against a secondary service, the owner gives read access to the service provider. The read access can be withdrawn at any time.
+
+Data is not natively stored in the RTW network. It is morphed into local data models along the linking path. For data to be consumed at an endpoint, ownership of sender and receiver ghosts must belong to a user who owns or has read access to the data.
+
+### 7. Keep the session alive
+
+The endpoint needs to refresh the token every three minutes to send data. Access can be revoked using a token revocation endpoint. Terminating user sessions can be activated through Synx runtime BIOS.
+
+### 8. Operate with Synx
+
+Synx tools configure, administer, secure, and maintain RTW services. Current implementation uses TCP/IP with HTTPS and websocket. Synx BIOS currently supports XML and JSON. Default is XML. A synx command can switch format at runtime without dropping the connection, if another client has domain ownership.
+
+## Three places, three jobs
+
+<EcosystemMap />
+
+Do not merge these into one onboarding form. Conceptual questions stay on RealTimeWeb.org. Account and domain questions stay on Morph.Space. Configuration stays in Synx documentation.
+
+<EcosystemLink to="morph" />

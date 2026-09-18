@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost, getRelated, posts } from "@/lib/blog";
 import { CornerMarks } from "@/components/CornerMarks";
+import { JoinExplainer } from "@/components/blog/JoinExplainer";
 
 type Params = { slug: string };
 
@@ -62,25 +63,29 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         </div>
       </header>
 
-      <div className="mx-auto max-w-[640px] px-4 py-12 md:px-0">
-        {post.body.map((paragraph, index) => (
-          <p
-            key={index}
-            className={
-              index === 0
-                ? "text-[18px] leading-8 text-[var(--ink)] first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-6xl first-letter:leading-[0.8]"
-                : "mt-6 text-[17px] leading-8 text-[var(--ink)]/90"
-            }
-          >
-            {paragraph}
-          </p>
-        ))}
-        <div className="mt-14 border-t border-[var(--line)] pt-8">
-          <Link href="/blog" className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent)]">
-            ← All essays
-          </Link>
+      {post.slug === "how-a-user-joins" ? (
+        <JoinExplainer />
+      ) : (
+        <div className="mx-auto max-w-[640px] px-4 py-12 md:px-0">
+          {post.body.map((paragraph, index) => (
+            <p
+              key={index}
+              className={
+                index === 0
+                  ? "text-[18px] leading-8 text-[var(--ink)]"
+                  : "mt-6 text-[17px] leading-8 text-[var(--ink)]/90"
+              }
+            >
+              {paragraph}
+            </p>
+          ))}
+          <div className="mt-14 border-t border-[var(--line)] pt-8">
+            <Link href="/blog" className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent)]">
+              ← All essays
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
 
       {related.length ? (
         <aside className="mx-auto max-w-[1100px] px-4 md:px-6">

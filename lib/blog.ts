@@ -12,6 +12,24 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "how-a-user-joins",
+    title: "How a user joins the Real Time Web",
+    excerpt:
+      "A system-level walk through Morph.Space, SynxPass, ghosts, and live channels. What is written. What is still unanswered.",
+    date: "2026-09-18",
+    category: "Field notes",
+    cover: "/join-hands.png",
+    coverAlt: "Two pixelated hands reaching toward each other across a dark field.",
+    readingMinutes: 12,
+    body: [
+      "People keep asking where to create an account. Not here. RealTimeWeb.org is the architecture. Morph.Space is the join path. Synx is how the room stays running once you are in.",
+      "The sequence that is actually written down is short. You arrive on Morph.Space. You receive a network identity through SynxPass. You work inside a domain. A service owner transfers a ghost to you. You confirm it. After that, the data layer of that ghost is yours. The application layer of the service is still theirs.",
+      "Sharing is a morph, not a copy into a platform. You can give a service read access and take it back. The endpoint has to refresh its token every three minutes to send data. If the session must die, Synx BIOS can terminate it.",
+      "What we do not have yet is the click-by-click Morph.Space FAQ: whether you need a public website domain, how long setup takes, or the exact screens. Those questions are listed in the source and still unanswered. Until they are written, the honest map lives in the documentation.",
+      "Read the step-by-step and the flow diagram at /docs/introduction/onboarding. Then go to Morph.Space if you intend to participate.",
+    ],
+  },
+  {
     slug: "eternal-widespread-ownership",
     title: "Eternal, widespread ownership of the Web",
     excerpt:
