@@ -60,6 +60,13 @@ export function JoinExplainer() {
         model. <TermHint id="morph-space">Morph Space</TermHint> is the reference implementation you join. Synx is the kit that
         implementation uses.
       </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        WWW linking is built for information: pictures, text, video, pages you request and
+        get back. Machines need something else. In the Synx writing, data is the live value
+        before it is stored. Once it sits in a database or filesystem it is information.
+        Joining RTW is joining a path where fresh data can move, change shape, and stay
+        owned, not signing up for another document host.
+      </p>
 
       <h2 id="three-places" className="mt-14 border-t border-[var(--line)] pt-8 text-[1.35rem] font-medium tracking-tight text-[var(--ink)]">
         Three places, three jobs
@@ -113,9 +120,17 @@ export function JoinExplainer() {
         implementation there is one: SynxPass, used by Morph Space. That is why onboarding
         is not “sign up on RealTimeWeb.org.” Identity lives in the reference network.
       </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        Nornir HIVE notes also describe a private collective that can sit Keycloak in front
+        of Synx Pass for SSO, dynamic tokens, and two-factor on that installation. That is
+        a HIVE Collective operations choice. It is not a Morph.Space click path, and it does
+        not replace the rule that MAD can use other token systems while the known public
+        implementation named here is SynxPass.
+      </p>
       <p className="mt-6 text-[15px] leading-7 text-[var(--muted)]">
-        Not specified in the current source: how a pass is created, token format, signing,
-        claims, or identity-provider federation. Those belong in Synx Pass documentation.
+        Not specified in the current source: how a Morph.Space pass is created, token
+        format, signing, claims, or identity-provider federation. Those belong in Synx Pass
+        documentation.
       </p>
 
       <Figure
@@ -148,7 +163,16 @@ export function JoinExplainer() {
         Each unique network resource is bijectively connected to its own <TermHint id="ghost">ghost</TermHint>: one
         endpoint, one ghost, addressable from both sides. The ghost is a
         shared-memory representation. When the connection is active it carries identity,
-        behavior, and context.
+        behavior, and context. You do not connect to a session on a vendor web server. You
+        connect against that ghost. The ghost can exist in more than one stack layer at
+        once. In the BiNS / Synx writing those roles are labeled C in the data layer, T in
+        the application layer, P in the system layer, and A in the network layer.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        A ghost is not the same thing as a digital twin. A twin can be built with ghosts.
+        The extra claim in the corpus is that the ghost also sees events up and down the
+        stack, so hosting, security, application, and data owners can have different
+        access without sharing the data layer.
       </p>
       <GhostBijection />
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
@@ -162,6 +186,14 @@ export function JoinExplainer() {
         That split is the whole point of MAD. You can own the sensor reading without
         owning the application that displays it. The service can be transferred later by
         handing over <TermHint id="ghost-zero">ghost id zero</TermHint>, which is the service itself.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        The join story people actually feel is morphing. A temperature sensor may only
+        send Celsius on its <TermHint id="morphic-service">primary service</TermHint>. Adding that ghost to a light service does
+        not reflash the hardware. The secondary service inherits a live reading and can
+        act on it. The physical limit is still the sensor. The intelligence is the
+        service you morph into. Withdraw the morph and that service goes dark for that
+        ghost. The primary relationship can stay.
       </p>
 
       <Figure
@@ -209,7 +241,14 @@ export function JoinExplainer() {
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         To send data, the endpoint refreshes the SynxPass token every three minutes.
         Access can be revoked at a token revocation endpoint. Sessions can be terminated
-        through Synx runtime BIOS.
+        through Synx runtime BIOS. A service owner can also kill a connection against a
+        ghost they still control as the primary service. That is stack control, not a
+        Morph.Space “log out of the website” walkthrough.
+      </p>
+      <p className="mt-6 text-[15px] leading-7 text-[var(--muted)]">
+        Maker-space tutorials on domain.cioty.com (Curl, Synx-Cat headers, Hello World
+        schemas) show how Synx HIVE was trialed. They are not Morph.Space screens, and
+        they are not copied here as if they were the join product.
       </p>
 
       <h2 id="faq" className="mt-14 border-t border-[var(--line)] pt-8 text-[1.35rem] font-medium tracking-tight text-[var(--ink)]">
@@ -307,6 +346,32 @@ export function JoinExplainer() {
             whether you need an existing domain name, whether you can register an RTW
             domain through Morph Space, whether you can connect a domain you already
             own, how long setup takes, and whether you need technical experience.
+          </p>
+        </Faq>
+        <Faq question="Is Nornir HIVE the same as Morph.Space?">
+          <p>
+            No. The corpus describes HIVE Collective as a private network: Real Time Web
+            at small scale, an intranet-style installation used to prove the stack.
+            Morph.Space is the marketplace and join environment named for the open path.
+            Synx BIOS, Synx C-DNS, and Synx Pass are the tools. Do not treat a HIVE
+            tutorial host as the Morph product.
+          </p>
+        </Faq>
+        <Faq question="Do I install a library to connect?">
+          <p>
+            The Synx writing says native TCP is enough: HTTP, HTTPS, or websocket, XML
+            or JSON, no extra client library required in the known implementation. Format
+            can switch at runtime when a client with domain ownership issues a Synx
+            command. Exact Morph.Space SDK packaging is not specified here.
+          </p>
+        </Faq>
+        <Faq question="When does data actually move?">
+          <p>
+            Links describe how data should transform. Data still does not flow until a
+            recipient exists and ownership (or granted read access) matches at both
+            ends. Same user on two of their endpoints is the usual consume case. Two
+            different people do not get each other&apos;s live source by sharing a
+            platform login.
           </p>
         </Faq>
       </div>

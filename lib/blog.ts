@@ -15,12 +15,12 @@ export const posts: BlogPost[] = [
     slug: "how-a-user-joins",
     title: "How a user joins the Real Time Web",
     excerpt:
-      "A system-level walk through Morph.Space, SynxPass, ghosts, and live channels. What is written. What is still unanswered.",
+      "Morph.Space is the join path. SynxPass is the pass. Ghosts, morphing, and live channels are the relationship. This page writes what the Synx corpus states and leaves Morph screens unanswered.",
     date: "2026-09-18",
     category: "Field notes",
     cover: "/join-hands.png",
     coverAlt: "Two pixelated hands reaching toward each other across a dark field.",
-    readingMinutes: 12,
+    readingMinutes: 16,
     body: [
       "People keep asking where to create an account. Not here. RealTimeWeb.org is the architecture. Morph.Space is the join path. Synx is how the room stays running once you are in.",
       "The sequence that is actually written down is short. You arrive on Morph.Space. You receive a network identity through SynxPass. You work inside a domain. A service owner transfers a ghost to you. You confirm it. After that, the data layer of that ghost is yours. The application layer of the service is still theirs.",
