@@ -7,8 +7,8 @@ export function SiteFooter() {
         <div className="md:col-span-1">
           <p className="font-mono text-[11px] tracking-[0.18em] text-[var(--accent)]">REALTIMEWEB.ORG</p>
           <p className="mt-4 max-w-xs text-[13px] leading-6 text-[var(--muted)]">
-            An architecture for interconnected real time digital spaces. Public documentation for
-            the Real Time Web.
+            A standalone nonprofit site. It explains what the Real Time Web is, why it exists, and
+            introduces Morphic Architecture Design.
           </p>
         </div>
         <div>
@@ -32,23 +32,19 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">Network</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">About</p>
           <ul className="mt-3 space-y-2 text-[13px] text-[var(--ink)]">
             <li>
               <Link href="/blog">Journal</Link>
             </li>
             <li>
+              <Link href="/docs/introduction/vision">Vision</Link>
+            </li>
+            <li>
               <Link href="/docs/brand">Brand strategy</Link>
             </li>
             <li>
-              <a href="https://morph.space" rel="noreferrer">
-                Morph.Space
-              </a>
-            </li>
-            <li>
-              <a href="https://synx.tools" rel="noreferrer">
-                Synx
-              </a>
+              <Link href="/docs/research/implementations">Implementations</Link>
             </li>
           </ul>
         </div>
@@ -57,14 +53,17 @@ export function SiteFooter() {
           <ul className="mt-3 space-y-2 text-[13px] leading-6 text-[var(--muted)]">
             <li>Architecture: public</li>
             <li>Specification: in draft</li>
-            <li>Join path: Morph.Space</li>
-            <li>Operations: Synx</li>
+            <li>Implementations: open</li>
+            <li>Not owned by a company</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-[var(--line)]">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-2 px-4 py-5 text-[12px] text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-6">
-          <p>Real Time Web is the architecture. Morph Space is how you join. Synx is how you operate.</p>
+          <p>
+            RealTimeWeb.org is not owned by a company. Anyone can develop an implementation of MAD
+            or the Real Time Web.
+          </p>
           <p>Documentation site. Not a product dashboard.</p>
         </div>
       </div>

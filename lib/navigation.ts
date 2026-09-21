@@ -18,7 +18,7 @@ export const nav: NavGroup[] = [
       { title: "What is Real Time Web?", href: "/docs/introduction" },
       { title: "Why Real Time Web?", href: "/docs/introduction/why" },
       { title: "How it works", href: "/docs/introduction/how-it-works" },
-      { title: "How a user joins", href: "/docs/introduction/onboarding", status: "draft" },
+      { title: "How participation works", href: "/docs/introduction/onboarding", status: "draft" },
       { title: "Vision and principles", href: "/docs/introduction/vision" },
     ],
   },
@@ -36,7 +36,6 @@ export const nav: NavGroup[] = [
       { title: "Data Channels", href: "/docs/architecture/data-channels", status: "draft" },
       { title: "Discovery", href: "/docs/architecture/discovery", status: "draft" },
       { title: "Authentication", href: "/docs/architecture/authentication", status: "draft" },
-      { title: "SynxPass", href: "/docs/architecture/synxpass", status: "draft" },
       { title: "Interoperability", href: "/docs/architecture/interoperability", status: "draft" },
     ],
   },
@@ -95,7 +94,7 @@ export const explorePaths = [
   {
     href: "/docs/architecture/identity",
     label: "Identity",
-    text: "Understand identities, domains, and SynxPass.",
+    text: "Understand identities, domains, and optional authentication.",
   },
   {
     href: "/docs/architecture/data-channels",

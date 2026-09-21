@@ -1,25 +1,25 @@
 import Link from "next/link";
 
 type Props = {
-  to: "morph" | "synx" | "rtw";
+  to: "introduction" | "architecture" | "specification";
   children?: React.ReactNode;
 };
 
 const config = {
-  morph: {
-    kicker: "Participate",
-    title: "Want to participate in the Real Time Web?",
-    href: "https://morph.space",
-    label: "Explore Morph.Space",
+  introduction: {
+    kicker: "What",
+    title: "Want to understand what the Real Time Web is?",
+    href: "/docs/introduction",
+    label: "Read the introduction",
   },
-  synx: {
-    kicker: "Operate",
-    title: "Want to configure or operate part of the network?",
-    href: "https://synx.tools",
-    label: "Explore Synx tools",
+  architecture: {
+    kicker: "MAD",
+    title: "Want an introduction to Morphic Architecture Design?",
+    href: "/docs/architecture",
+    label: "Read Morphic Architecture",
   },
-  rtw: {
-    kicker: "Understand",
+  specification: {
+    kicker: "Specification",
     title: "Want to understand how this architecture is specified?",
     href: "/docs/specification",
     label: "Explore the technical specification",
@@ -38,20 +38,12 @@ export function EcosystemLink({ to, children }: Props) {
     </>
   );
 
-  const className =
-    "mt-8 block border border-[var(--line)] px-4 py-3 transition-colors hover:border-[rgba(127,211,195,0.35)]";
-
-  if (item.href.startsWith("/")) {
-    return (
-      <Link href={item.href} className={className}>
-        {inner}
-      </Link>
-    );
-  }
-
   return (
-    <a href={item.href} className={className} rel="noreferrer">
+    <Link
+      href={item.href}
+      className="mt-8 block border border-[var(--line)] px-4 py-3 transition-colors hover:border-[rgba(127,211,195,0.35)]"
+    >
       {inner}
-    </a>
+    </Link>
   );
 }

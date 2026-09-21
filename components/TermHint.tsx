@@ -28,15 +28,7 @@ const terms: Record<string, { title: string; lines: string[] }> = {
     lines: [
       "Morphic Architecture Design is the 2008 model RTW is built on.",
       "It coordinates at least four independent ownership and operational layers.",
-      "Authentication is optional in the model. Morph Space currently uses SynxPass.",
-    ],
-  },
-  synxpass: {
-    title: "SynxPass",
-    lines: [
-      "SynxPass is the known authentication system used by Morph Space.",
-      "It is token-based. The endpoint refreshes the token every three minutes to send data.",
-      "After registration, a user may join services by receiving access to ghosts.",
+      "Authentication is optional in the model. An implementation may use any token system that generates a token for identity.",
     ],
   },
   morph: {
@@ -47,28 +39,12 @@ const terms: Record<string, { title: string; lines: string[] }> = {
       "Giving a service read access is a morph of your ghost, not an upload into a central dump.",
     ],
   },
-  "morph-space": {
-    title: "Morph Space",
-    lines: [
-      "Morph Space is the commercial platform and reference implementation.",
-      "People and organizations join here, establish domains, and publish resources.",
-      "RTW is the architecture. Morph is how you enter it.",
-    ],
-  },
-  synx: {
-    title: "Synx tools",
-    lines: [
-      "Synx tools configure, administer, secure, and maintain RTW services.",
-      "The current implementation uses TCP/IP with HTTPS and websocket.",
-      "Session termination can be activated through Synx runtime BIOS.",
-    ],
-  },
   domain: {
     title: "Domain",
     lines: [
       "In this network a domain is an address space, not a marketing website.",
       "If you own the full stack of a domain, you control ghosts for endpoints that connect into it.",
-      "Whether Morph mints that domain for you is not answered in the current source.",
+      "How a public name is registered for that address space is not answered in the current source.",
     ],
   },
   ghostid: {

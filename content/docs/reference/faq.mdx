@@ -60,6 +60,14 @@ The Real-Time Web was created by Norwegian technology inventor Paal Kristian Lev
 
 [Vision and principles](/docs/introduction/vision)
 
+### Can anyone implement MAD or RTW?
+
+Yes. Anyone can develop an implementation of MAD or the Real Time Web.
+
+RealTimeWeb.org is a standalone nonprofit architecture site. It is not owned by a company and does not designate a vendor.
+
+[Reference implementations](/docs/research/implementations)
+
 ## Trust, control and security
 
 ### Who owns data exchanged through RTW?
@@ -76,13 +84,19 @@ Data is not natively stored in the network. Data is dynamically morphed into loc
 
 ### How is access authorized?
 
-Morph Space is using Synx Pass for authorization.
+Authentication is optional in MAD. An implementation may use any token system that generates a token for identity.
 
-[SynxPass](/docs/architecture/synxpass)
+Once a user is registered in an implementation, they may participate in RTW and become members of services by getting access to ghosts.
+
+[Authentication](/docs/architecture/authentication)
 
 ### How can access be revoked?
 
-Access can be revoked by using a token revocation endpoint. Time-based revocation policies have been set and terminating user sessions can be activated through Synx runtime BIOS.
+Morphing a ghost against a secondary service grants read access that the owner can withdraw at any time. A ghost can also be transferred, which is a change of ownership.
+
+Implementations may additionally revoke tokens. Those operational details belong with each implementation, not on this architecture site.
+
+[Resource / Ownership Layer](/docs/architecture/resource)
 
 ### How does RTW protect identities and network resources?
 
@@ -112,9 +126,7 @@ Architecture, unanswered:
 Standards and implementation, unanswered:
 
 - Is RTW an open specification?
-- Can other companies build compatible RTW implementations?
 - Which specifications are currently available?
 - How are specifications versioned?
 - How can researchers and developers contribute?
-- Is there a reference implementation?
 - Where can I find technical documentation?

@@ -52,7 +52,16 @@ Primary audience: architects, developers, researchers, universities, standards o
 
 Purpose: Explain what Real Time Web is, why it exists, how the network works and how implementations can remain compatible.
 
-This site should feel neutral, technical and educational — not like a conventional product sales page.
+This site should feel neutral, technical and educational, not like a conventional product sales page.
+
+Public copy rule for RealTimeWeb.org:
+
+- RealTimeWeb.org is a standalone nonprofit site. It explains what RTW is, why it exists, and introduces MAD.
+- It is not owned by a company. Anyone can develop an implementation of MAD or RTW.
+- Public pages on RealTimeWeb.org must not mention Morph.Space or Synx.
+- Morph.Space and synx.tools may reference RealTimeWeb.org. synx.tools may describe the model used in that implementation.
+- No join button, lead capture, or product funnel on this site.
+- MAD terms (Morphic Architecture Design, morphing, Morphic service) stay. They are architecture language, not product names.
 
 ### Recommended main section: Introduction to the Real-Time Web
 
@@ -670,6 +679,8 @@ Avoid duplicating long answers across the three locations. Give each question a 
 - Conceptual questions belong on RealTimeWeb.org.
 - Account, marketplace and onboarding questions belong on Morph.Space.
 - Configuration and operational questions belong in Synx documentation.
+
+Public RealTimeWeb.org pages still must not mention Morph.Space or Synx. Those other sites may link to RTW.
 
 ## Suggested implementation order
 

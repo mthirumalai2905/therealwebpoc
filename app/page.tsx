@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { JoinBand } from "@/components/landing/JoinBand";
 import { EcosystemPath } from "@/components/landing/EcosystemPath";
 import { StartHere } from "@/components/landing/StartHere";
 import { TrackingRecord } from "@/components/landing/TrackingRecord";
@@ -32,28 +31,17 @@ export default function HomePage() {
             A live web for people, devices, services, and ideas, where what you create stays
             yours, and the network keeps growing around it.
           </p>
-          <form
-            action="https://morph.space"
-            className="mt-8 flex w-full max-w-[420px] items-center gap-2 rounded-full border border-white/12 bg-black/40 p-1.5 backdrop-blur-md"
-          >
-            <input
-              name="domain"
-              type="text"
-              placeholder="your domain or organization"
-              className="min-w-0 flex-1 bg-transparent px-4 py-2 text-[13px] text-white outline-none placeholder:text-white/35"
-            />
-            <button
-              type="submit"
-              className="shrink-0 rounded-full bg-[#e8e4db] px-4 py-2 text-[12px] font-medium text-[#111] transition-opacity hover:opacity-85"
-            >
-              Join the network
-            </button>
-          </form>
           <Link
             href="/docs/introduction"
+            className="mt-8 rounded-full border border-white/20 bg-black/40 px-5 py-2.5 text-[13px] text-[#f2efe8] backdrop-blur-md transition-colors hover:border-white/40 hover:bg-black/55"
+          >
+            Read what and why
+          </Link>
+          <Link
+            href="/docs/architecture"
             className="mt-4 font-mono text-[11px] text-white/40 hover:text-white/70"
           >
-            Learn who we are →
+            Introduction to MAD →
           </Link>
         </div>
       </section>
@@ -66,13 +54,11 @@ export default function HomePage() {
             Specification in draft
           </Link>
           <span className="hidden text-[var(--line)] sm:inline">/</span>
-          <a href="https://morph.space" rel="noreferrer" className="hover:text-[var(--ink)]">
-            Join on Morph.Space
-          </a>
+          <Link href="/docs/architecture" className="hover:text-[var(--ink)]">
+            Introduction to MAD
+          </Link>
           <span className="hidden text-[var(--line)] sm:inline">/</span>
-          <a href="https://synx.tools" rel="noreferrer" className="hover:text-[var(--ink)]">
-            Operate with Synx
-          </a>
+          <span>Open to implement</span>
         </div>
       </div>
 
@@ -139,15 +125,14 @@ export default function HomePage() {
               be used, instead of handing the original source to a central platform.
             </p>
             <p className="mt-5 text-[15px] leading-[1.8] text-[var(--muted)]">
-              Morph Space is how people and organizations join. Synx is how operators configure
-              and secure their part of the network. RealTimeWeb.org is where you understand the
-              idea.
+              RealTimeWeb.org is a standalone nonprofit site for the architecture. It is not owned
+              by a company. Anyone can develop an implementation of MAD or the Real Time Web.
             </p>
             <Link
-              href="/docs/brand"
+              href="/docs/architecture"
               className="mt-8 inline-block font-mono text-[11px] tracking-[0.12em] text-[var(--accent)]"
             >
-              Read the brand strategy →
+              Read Morphic Architecture →
             </Link>
           </div>
         </div>
@@ -156,8 +141,6 @@ export default function HomePage() {
       <StartHere />
 
       <VideoWall />
-
-      <JoinBand />
     </main>
   );
 }

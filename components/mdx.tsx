@@ -4,7 +4,7 @@ import { EcosystemLink } from "@/components/EcosystemLink";
 import { ClarificationBanner } from "@/components/ClarificationBanner";
 import { MadLayers } from "@/components/diagrams/MadLayers";
 import { GhostBijection } from "@/components/diagrams/GhostBijection";
-import { SynxPassFlow } from "@/components/diagrams/SynxPassFlow";
+import { IdentityFlow } from "@/components/diagrams/IdentityFlow";
 import { EcosystemMap } from "@/components/diagrams/EcosystemMap";
 import { DataChannelMorph } from "@/components/diagrams/DataChannelMorph";
 import { WwwVsRtw } from "@/components/diagrams/WwwVsRtw";
@@ -37,7 +37,7 @@ export const mdxComponents: MDXRemoteProps["components"] = {
   ClarificationBanner,
   MadLayers,
   GhostBijection,
-  SynxPassFlow,
+  IdentityFlow,
   EcosystemMap,
   DataChannelMorph,
   WwwVsRtw,

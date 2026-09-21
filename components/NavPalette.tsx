@@ -30,12 +30,11 @@ export function useNavPalette() {
 }
 
 const pages = [
-  { title: "How a user joins", href: "/docs/introduction/onboarding", trail: "Documentation" },
+  { title: "How participation works", href: "/docs/introduction/onboarding", trail: "Documentation" },
   { title: "Journal", href: "/blog", trail: "Site" },
   { title: "Architecture", href: "/docs/architecture", trail: "Documentation" },
   { title: "Specification", href: "/docs/specification", trail: "Documentation" },
   { title: "Glossary", href: "/docs/reference/glossary", trail: "Reference" },
-  { title: "Join Morph.Space", href: "https://morph.space", trail: "Participate" },
 ];
 
 export function NavPaletteProvider({ children }: { children: ReactNode }) {

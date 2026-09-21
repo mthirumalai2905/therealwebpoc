@@ -94,22 +94,6 @@ export const glossary: Term[] = [
     term: "Heterogeneous network",
     def: "A network not controlled by a single entity. It evolves as independent participants connect and manage their own domains and services.",
   },
-  {
-    id: "synxpass",
-    term: "SynxPass",
-    def: "The currently known authentication implementation used by Morph Space. Token-based; the endpoint refreshes the token every three minutes to send data.",
-    href: "/docs/architecture/synxpass",
-  },
-  {
-    id: "morph-space",
-    term: "Morph Space",
-    def: "Commercial platform and reference implementation through which users can establish domains, publish resources, and join the network.",
-  },
-  {
-    id: "synx",
-    term: "Synx tools",
-    def: "Operational tools used to configure, administer, secure, and maintain RTW services. Current implementation uses TCP/IP with HTTPS and websocket.",
-  },
 ];
 
 export function GlossaryTerm({ id, children }: { id: string; children?: React.ReactNode }) {

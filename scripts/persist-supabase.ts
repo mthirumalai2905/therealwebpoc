@@ -176,7 +176,6 @@ async function main() {
     "lib/blog.ts",
     "lib/navigation.ts",
     "lib/docs.ts",
-    "components/blog/JoinExplainer.tsx",
     "components/TermHint.tsx",
     "components/Glossary.tsx",
   ];

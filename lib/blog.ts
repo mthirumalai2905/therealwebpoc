@@ -13,20 +13,20 @@ export type BlogPost = {
 export const posts: BlogPost[] = [
   {
     slug: "how-a-user-joins",
-    title: "How a user joins the Real Time Web",
+    title: "How participation works on the Real Time Web",
     excerpt:
-      "Morph.Space is the join path. SynxPass is the pass. Ghosts, morphing, and live channels are the relationship. This page writes what the Synx corpus states and leaves Morph screens unanswered.",
+      "Ghosts, morphing, and live channels are the relationship. This site explains the architecture. Anyone can implement it.",
     date: "2026-09-18",
     category: "Field notes",
     cover: "/join-hands.png",
     coverAlt: "Two pixelated hands reaching toward each other across a dark field.",
-    readingMinutes: 16,
+    readingMinutes: 8,
     body: [
-      "People keep asking where to create an account. Not here. RealTimeWeb.org is the architecture. Morph.Space is the join path. Synx is how the room stays running once you are in.",
-      "The sequence that is actually written down is short. You arrive on Morph.Space. You receive a network identity through SynxPass. You work inside a domain. A service owner transfers a ghost to you. You confirm it. After that, the data layer of that ghost is yours. The application layer of the service is still theirs.",
-      "Sharing is a morph, not a copy into a platform. You can give a service read access and take it back. The endpoint has to refresh its token every three minutes to send data. If the session must die, Synx BIOS can terminate it.",
-      "What we do not have yet is the click-by-click Morph.Space FAQ: whether you need a public website domain, how long setup takes, or the exact screens. Those questions are listed in the source and still unanswered. Until they are written, the honest map lives in the documentation.",
-      "Read the step-by-step and the flow diagram at /docs/introduction/onboarding. Then go to Morph.Space if you intend to participate.",
+      "People keep asking where to create an account. Not here. RealTimeWeb.org is a standalone nonprofit architecture site. It tells you what the Real Time Web is, why it exists, and introduces MAD.",
+      "The sequence that is actually written down is short. You need a network identity. You work inside a domain, which is an address space. A service owner transfers a ghost to you. You confirm it. After that, the data layer of that ghost is yours. The application layer of the service is still theirs.",
+      "Sharing is a morph, not a copy into a platform. You can give a service read access and take it back.",
+      "Anyone can develop an implementation of MAD or the Real Time Web. This site is not owned by a company and does not collect leads.",
+      "Read the architectural path in How participation works.",
     ],
   },
   {
@@ -42,7 +42,7 @@ export const posts: BlogPost[] = [
     body: [
       "We believe in eternal widespread ownership of the Web. Not as a slogan. As the reason this architecture exists.",
       "Today, too much of what people make lives on platforms they do not own. Accounts vanish. Feeds rewrite themselves. The record of a life online sits behind a company that can change the terms overnight.",
-      "Real Time Web is a way to treat digital space the way we already treat a home or a workshop: something you can occupy, furnish, and keep. Morph.Space is how you join that space. Synx is how you operate inside it.",
+      "Real Time Web is a way to treat digital space the way we already treat a home or a workshop: something you can occupy, furnish, and keep.",
       "Ownership here is not a product feature. It is the condition under which people will still bother to make things that last.",
     ],
   },
@@ -58,9 +58,9 @@ export const posts: BlogPost[] = [
     readingMinutes: 5,
     body: [
       "We are looking for settlers chasing new opportunities. People who would rather build a room than wait for a product to give them one.",
-      "Settlers do not need a finished city. They need a plot, a way to arrive, and a reason to stay. Real Time Web is the plot. Morph.Space is the arrival. Synx is how the room stays running.",
+      "Settlers do not need a finished city. They need a plot, a way to arrive, and a reason to stay. Real Time Web is the plot. MAD is how the rooms hold.",
       "This is slower work than launching an app. It is also the only kind of work that still belongs to the people who do it after the launch week is over.",
-      "If that sounds like you, read the architecture, then come in through Morph.Space.",
+      "If that sounds like you, read the architecture.",
     ],
   },
   {
@@ -77,7 +77,7 @@ export const posts: BlogPost[] = [
       "We let anyone connect anything to the present. That line is the whole brief, written before the interface, before the diagrams, before the site.",
       "The old Web asked documents to wait. You requested a page, it arrived, you left. Real time means the surface stays open. Things can appear while you are still looking.",
       "Connecting anything is not a promise of magic. It is a refusal to decide, in advance, which objects are allowed to exist in public digital space. People will invent the rest.",
-      "If you want to understand the network, start in the documentation. If you want to participate, Morph.Space is the door.",
+      "If you want to understand the network, start in the documentation. Anyone can develop an implementation of MAD or the Real Time Web.",
     ],
   },
   {
@@ -93,7 +93,7 @@ export const posts: BlogPost[] = [
     body: [
       "Do not let unknown platforms govern your data. The sentence is blunt because the situation is blunt.",
       "When a service holds the only copy of your work, it does not have to be evil to be dangerous. It only has to change direction. Or get acquired. Or close.",
-      "Real Time Web treats space and the things inside it as something you can keep. That is why the documentation is public, why Morph.Space is the join path, and why Synx exists as operations rather than a hidden backend.",
+      "Real Time Web treats space and the things inside it as something you can keep. That is why the documentation is public, and why this site is not owned by a company.",
       "Governance of data should be visible. If you cannot see who holds the keys, assume it is not you.",
     ],
   },
@@ -127,7 +127,7 @@ export const posts: BlogPost[] = [
     body: [
       "The Web we inherited taught people to scroll a list that never ends. The present, in that model, is whatever the ranking happens to show.",
       "A horizon is different. It is a shared edge. You can stand on it with someone else. You can see what is arriving without being told what to look at.",
-      "Real Time Web is an architecture for that kind of present: interconnected digital spaces that stay open while you are in them. Morph.Space is how you step onto the line. Synx is how the line holds.",
+      "Real Time Web is an architecture for that kind of present: interconnected digital spaces that stay open while you are in them.",
       "We are not replacing the document Web. We are giving people a place to be, together, when a document is not enough.",
     ],
   },
@@ -162,7 +162,7 @@ export const posts: BlogPost[] = [
       "Most of the Web you use is a graph you are not allowed to see. You feel the edges when a friend disappears, when a search result moves, when a room you used yesterday is gone.",
       "Real Time Web is built so the space itself is the thing you inhabit, not a ranking over someone else's inventory.",
       "Seeing the network does not mean drowning in diagrams. It means knowing where you are, who shares the room, and how to leave with what you brought.",
-      "Read the specification when you want the structure. Come through Morph.Space when you want the room.",
+      "Read the specification when you want the structure. Read Morphic Architecture when you want the layers.",
     ],
   },
   {
@@ -196,7 +196,7 @@ export const posts: BlogPost[] = [
       "The 2014 brief asked for informal visionaries: people who can see a structure before it has a product page.",
       "That is still the hiring filter. Not a job title. A temperament. You look at an empty surface and furnish it. You look at a closed platform and want a door.",
       "Real Time Web will not feel finished for a long time. That is the point. Finished products are already owned by someone else.",
-      "If you are the sort of person who would cross the ice because the object is interesting, the documentation is waiting, and Morph.Space is the way in.",
+      "If you are the sort of person who would cross the ice because the object is interesting, the documentation is waiting.",
     ],
   },
   {
@@ -211,9 +211,9 @@ export const posts: BlogPost[] = [
     readingMinutes: 6,
     body: [
       "A digital world needs a core that holds, and terraces where people actually live. Mix those up and you get a dashboard pretending to be a city.",
-      "The architecture names this plainly: Morph, Access, Data. Understand the network, join the space, operate what you own.",
+      "The architecture names this plainly as Morphic Architecture Design: four independently owned layers, so a hollow world can hold light, work, and people without collapsing.",
       "You do not have to live in the core. Most people should not. The core is there so the rooms do not vanish when a vendor changes a slide.",
-      "Walk the documentation for the layers. Walk Morph.Space when you want a room with a view.",
+      "Walk the documentation for the layers.",
     ],
   },
   {

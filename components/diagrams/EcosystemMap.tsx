@@ -6,7 +6,7 @@ export function EcosystemMap() {
   return (
     <div className="diagram-block my-8 overflow-hidden border border-[var(--line)]">
       <div className="border-b border-[var(--line)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">
-        Three locations. Do not merge these products into one navigation.
+        What this site covers. Implementations are independent.
       </div>
       <div className="hidden border-b border-[var(--line)] px-10 py-2 md:block">
         <svg viewBox="0 0 900 28" className="h-7 w-full">
@@ -17,22 +17,22 @@ export function EcosystemMap() {
       <div className="grid gap-px bg-[var(--line)] md:grid-cols-3">
         {[
           {
-            kicker: "Understand",
-            name: "RealTimeWeb.org",
-            role: "Conceptual and specification layer",
-            action: "Understand or implement RTW",
+            kicker: "What",
+            name: "Real Time Web",
+            role: "A network architecture for live bidirectional resource relationships",
+            action: "Understand the idea",
           },
           {
-            kicker: "Participate",
-            name: "Morph.Space",
-            role: "Practical environment and marketplace",
-            action: "Create an account or domain",
+            kicker: "Why",
+            name: "Ownership of live data",
+            role: "Keep data with its source instead of copying it into platforms",
+            action: "Understand the problem",
           },
           {
-            kicker: "Operate",
-            name: "Synx",
-            role: "Operational controls and infrastructure",
-            action: "Configure, secure, and administer",
+            kicker: "MAD",
+            name: "Morphic Architecture Design",
+            role: "Four independently owned layers, introduced in 2008",
+            action: "Understand the blueprint",
           },
         ].map((item) => (
           <div key={item.name} className="bg-[var(--bg)] p-5">

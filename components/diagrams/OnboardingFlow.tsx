@@ -9,28 +9,21 @@ const steps = [
     id: "understand",
     title: "Understand the architecture",
     where: "RealTimeWeb.org",
-    text: "RTW is the network model. This site explains principles, layers, and ownership. You do not join the live network here.",
+    text: "RTW is the network model. This site explains principles, layers, and ownership. Nothing here creates an account or designates a vendor.",
     href: "/docs/introduction",
   },
   {
-    id: "morph",
-    title: "Arrive through Morph.Space",
-    where: "Morph.Space",
-    text: "Morph Space is the commercial platform and reference implementation. People and organizations join, establish domains, and publish resources there.",
-    href: "https://morph.space",
-  },
-  {
     id: "identity",
-    title: "Create an RTW identity",
-    where: "SynxPass",
-    text: "Morph Space uses Synx Pass for authorization. SynxPass is token-based. After registration, a user may participate in RTW and join services by getting access to ghosts.",
-    href: "/docs/architecture/synxpass",
+    title: "Establish a network identity",
+    where: "Identity",
+    text: "A participant needs an identity so they can be addressed in the network. How identifiers are issued is implementation-specific. Authentication is optional in MAD.",
+    href: "/docs/architecture/identity",
   },
   {
     id: "domain",
-    title: "Establish a domain",
-    where: "Morph.Space",
-    text: "The Morph Space site plan includes registering or connecting a domain, then creating an RTW identity. Whether you must already own a public website domain is not answered in the current source.",
+    title: "Work inside a domain",
+    where: "Domain",
+    text: "A domain here is an address space, not a marketing website. If an identified user owns and controls the whole stack of a domain, that user also controls ownership of allocated ghosts for endpoints connecting against that address space.",
     href: "/docs/architecture/domains",
   },
   {
@@ -48,28 +41,21 @@ const steps = [
     href: "/docs/architecture/data-channels",
   },
   {
-    id: "live",
-    title: "Stay live on the channel",
-    where: "Endpoint",
-    text: "The endpoint needs to refresh the SynxPass token every three minutes to send data. Access can be revoked at a token revocation endpoint. Sessions can be terminated through Synx runtime BIOS.",
-    href: "/docs/architecture/authentication",
-  },
-  {
-    id: "operate",
-    title: "Operate with Synx tools",
-    where: "Synx",
-    text: "Synx tools configure, administer, secure, and maintain RTW services. Current implementation uses TCP/IP with HTTPS and websocket. Communication format is XML or JSON, switchable at runtime by a client with domain ownership.",
-    href: "https://synx.tools",
+    id: "implement",
+    title: "Implement independently",
+    where: "Open implementations",
+    text: "Anyone can develop an implementation of MAD or the Real Time Web. This site does not name a vendor, collect leads, or send readers to a join path.",
+    href: "/docs/research/implementations",
   },
 ];
 
 export function OnboardingFlow() {
-  const [open, setOpen] = useState("morph");
+  const [open, setOpen] = useState("understand");
 
   return (
     <div className="diagram-block my-8 overflow-hidden border border-[var(--line)]">
       <div className="border-b border-[var(--line)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">
-        User onboarding path. Conceptual. Not a click-by-click Morph.Space guide.
+        How participation works in the architecture. Conceptual. Not a product onboarding guide.
       </div>
 
       <div className="diagram-grid hidden border-b border-[var(--line)] px-3 py-6 md:block">
@@ -86,30 +72,30 @@ export function OnboardingFlow() {
 
           <rect x="228" y="24" width="160" height="56" fill="var(--accent-dim)" stroke="var(--accent)" />
           <text x="308" y="48" textAnchor="middle" fill="var(--ink)" fontSize="12">
-            Morph.Space
+            Identity
           </text>
           <text x="308" y="66" textAnchor="middle" fill="var(--muted)" fontSize="10">
-            join and domain
+            optional authentication
           </text>
 
           <FlowArrow x1={388} y1={52} x2={436} y2={52} />
 
           <rect x="436" y="24" width="140" height="56" fill="var(--node)" stroke="var(--line)" />
           <text x="506" y="48" textAnchor="middle" fill="var(--ink)" fontSize="12">
-            SynxPass
+            Domain
           </text>
           <text x="506" y="66" textAnchor="middle" fill="var(--muted)" fontSize="10">
-            identity token
+            address space
           </text>
 
           <FlowArrow x1={576} y1={52} x2={620} y2={52} />
 
           <rect x="620" y="24" width="120" height="56" fill="var(--node)" stroke="var(--line)" />
           <text x="680" y="48" textAnchor="middle" fill="var(--ink)" fontSize="12">
-            Domain
+            Ghosts
           </text>
           <text x="680" y="66" textAnchor="middle" fill="var(--muted)" fontSize="10">
-            address space
+            live endpoints
           </text>
 
           <FlowArrow x1={308} y1={80} x2={308} y2={118} />
@@ -125,7 +111,7 @@ export function OnboardingFlow() {
           <FlowArrow x1={380} y1={174} x2={380} y2={198} />
 
           <text x="380" y="214" textAnchor="middle" fill="var(--accent)" fontSize="11" fontFamily="ui-monospace, monospace">
-            live channel · token refresh · Synx operation
+            morph for read access · implementations are independent
           </text>
         </svg>
       </div>
@@ -166,19 +152,9 @@ export function OnboardingFlow() {
                 </div>
                 <div className="mt-1 text-[18px] text-[var(--ink)]">{step.title}</div>
                 <p className="mt-3 text-[14px] leading-relaxed text-[var(--muted)]">{step.text}</p>
-                {step.href.startsWith("http") ? (
-                  <a
-                    href={step.href}
-                    rel="noreferrer"
-                    className="mt-4 inline-block text-[13px] text-[var(--accent)]"
-                  >
-                    Open {step.where} →
-                  </a>
-                ) : (
-                  <Link href={step.href} className="mt-4 inline-block text-[13px] text-[var(--accent)]">
-                    Open related documentation →
-                  </Link>
-                )}
+                <Link href={step.href} className="mt-4 inline-block text-[13px] text-[var(--accent)]">
+                  Open related documentation →
+                </Link>
               </div>
             ) : null,
           )}

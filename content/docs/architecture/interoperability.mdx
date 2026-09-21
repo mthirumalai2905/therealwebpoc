@@ -21,10 +21,8 @@ For endpoints and their ghosts, interoperability is unlimited since kernelizer a
 
 This self-executed client then becomes dynamic and can set up its own protocol and template for managing its own data. It also enables the endpoint to be distributed as an empty container where the program (kernelizer) and data (morphing) will be deployed dynamically at a later stage.
 
-## Communication formats in the known implementation
+## Protocol independence
 
-The communication format currently supported by Synx BIOS is XML and JSON. When a client endpoint connects it can receive data in XML or in JSON format. Default is XML but by issuing a synx command it can be set to JSON. There is no need to drop the connection; the format can be altered at runtime by another client that has domain ownership.
-
-RTW is protocol independent. The service owner decides his own protocol. Information about how data is structured and the data model description can be found on each micropage.
+RTW is protocol independent. The service owner decides their own protocol. Information about how data is structured and the data model description can be found on each micropage. An implementation may support more than one encoding and change format at runtime when a client with domain ownership requests it.
 
 A micropage is a mini description of the service that the service owner can use to describe the service and data model. Any service provider needs to describe its own data schema availability.

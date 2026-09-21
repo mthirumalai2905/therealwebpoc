@@ -7,32 +7,26 @@ import { FlowDown } from "@/components/diagrams/FlowArrow";
 const steps = [
   {
     id: "user",
-    title: "User",
+    title: "Participant",
     text: "A person, organization, machine, or service that needs a network identity.",
     href: "/docs/architecture/identity",
   },
   {
     id: "identity",
-    title: "Identity creation",
+    title: "Identity",
     text: "Identity is established so the participant can be addressed in the network. How identifiers are issued is implementation-specific.",
     href: "/docs/architecture/identity",
   },
   {
-    id: "synxpass",
-    title: "SynxPass",
-    text: "Currently there is one known authentication implementation in use: SynxPass, part of Synx Tools, used by Morph Space. It is a token-based system.",
-    href: "/docs/architecture/synxpass",
-  },
-  {
     id: "authn",
     title: "Authentication",
-    text: "The endpoint presents a token to participate. The source states the endpoint needs to refresh the token every three minutes to send data.",
+    text: "Authentication is optional in MAD. An implementation may use any token system that generates a token for identity.",
     href: "/docs/architecture/authentication",
   },
   {
     id: "netid",
     title: "Network identity",
-    text: "Once registered, the participant may join services by receiving access to ghosts.",
+    text: "Once identified, the participant may join services by receiving access to ghosts.",
     href: "/docs/architecture/ghost-space",
   },
   {
@@ -55,8 +49,8 @@ const steps = [
   },
 ];
 
-export function SynxPassFlow() {
-  const [open, setOpen] = useState("synxpass");
+export function IdentityFlow() {
+  const [open, setOpen] = useState("authn");
 
   return (
     <div className="diagram-block my-8 overflow-hidden border border-[var(--line)]">

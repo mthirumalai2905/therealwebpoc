@@ -58,17 +58,6 @@ export function SiteHeader() {
           <Link href="/docs/reference/glossary" className="hover:text-[var(--ink)]">
             Glossary
           </Link>
-          <a
-            href="https://morph.space"
-            rel="noreferrer"
-            className={
-              overHero
-                ? "rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[12px] text-white hover:bg-white/16"
-                : "rounded-full border border-[var(--line)] bg-[var(--bg-elev)] px-3 py-1 text-[12px] text-[var(--ink)] hover:border-[var(--accent)]"
-            }
-          >
-            Join
-          </a>
           <ThemeToggle />
         </nav>
         <div className="flex items-center gap-3 md:hidden">

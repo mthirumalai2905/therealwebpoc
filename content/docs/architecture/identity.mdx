@@ -10,9 +10,9 @@ When ghosts are allocated for the first time, all allocated ghosts are owned by 
 
 The service itself is also a ghost in the application layer. Independently from the data layer, ownership of the service can also be transferred to another person. There are four layers of ownership in the vertical communication stack that independently from each other can be changing ownership.
 
-MAD has been designed using roles and responsibility patterns, so what kind of authentication system is used is optional when constructing an RTW network. Currently there is only one valid implementation in use named SynxPass (part of Synx Tools) that is used by Morph Space.
+MAD has been designed using roles and responsibility patterns, so what kind of authentication system is used is optional when constructing an RTW network. Any token system that generates a token for identity can be used.
 
-<SynxPassFlow />
+<IdentityFlow />
 
 <SpecStatus status="proposal">
   How services, devices, and AI agents are identified at the protocol level is not specified in the current source.

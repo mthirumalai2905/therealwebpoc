@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const starts = [
   {
-    href: "/docs/introduction/onboarding",
-    label: "Join the network",
-    text: "The onboarding path through Morph.Space, SynxPass, and ghosts.",
+    href: "/docs/introduction",
+    label: "What is RTW?",
+    text: "What the Real Time Web is, in specification language.",
   },
   {
-    href: "/docs/introduction",
-    label: "Introduction",
-    text: "What Real Time Web is, in specification language.",
+    href: "/docs/introduction/why",
+    label: "Why RTW?",
+    text: "Why live resources need a different architecture than documents.",
   },
   {
     href: "/docs/architecture",

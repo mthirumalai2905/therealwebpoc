@@ -10,7 +10,11 @@ Paste this file (or `@CLAUDE.md`) into an LLM session before building, explainin
 
 If a claim is not in that corpus, say it is unspecified. Do not invent Morph.Space screens, Synx APIs, token payloads, domain registration steps, or protocols.
 
-This repository (`rtwp` / therealwebpoc) is a **documentation and journal prototype**. It is not Morph.Space and not a Synx runtime.
+This repository (`rtwp` / therealwebpoc) is a **documentation and journal prototype** for RealTimeWeb.org.
+
+**Public copy on this site must not mention Morph.Space, Synx, SynxPass, or synx.tools.** Morph.Space and synx.tools may reference RealTimeWeb.org. synx.tools may describe the model used in that implementation. MAD terms (Morphic Architecture Design, morphing, Morphic service) stay.
+
+RealTimeWeb.org is a standalone nonprofit explainer of what RTW is, why it exists, and MAD. It is not owned by a company. Anyone can develop an implementation of MAD or RTW. No join button, lead capture, or product funnel.
 
 Do not use em dashes in user-facing copy.
 
@@ -26,7 +30,7 @@ Do not use em dashes in user-facing copy.
 
 Teaching analogy (rough, not architecture): RealTimeWeb.org is reading how email works. Morph.Space is where you get an identity and join. Synx is how you run and secure the connection afterward.
 
-Current implementation of MAD in the source: **Synx.tools** and marketplace **Morph.Space**.
+Current implementation of MAD in the internal source: **Synx.tools** and marketplace **Morph.Space**. Those names do not appear on RealTimeWeb.org public pages. This site does not link to them.
 
 ---
 
@@ -45,7 +49,7 @@ It is not a single app, not a replacement for the Internet, and not the World Wi
 A change in one layer does not have to redefine the whole relationship. Different parties can own different layers.
 
 1. **Infrastructure layer** — physical or virtual infrastructure: processing, connectivity, storage where required, energy.
-2. **Network and security layer** — addressing, identity, authentication, authorization, trust, secure communication. Auth system is **optional** in MAD. Known implementation: **SynxPass**.
+2. **Network and security layer** — addressing, identity, authentication, authorization, trust, secure communication. Auth system is **optional** in MAD. Any token system that generates a token for identity can be used. Do not name a vendor on this site.
 3. **Domain and application layer** — domains, services, applications, transformation logic.
 4. **Resource and ownership layer** — person, organization, machine, or device that generates or owns the resource and controls whether it may be accessed or shared.
 
@@ -97,7 +101,7 @@ If an identified user owns and controls the **whole stack of a domain**, that us
 
 **Consume rule (draft architecture notes, still marked draft in source):** data is consumed at an endpoint when the ghosts at the ends are owned by the **same user**, or the receiver has approved **read access**. Same user owning two ghosts usually means **one person, two of their endpoints** (e.g. their sensor and their display), not “User A and User B are the same person.”
 
-**Two different people:** B does not open A’s data because they live on Morph.Space. A morphs (read) or transfers (ownership).
+**Two different people:** B does not open A’s data because they share an implementation. A morphs (read) or transfers (ownership).
 
 There is **no centralized API or database** required to build RTW services in this model. The RTW network **does not natively store data**. A service provider **may** attach a database to **local** ghosts.
 
@@ -121,15 +125,13 @@ There is **no centralized API or database** required to build RTW services in th
 
 ---
 
-## SynxPass and tokens
+## Authentication (internal source)
 
-- Morph Space uses **Synx Pass** for authorization. SynxPass is part of Synx Tools.
-- Token-based. After registration, a user may participate in RTW and join services by getting access to ghosts.
-- The **endpoint** must refresh the token **every three minutes** to **send data**.
-- Access can be revoked via a **token revocation endpoint**. Session termination can be activated through **Synx runtime BIOS**.
-- **Unspecified in this corpus:** how a pass is created, what the token contains, how identity is bound to a person vs machine, and whether refresh is automatic vs operator-built. Do not invent those. Honest line: refresh is **endpoint duty**; automation is not specified here.
+Auth in MAD is **optional**. Any token system that generates a token for identity can be used.
 
-Auth in MAD is optional; SynxPass is the **only known valid implementation** named in the source.
+The internal source names one implementation (SynxPass). **Do not put that name, Morph.Space, or Synx on RealTimeWeb.org public pages.** Operational token details belong with the implementation that uses them, not on this architecture site.
+
+On this site, say: authentication is optional; implementations may use tokens; morphing grants read access that can be withdrawn.
 
 ---
 
@@ -179,9 +181,11 @@ NTNU-style 24h PoCs assumed an **existing channel platform**. Without Morph/Synx
 
 ## Editorial split for any copy or product UX
 
-- Conceptual questions → RealTimeWeb.org
-- Account, marketplace, onboarding → Morph.Space
-- Configuration and operations → Synx documentation
+- Conceptual questions → RealTimeWeb.org public pages. **No Morph.Space or Synx names. No join or lead CTAs.**
+- Account, marketplace, onboarding → Morph.Space (that site may link to RTW)
+- Configuration and operations → Synx documentation (that site may link to RTW and describe the model it implements)
+
+This repository is RealTimeWeb.org. Do not add outbound product links from it.
 
 ---
 
@@ -203,7 +207,6 @@ NTNU-style 24h PoCs assumed an **existing channel platform**. Without Morph/Synx
 | Data channel | Linking path collecting live sources into one user’s local ghost |
 | Normalizer / materializer / kernelizer | Fit local model / mutate after absorb / deliver program to empty endpoint |
 | Micropage | Service’s mini schema/spec sheet |
-| SynxPass | Known token auth; endpoint refresh every 3 minutes to send |
 | Heterogeneous | Many independent owners, no single-company network |
 
 When unsure, quote `source.txt` and stop. Inventing a missing protocol is a bug, not a feature.
