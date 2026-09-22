@@ -1,0 +1,59 @@
+---
+title: Bijective network
+description: One endpoint maps to one ghost. The relationship is addressable from both sides.
+status: published
+---
+
+A conventional hyperlink points one way. The page you link from knows the target. The target does not have to know who pointed at it. That is enough for documents.
+
+The Real Time Web needs a different pairing. Each participating <GlossaryTerm id="endpoint">endpoint</GlossaryTerm> has one corresponding <GlossaryTerm id="ghost">ghost</GlossaryTerm>, and that ghost represents that one endpoint. The relationship can be addressed and maintained from both sides. Authorized updates can travel as they occur. The source calls this a <GlossaryTerm id="bins">Bijective Network System</GlossaryTerm>.
+
+<WwwVsRtw />
+
+Bijective, in ordinary language, means a clean one-to-one pairing that reverses. Nothing is left over. If a ghost could stand for two lamps at once, ownership of the data would stop being answerable. If two ghosts stood for one lamp, you would no longer know which stand-in was current.
+
+<GhostBijection />
+
+## Why the pairing is bidirectional
+
+In the existing Web, you retrieve a document by asking. For machines that sense and act, asking is the wrong default. A sensor should be able to notify. An actuator should be able to receive. The same relationship has to carry both directions without inventing a new integration for each pairing.
+
+The ghost is the addressable stand-in. What the endpoint reports, the ghost can carry. What the ghost is authorized to receive, the endpoint can act on. The ghost provides identity, behavior, and context when an active connection is present.
+
+The pairing is not a chat room of avatars. People participate in the ecosystem. A person is not a ghost. The ghost is tied to the resource.
+
+## Four layers stay independently owned
+
+The pairing sits on Morphic Architecture Design. A change in one layer does not have to redefine the whole relationship.
+
+<MadLayerTable />
+
+Infrastructure, network and security, domain and application, and resource and ownership can have different owners. The company that hosts a box does not have to own the reading. The person who wrote a scheduler does not have to own the lamp. You do not have to run the network in order to decide who may see the data.
+
+Ghost Space is the shared coordination environment around that one resource, so the four layers can observe authorized updates without one party owning the stack. See [Ghost Space](/docs/architecture/ghost-space).
+
+## Data still waits for ownership
+
+A bijective pairing is not an open pipe. The linking path can be complex. Data is consumed at an endpoint when the ghosts at the ends are owned by the same user, or the receiver has approved read access.
+
+There is no centralized API or database required to build RTW services in this model. Each service works on local structures. How data was morphed is unknown outside that service. The network does not natively store the value.
+
+<OwnershipGate />
+
+## It sits on the existing Internet
+
+The Bijective Network System is described as backward compatible with the Internet we already have. RTW does not replace TCP, and it does not replace the World Wide Web. It adds a live, bidirectional dimension on top of and beside them.
+
+A conventional website can still publish documents. RTW can carry the live channel beside that site. Existing devices and applications can become participants over time. The whole Internet does not have to be rebuilt.
+
+Protocol independence is part of the same idea. The service owner chooses how a service is described. The <GlossaryTerm id="micropage">micropage</GlossaryTerm> is where that description lives. This site does not publish command tables or encodings.
+
+<SpecStatus status="draft">
+  Several topology, naming, and protocol questions remain draft or unanswered in the source. This page states the pairing and the ownership rule. It does not invent a wire format.
+</SpecStatus>
+
+## Keep reading
+
+Next in this path is [Morphic services](/docs/architecture/morphic-services), then [Data channels](/docs/architecture/data-channels).
+
+<EcosystemLink to="implementation" />

@@ -47,7 +47,7 @@ export function SiteHeader() {
       className={
         onLanding
           ? "absolute inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)]"
-          : "fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_86%,transparent)] pt-[env(safe-area-inset-top)] backdrop-blur-md"
+            : "fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_78%,transparent)] pt-[env(safe-area-inset-top)] backdrop-blur-xl"
       }
     >
       <div className="mx-auto flex h-14 max-w-[1400px] items-center justify-between px-4 md:px-6">

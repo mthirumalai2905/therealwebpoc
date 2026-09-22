@@ -20,6 +20,8 @@ import { MorphToSecondary } from "@/components/diagrams/MorphToSecondary";
 import { OwnershipGate } from "@/components/diagrams/OwnershipGate";
 import { MadLayerTable } from "@/components/diagrams/MadLayerTable";
 import { ImplementationMap } from "@/components/diagrams/ImplementationMap";
+import { DataVsInfo } from "@/components/diagrams/DataVsInfo";
+import { InheritContext } from "@/components/diagrams/InheritContext";
 import { GlossaryTerm } from "@/components/Glossary";
 import { GlossaryTable } from "@/components/GlossaryTable";
 
@@ -61,6 +63,8 @@ export const mdxComponents: MDXRemoteProps["components"] = {
   OwnershipGate,
   MadLayerTable,
   ImplementationMap,
+  DataVsInfo,
+  InheritContext,
   GlossaryTerm,
   GlossaryTable,
 };

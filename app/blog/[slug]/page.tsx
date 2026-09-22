@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { formatPostDate, getPost, getRelated, posts } from "@/lib/blog";
 import { CornerMarks } from "@/components/CornerMarks";
 import { ParticipationExplainer } from "@/components/blog/ParticipationExplainer";
+import { LastITProject } from "@/components/blog/LastITProject";
+import { SmartShoes } from "@/components/blog/SmartShoes";
 
 type Params = { slug: string };
 
@@ -58,14 +60,19 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
                 {post.excerpt}
               </p>
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.14em] text-white/55">
-                Real Time Web · {formatPostDate(post.date)} · {post.readingMinutes} min read
+                {post.author ? `${post.author} · ` : "Real Time Web · "}
+                {formatPostDate(post.date)} · {post.readingMinutes} min read
               </p>
             </div>
           </div>
         </div>
       </header>
 
-      {post.slug === "how-a-user-joins" ? (
+      {post.slug === "the-last-it-project" ? (
+        <LastITProject />
+      ) : post.slug === "smart-shoes" ? (
+        <SmartShoes />
+      ) : post.slug === "how-a-user-joins" ? (
         <ParticipationExplainer />
       ) : (
         <div className="mx-auto max-w-[640px] px-4 py-12 md:px-0">

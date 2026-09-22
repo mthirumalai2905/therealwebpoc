@@ -48,6 +48,38 @@ The Real-Time Web extends this model from static or request-based resources to l
 
 [Two webs](/docs/introduction/two-webs)
 
+### What does bijective network architecture mean?
+
+It means each participating endpoint has one corresponding ghost, and that ghost represents that one endpoint. The relationship is uniquely addressable from both sides.
+
+A conventional hyperlink points one way. The bijective pairing is live and bidirectional. If a ghost could stand for two endpoints at once, ownership of the data would stop being answerable.
+
+[Bijective network](/docs/architecture/bijective-network)
+
+### What is a real-time data channel?
+
+A data channel is how a linking path collects live sources into a channel of data associated with one user’s ghost in a local service.
+
+The canonical picture is temperature from several makers, gathered for one person. Only data with a valid morphed ghost is received. Both ends need a user who owns the data or has been granted read access.
+
+[Data channels](/docs/architecture/data-channels)
+
+### How is data exchanged between network participants?
+
+Authorized updates can travel along a linking path as they occur. Each service morphs the value into its own local model. The network does not natively store the value.
+
+Data is consumed at an endpoint when the ghosts at the ends are owned by the same user, or the receiver has approved read access. Two different people do not open each other’s data because they share an implementation.
+
+[Morphic services](/docs/architecture/morphic-services)
+
+### Does RTW require centralized servers or cloud services?
+
+No centralized API or database is required to build RTW services in this model.
+
+Each service works on local structures. A service may attach a database to its local ghosts after it has received a morph. That local copy is optional. The architecture is designed to sit on the existing Internet and to grow as independent domains and services are added.
+
+[Why Real Time Web?](/docs/introduction/why)
+
 ### Is RTW intended to replace the existing Internet?
 
 No. RTW is designed to operate on top of and alongside the existing Internet.
@@ -115,12 +147,8 @@ These are listed in the source FAQ plan and do not yet have answers. Related dra
 Architecture, unanswered:
 
 - How does the RTW network topology work?
-- What does “bijective network architecture” mean?
 - How are services, devices and AI agents identified?
 - What is an RTW domain?
-- What is a real-time data channel?
-- How is data exchanged between network participants?
-- Does RTW require centralized servers or cloud services?
 - How does RTW reduce unnecessary network traffic?
 
 Standards and implementation, unanswered:

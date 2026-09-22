@@ -33,10 +33,22 @@ export function DocsNav() {
             </button>
             {expanded ? (
               <ul className="mb-3 space-y-0.5">
-                {group.items.map((item) => {
+                {group.items.map((item, index) => {
                   const active = pathname === item.href;
+                  const chapter = item.chapter;
+                  const showChapter = Boolean(chapter && chapter !== group.items[index - 1]?.chapter);
                   return (
                     <li key={item.href}>
+                      {showChapter ? (
+                        <p
+                          className={clsx(
+                            "px-2 pb-1 font-mono text-[9px] uppercase tracking-[0.16em] text-[var(--accent)]",
+                            index === 0 ? "mt-0.5" : "mt-3.5",
+                          )}
+                        >
+                          {chapter}
+                        </p>
+                      ) : null}
                       <Link
                         href={item.href}
                         className={clsx(

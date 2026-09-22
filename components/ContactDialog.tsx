@@ -53,7 +53,7 @@ export function ContactDialog() {
           setStatus("idle");
           setOpen(true);
         }}
-        className="inline-flex shrink-0 items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-[14px] font-medium text-[#07110f] transition-opacity hover:opacity-90 [[data-theme=light]_&]:text-white"
+        className="inline-flex shrink-0 items-center justify-center rounded-full bg-[var(--accent)] px-6 py-3 text-[14px] font-medium text-[var(--on-accent)] transition-opacity hover:opacity-90"
       >
         Send a message
       </button>

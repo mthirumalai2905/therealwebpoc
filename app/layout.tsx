@@ -8,6 +8,7 @@ import { NavPaletteProvider } from "@/components/NavPalette";
 
 const sans = Instrument_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   variable: "--font-sans",
 });
 
@@ -26,6 +27,7 @@ const pixel = Pixelify_Sans({
 const serif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
+  style: ["normal", "italic"],
   variable: "--font-serif",
 });
 

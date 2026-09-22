@@ -95,13 +95,122 @@ const terms: Record<string, { title: string; lines: string[] }> = {
       "That is what makes the link live and bidirectional, unlike a normal hyperlink.",
     ],
   },
+  endpoint: {
+    title: "Endpoint",
+    lines: [
+      "The actual network resource that participates.",
+      "A sensor, actuator, application, device, domain resource, AI agent, or a source you control.",
+      "A person is not a ghost. The ghost is tied to the resource, not to a human avatar.",
+    ],
+  },
+  bins: {
+    title: "Bijective Network System",
+    lines: [
+      "The network model behind RTW: one endpoint maps to one ghost, and that ghost maps back.",
+      "The pairing can be addressed from both sides.",
+      "It is designed to sit on the existing Internet, not replace it.",
+    ],
+  },
+  "primary-service": {
+    title: "Primary service",
+    lines: [
+      "The Morphic service an endpoint belongs to first.",
+      "The endpoint inherits that service’s local data model.",
+      "The service owner keeps the application layer even after the user owns the data layer.",
+    ],
+  },
+  "secondary-service": {
+    title: "Secondary service",
+    lines: [
+      "A service that receives a morphed ghost from another home.",
+      "The owner grants read access. The data is reshaped into this service’s local model.",
+      "The owner can withdraw the morph. Ownership of the ghostId stays with the original holder.",
+    ],
+  },
+  "linking-path": {
+    title: "Linking path",
+    lines: [
+      "The chain of services that collect and reshape live sources.",
+      "Each node only sees its own local context.",
+      "Data is consumed at the ends when the same user owns both ghosts, or when read access has been granted.",
+    ],
+  },
+  ioe: {
+    title: "Internet of Everything",
+    lines: [
+      "Physical devices, virtual resources, software services, AI agents, sensors, actuators, and people in one ecosystem.",
+      "RTW treats those resources as addressable participants, not as pages to fetch.",
+    ],
+  },
+  information: {
+    title: "Data and information",
+    lines: [
+      "In this architecture, data is the live value before it is stored.",
+      "Once it is written into a file or a database, it becomes information: historical, structured, retrieved on request.",
+      "The World Wide Web is strong at information. The Real Time Web is aimed at live data from the source.",
+    ],
+  },
+  "digital-twin": {
+    title: "Ghost and digital twin",
+    lines: [
+      "A digital twin is usually a stored model of a thing, often in one layer.",
+      "A ghost is a live stand-in for one endpoint, and it operates across MAD layers.",
+      "A ghost can be used to build twin-like services. It is not only a copy sitting in a database.",
+    ],
+  },
+  micropage: {
+    title: "Micropage",
+    lines: [
+      "A mini description a service owner publishes of the service and its data model.",
+      "RTW is protocol independent. The schema lives on the micropage.",
+      "If a service does not describe itself, others have no serious basis for linking to it.",
+    ],
+  },
+  kernelizer: {
+    title: "Kernelizer",
+    lines: [
+      "An empty endpoint can receive a self-contained message before the live data stream.",
+      "The program arrives first. The data follows.",
+      "The endpoint does not need a preinstalled application to begin.",
+    ],
+  },
+  normalizer: {
+    title: "Normalizer",
+    lines: [
+      "To link a source and morph it so it fits the local data model.",
+      "The receiving service keeps its own shape. The source does not have to change.",
+    ],
+  },
+  materializer: {
+    title: "Materializer",
+    lines: [
+      "The service can change data after the local model has been updated.",
+      "That change stays in local context. Other nodes do not see how it was done.",
+    ],
+  },
+  heterogeneous: {
+    title: "Heterogeneous network",
+    lines: [
+      "A network not controlled by a single entity.",
+      "Independent participants connect and manage their own domains and services.",
+      "The whole grows as more services are added. No one owns the network itself.",
+    ],
+  },
+  predicate: {
+    title: "Predicate",
+    lines: [
+      "In a link, the predicate is the verb: what the service does with the incoming source.",
+      "It is how data is turned to fit the local model before anyone else links onward.",
+      "The logic stays with the service that defined it.",
+    ],
+  },
 };
 
 function TermCard({ title, lines }: { title: string; lines: string[] }) {
   return (
     <span
       role="tooltip"
-      className="relative block border border-[var(--line)] bg-[var(--bg-elev)] px-4 py-3.5 text-left shadow-[0_16px_40px_rgba(0,0,0,0.28)]"
+      className="relative block border border-[var(--line)] bg-[var(--bg-elev)] px-4 py-3.5 text-left shadow-[var(--elev)]"
     >
       <CornerMarks />
       <span className="relative z-10 block font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--accent)]">

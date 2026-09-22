@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function GlossaryTable() {
   return (
-    <div className="my-6 border border-[var(--line)]">
+    <div className="my-6 border border-[var(--line)] bg-[var(--bg)] shadow-[var(--elev)]">
       <div className="hidden overflow-x-auto md:block">
         <table className="w-full text-left text-[13px]">
           <thead className="border-b border-[var(--line)] font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--muted)]">

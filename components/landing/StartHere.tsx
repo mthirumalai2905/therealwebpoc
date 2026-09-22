@@ -7,19 +7,19 @@ const starts = [
     text: "WWW for documents. RTW for live things. Ghosts, morphing, ownership, MAD.",
   },
   {
-    href: "/docs/introduction",
-    label: "What is RTW?",
-    text: "What the Real Time Web is, in specification language.",
+    href: "/docs/introduction/what-it-can-do",
+    label: "What it can do",
+    text: "Live resources, inherited context, and ownership that can move.",
+  },
+  {
+    href: "/docs/introduction/data-and-information",
+    label: "Data and information",
+    text: "Stored pages for people. Live values from the source for machines.",
   },
   {
     href: "/docs/architecture",
     label: "Architecture",
-    text: "MAD, Ghost Space, and the layers of the network.",
-  },
-  {
-    href: "/blog",
-    label: "Articles",
-    text: "Writing on ownership, presence, and interconnected space.",
+    text: "MAD, Ghost Space, Morphic services, and the bijective pairing.",
   },
 ];
 
@@ -44,7 +44,7 @@ export function StartHere() {
             <Link
               key={item.href}
               href={item.href}
-              className="group border border-[var(--line)] bg-[var(--bg-elev)] p-5 transition-colors hover:border-[var(--accent)]"
+              className="group border border-[var(--line)] bg-[var(--bg-elev)] p-5 shadow-[var(--elev)] transition-colors hover:border-[var(--accent)]"
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--accent)]">{item.label}</p>
               <p className="mt-3 text-[14px] leading-6 text-[var(--muted)]">{item.text}</p>

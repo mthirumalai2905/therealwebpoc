@@ -1,0 +1,55 @@
+---
+title: Ghosts and twins
+description: A ghost is a live stand-in across MAD layers. A digital twin is usually a stored model in one place.
+status: published
+---
+
+The word ghost is easy to misuse. In this architecture it is not a person, not an avatar, and not a cursor in a shared document. A <GlossaryTerm id="ghost">ghost</GlossaryTerm> is the live stand-in for one network resource.
+
+A digital twin is a useful nearby idea, and the source draws a line between the two. A ghost can be used to build twin-like services. It is not only a stored model of a thing.
+
+<LampGhost />
+
+## What the ghost is
+
+When an endpoint can participate, it is paired with a ghost. The pairing is <GlossaryTerm id="bijective">bijective</GlossaryTerm>: one endpoint, one ghost. The ghost provides identity, behavior, and context when an active connection is present.
+
+Whoever owns the <GlossaryTerm id="ghostid">ghostId</GlossaryTerm> owns the data at that endpoint. When a Morphic service is created, the service owner is the primary owner of allocated ghosts. After a user confirms a transfer, the user owns the data layer. The service owner keeps the application layer and may keep a local copy.
+
+The ghost operates in more than one layer at once. Infrastructure, security, applications, and owners can each hold state in relation to the same ghost without taking the other layers. That shared coordination environment is <GlossaryTerm id="ghost-space">Ghost Space</GlossaryTerm>.
+
+<GhostBijection />
+
+## How this differs from a stored twin
+
+A digital twin, as commonly built, is a model kept in a system whether or not the physical thing is talking. It often lives in one layer, usually the data layer, and is updated by copying readings into a store.
+
+A ghost is not required to sit in a database when nothing is happening. The source describes a small footprint: the stand-in is there for the authorized exchange. When the connection ends, the ghost can go quiet or be removed, depending on how the service owner has set that service. Historical values are not natively persisted by the network.
+
+The other difference is depth. A ghost can receive events up and down the MAD stack. Hosting, security, application logic, and the data owner each see the ghost in the role that belongs to their layer. A stored twin that only mirrors the reading cannot give those other parties a lawful place to act without taking the data.
+
+<GlossaryTerm id="digital-twin">Ghost and digital twin</GlossaryTerm>
+
+## What other layers can do
+
+Because the ghost is shared across layers, a service owner can stop a connection to their service without owning the endpoint’s data. A security layer can handle identity without owning the application. A domain owner who controls the full stack of an address space controls ghosts allocated against that space.
+
+None of that turns the ghost into a person. If you own a hundred sensors across several services, you control the data those services receive from your endpoints. How the values are reshaped still belongs to each service.
+
+## Transfer and read access
+
+Two actions are easy to confuse.
+
+Transfer moves the ghostId. The new holder confirms. After confirm, they own the data layer. That is a change of ownership.
+
+<GlossaryTerm id="morph">Morphing</GlossaryTerm> a ghost against a <GlossaryTerm id="secondary-service">secondary service</GlossaryTerm> grants read access and reshapes the value into that service’s local model. The original holder keeps the ghostId. The morph can be withdrawn.
+
+A ghost can also be mapped to an identifier the object already has, such as a hardware address. The source describes that as a way to keep the bijection between the object and its stand-in. How a given implementation issues those identifiers is not specified here.
+
+## What this page will not do
+
+This page will not describe command lists, token lifetimes, or product consoles. Those belong with an implementation. The architecture claim is smaller and stricter: one live stand-in per resource, across independently owned layers, with ownership sitting on the ghostId.
+
+See [Ghost Space](/docs/architecture/ghost-space) for the coordination model. Next in this path is [Bijective network](/docs/architecture/bijective-network).
+
+<EcosystemLink to="architecture" />

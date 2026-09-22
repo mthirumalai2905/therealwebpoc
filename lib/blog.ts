@@ -8,9 +8,46 @@ export type BlogPost = {
   coverAlt: string;
   readingMinutes: number;
   body: string[];
+  author?: string;
+  authorRole?: string;
+  authorImage?: string;
 };
 
 export const posts: BlogPost[] = [
+  {
+    slug: "the-last-it-project",
+    title: "The last IT project",
+    excerpt:
+      "How AI agents, collective intelligence, and the Real Time Web will transform everything we know about software.",
+    date: "2026-02-03",
+    category: "Essay",
+    cover: "/blog/rtw-cyberpunk-08-server-canyon.png",
+    coverAlt: "A dark server canyon with a gold lattice sphere hanging in the centre.",
+    readingMinutes: 12,
+    author: "Paal Kristian Levang",
+    authorRole: "Inventor of AI Network Infrastructure",
+    authorImage: "/blog/paal-kristian-levang.jpg",
+    body: [
+      "How AI agents, collective intelligence, and the Real Time Web will transform everything we know about software.",
+    ],
+  },
+  {
+    slug: "smart-shoes",
+    title: "Smart shoes",
+    excerpt:
+      "A shoe that harvests its own energy, stays online, and inherits the properties of whatever service you attach it to. Even a keyboard.",
+    date: "2015-04-18",
+    category: "Essay",
+    cover: "/blog/smart-shoes-cover.png",
+    coverAlt: "A factory arm on one side, a gold wireframe twin on the other, joined by a single beam.",
+    readingMinutes: 7,
+    author: "Paal Kristian Levang",
+    authorRole: "Inventor of AI Network Infrastructure",
+    authorImage: "/blog/paal-kristian-levang.jpg",
+    body: [
+      "We humans are slipping more and more into the virtual world, and machines are slipping more and more into the physical world.",
+    ],
+  },
   {
     slug: "how-a-user-joins",
     title: "How participation works on the Real Time Web",

@@ -34,7 +34,7 @@ export function BlogIndex({ posts }: { posts: BlogPost[] }) {
             Worlds worth keeping
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-6 text-[var(--muted)]">
-            Twelve frames. Twelve articles. Ownership, presence, and the rooms we want to inhabit.
+            Essays and field notes on ownership, presence, and the rooms we want to inhabit.
           </p>
         </div>
         <div className="flex items-center gap-1 rounded-full border border-[var(--line)] p-1">
@@ -89,6 +89,22 @@ export function BlogIndex({ posts }: { posts: BlogPost[] }) {
                   {featured.title}
                 </h2>
                 <p className="mt-2 line-clamp-2 max-w-2xl text-sm leading-6 text-white/75">{featured.excerpt}</p>
+                {featured.author ? (
+                  <div className="mt-3 flex items-center gap-2">
+                    {featured.authorImage ? (
+                      <Image
+                        src={featured.authorImage}
+                        alt={featured.author}
+                        width={28}
+                        height={28}
+                        className="h-7 w-7 rounded-full object-cover"
+                      />
+                    ) : null}
+                    <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-white/70">
+                      {featured.author}
+                    </p>
+                  </div>
+                ) : null}
               </div>
             </div>
           </article>

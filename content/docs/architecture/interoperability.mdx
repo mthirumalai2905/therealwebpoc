@@ -1,28 +1,45 @@
 ---
 title: Interoperability
-description: Normalizer, materializer, kernelizer, and local data models.
+description: Local models, morphing along a path, and an empty endpoint that can receive a program first.
 status: draft
 ---
 
-In the Semantic Web there is a principle about linking a target data source and turning that data to fit the local data model. By doing so, links and data sources are transformed (morphed) to work with the local data structure. When the local data model becomes a target for linking, the same principle applies for the one who sets up the link.
+<SpecStatus status="draft">
+  Interoperability notes in the source are still marked draft. This page stays at the architectural idea. It does not publish a schema language.
+</SpecStatus>
 
-If every service follows these principles the network as a whole becomes more sustainable to participate with intelligence.
+The Semantic Web has a working habit: when you link to a source, you turn that source to fit your local model. When someone later links to you, they do the same. If every service keeps that habit, the whole remains livable.
 
-In the MAD model this principle is implemented as part of the horizontal distribution model:
-
-- To link a data source and morph the data to fit the local data model is called **normalizer** (to normalize) the data.
-- If the service offers to make changes to the data after the local data model has been updated it is called **materializer** (to materialize).
+MAD uses that habit on a live path, not only on stored documents.
 
 <DataChannelMorph />
 
-## Kernelizer
+## Fit the local model
 
-For endpoints and their ghosts, interoperability is unlimited since kernelizer allows the endpoint or client to receive a self-contained message before the data stream. That allows the application-layer owner to send a message to the receiver before the data-layer stream. The client can build its application and interface without a preinstalled program.
+To link a source and morph it so it fits the local data model is called <GlossaryTerm id="normalizer">normalizer</GlossaryTerm>. The receiving service keeps its own shape. The source does not have to change.
 
-This self-executed client then becomes dynamic and can set up its own protocol and template for managing its own data. It also enables the endpoint to be distributed as an empty container where the program (kernelizer) and data (morphing) will be deployed dynamically at a later stage.
+If the service then offers to change the data after the local model has been updated, that is a <GlossaryTerm id="materializer">materializer</GlossaryTerm>. The change stays in local context. Other nodes do not see how it was done.
+
+The <GlossaryTerm id="predicate">predicate</GlossaryTerm> on a link is the verb in that fit. The logic belongs to the service that defined it. Domain owners keep that logic intact even as others link in. End users keep control of whether the source is available at all.
+
+## An empty endpoint can start
+
+For endpoints and their ghosts, the source describes a further step. <GlossaryTerm id="kernelizer">Kernelizer</GlossaryTerm> lets the endpoint receive a self-contained message before the data stream. The application-layer owner can send a program first. The data-layer stream follows. The client can build its interface without a preinstalled application.
+
+The endpoint can therefore be distributed as an empty container. Program and data arrive later. Ownership of the ghost decides which layer may be configured at runtime.
+
+This is also how the architecture talks about objects that have almost no stack of their own. If they can keep a connection alive and be identified, they can receive intelligence from a service. The limit is still the body of the object.
 
 ## Protocol independence
 
-RTW is protocol independent. The service owner decides their own protocol. Information about how data is structured and the data model description can be found on each micropage. An implementation may support more than one encoding and change format at runtime when a client with domain ownership requests it.
+RTW is protocol independent. The service owner decides their own protocol. Information about how data is structured lives on each <GlossaryTerm id="micropage">micropage</GlossaryTerm>. An implementation may support more than one encoding and change format at runtime when a client with domain ownership requests it.
 
-A micropage is a mini description of the service that the service owner can use to describe the service and data model. Any service provider needs to describe its own data schema availability.
+This site will not publish those encodings. If a service does not describe itself, others have no serious basis for linking to it.
+
+## What interoperability is not
+
+It is not one global data model that everyone must adopt. It is not a central API. It is the rule that each service keeps its own shape, and that a live source is morphed into that shape along the path.
+
+See [Morphic services](/docs/architecture/morphic-services) and [Data channels](/docs/architecture/data-channels).
+
+<EcosystemLink to="architecture" />

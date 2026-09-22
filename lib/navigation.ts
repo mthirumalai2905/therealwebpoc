@@ -4,6 +4,7 @@ export type NavItem = {
   title: string;
   href: string;
   status?: DocStatus;
+  chapter?: string;
 };
 
 export type NavGroup = {
@@ -15,24 +16,29 @@ export const nav: NavGroup[] = [
   {
     title: "Real Time Web",
     items: [
-      { title: "What is Real Time Web?", href: "/docs/introduction" },
-      { title: "Two webs", href: "/docs/introduction/two-webs" },
-      { title: "Why Real Time Web?", href: "/docs/introduction/why" },
-      { title: "How it works", href: "/docs/introduction/how-it-works" },
-      { title: "How participation works", href: "/docs/introduction/onboarding", status: "draft" },
-      { title: "Vision and principles", href: "/docs/introduction/vision" },
-      { title: "Morphic Architecture", href: "/docs/architecture" },
-      { title: "Infrastructure Layer", href: "/docs/architecture/infrastructure" },
-      { title: "Network / Security Layer", href: "/docs/architecture/network" },
-      { title: "Domain / Application Layer", href: "/docs/architecture/domain" },
-      { title: "Resource / Ownership Layer", href: "/docs/architecture/resource" },
-      { title: "Ghost Space", href: "/docs/architecture/ghost-space" },
-      { title: "Identity", href: "/docs/architecture/identity", status: "draft" },
-      { title: "Domains", href: "/docs/architecture/domains", status: "draft" },
-      { title: "Data Channels", href: "/docs/architecture/data-channels", status: "draft" },
-      { title: "Discovery", href: "/docs/architecture/discovery", status: "draft" },
-      { title: "Authentication", href: "/docs/architecture/authentication", status: "draft" },
-      { title: "Interoperability", href: "/docs/architecture/interoperability", status: "draft" },
+      { title: "What is Real Time Web?", href: "/docs/introduction", chapter: "Start here" },
+      { title: "Why Real Time Web?", href: "/docs/introduction/why", chapter: "Start here" },
+      { title: "Two webs", href: "/docs/introduction/two-webs", chapter: "Start here" },
+      { title: "Data and information", href: "/docs/introduction/data-and-information", chapter: "Start here" },
+      { title: "What it can do", href: "/docs/introduction/what-it-can-do", chapter: "Start here" },
+      { title: "How it works", href: "/docs/introduction/how-it-works", chapter: "How it works" },
+      { title: "Vision and principles", href: "/docs/introduction/vision", chapter: "How it works" },
+      { title: "How participation works", href: "/docs/introduction/onboarding", status: "draft", chapter: "How it works" },
+      { title: "Morphic Architecture", href: "/docs/architecture", chapter: "The architecture" },
+      { title: "Infrastructure Layer", href: "/docs/architecture/infrastructure", chapter: "The architecture" },
+      { title: "Network / Security Layer", href: "/docs/architecture/network", chapter: "The architecture" },
+      { title: "Domain / Application Layer", href: "/docs/architecture/domain", chapter: "The architecture" },
+      { title: "Resource / Ownership Layer", href: "/docs/architecture/resource", chapter: "The architecture" },
+      { title: "Ghost Space", href: "/docs/architecture/ghost-space", chapter: "The architecture" },
+      { title: "Ghosts and twins", href: "/docs/architecture/ghosts-and-twins", chapter: "The architecture" },
+      { title: "Bijective network", href: "/docs/architecture/bijective-network", chapter: "The architecture" },
+      { title: "Morphic services", href: "/docs/architecture/morphic-services", chapter: "The architecture" },
+      { title: "Data Channels", href: "/docs/architecture/data-channels", status: "draft", chapter: "The architecture" },
+      { title: "Identity", href: "/docs/architecture/identity", status: "draft", chapter: "Still open" },
+      { title: "Domains", href: "/docs/architecture/domains", status: "draft", chapter: "Still open" },
+      { title: "Discovery", href: "/docs/architecture/discovery", status: "draft", chapter: "Still open" },
+      { title: "Authentication", href: "/docs/architecture/authentication", status: "draft", chapter: "Still open" },
+      { title: "Interoperability", href: "/docs/architecture/interoperability", status: "draft", chapter: "Still open" },
     ],
   },
   {
@@ -78,11 +84,32 @@ export const nav: NavGroup[] = [
   },
 ];
 
+export function getAdjacentDocs(pathname: string): {
+  prev?: NavItem;
+  next?: NavItem;
+} {
+  const group =
+    nav.find((entry) => entry.items.some((item) => item.href === pathname)) ??
+    (pathname === "/docs" ? nav[0] : undefined);
+  if (!group) return {};
+
+  if (pathname === "/docs") {
+    return { next: group.items[0] };
+  }
+
+  const index = group.items.findIndex((item) => item.href === pathname);
+  if (index < 0) return {};
+  return {
+    prev: group.items[index - 1],
+    next: group.items[index + 1],
+  };
+}
+
 export const explorePaths = [
   {
-    href: "/docs/architecture",
+    href: "/docs/introduction",
     label: "Real Time Web",
-    text: "Understand how the Real Time Web is structured.",
+    text: "Start with what it is, then why, then the two webs.",
   },
   {
     href: "/docs/architecture/identity",

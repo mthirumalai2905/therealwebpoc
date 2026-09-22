@@ -9,7 +9,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
           <DocsNav />
         </div>
       </aside>
-      <div className="min-w-0 flex-1">
+          <div className="min-w-0 flex-1 bg-[var(--bg-elev)]">
         <DocsBrowseBar />
         {children}
       </div>

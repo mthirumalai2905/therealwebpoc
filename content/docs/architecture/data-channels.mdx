@@ -1,19 +1,49 @@
 ---
 title: Data Channels
-description: Linking paths that collect live sources into a channel of data.
+description: A linking path that collects live sources into one user’s local ghost.
 status: draft
 ---
 
-Data channels is a way to explain how a linking path is used to collect various data sources into a channel of data.
+<SpecStatus status="draft">
+  Data channels are described in the architecture notes. Protocol details, naming, and discovery around a channel remain unanswered in the source.
+</SpecStatus>
 
-One example: a service that collects temperature from various manufacturers of temperature sensors. By linking to various temperature sensor services you collect potential temperature readings from different sensors that update their local ghosts.
+A <GlossaryTerm id="data-channel">data channel</GlossaryTerm> is how a <GlossaryTerm id="linking-path">linking path</GlossaryTerm> collects live sources into a channel of data associated with one user’s ghost in a local service.
+
+The picture in the source is ordinary. You create a service that wants temperature. Several makers already offer temperature services. You link to them. Each sensor updates its own ghost. For a given person, the readings that belong to that person gather in the data channel of their primary ghost in your service.
 
 <DataChannelMorph />
 
-When a service owner is morphing a user's ghost into his primary service, the data that is collected for that specific user is available in the data channel of the user primary ghost of the local service. Since the user has ownership in both ends of the network value chain the data can be consumed by the endpoint that is bijective connected to the specific ghosts.
+## What has to be true before anything arrives
 
-Only data with a valid morphed ghost is to receive data.
+Linking is not enough. The path can be long. Each node only works on local structures. How a value was morphed is unknown outside that service.
 
-The linking path can be complex and only when the ghost at the endpoints is owned by the same user will the data be consumed and received at the endpoint.
+Data is consumed at an endpoint when the ghosts at the ends are owned by the same user, or the receiver has approved read access. Only data with a valid morphed ghost is received.
 
-Each service or node in the linking path operates on local data structures and is only able to persist and access data at local context. How data is morphed or used in the linking path is unknown outside the local service or domain. There is no centralized API or database in use when building RTW services.
+Same user usually means one person and two of their endpoints. It does not mean two different people become one person because they share an implementation. Two people do not open each other’s readings by default. One of them morphs (read) or transfers (ownership).
+
+When a service owner morphs a user’s ghost into a primary service, the data collected for that user is available in that user’s channel on the local service. The user has a presence at both ends of the value chain. The endpoint that is bijectively connected to those ghosts can consume the result.
+
+## The channel is personal
+
+Two people can use the same service address and not receive the same values. Each listens through their own ghosts. The local model can be shared. The origin is not.
+
+That is how the architecture avoids a central dump that every client polls. The network does not natively store the channel. A service may persist what it has been granted, in the local shape it understands. That is optional and local.
+
+If nobody is listening, the value does not need to travel. That is a different cost from a store that answers whether or not the reading changed.
+
+## Several sources, one local shape
+
+A channel can gather more than one maker. The receiving service still has one local model. Each incoming source is morphed to fit that model. A sensor that reports in one unit does not force every other service to change. The <GlossaryTerm id="normalizer">normalizer</GlossaryTerm> does the fit. If the service then changes the value after absorb, that is a <GlossaryTerm id="materializer">materializer</GlossaryTerm>.
+
+The owner of the original source can withdraw a morph. That source goes dark in the secondary channel. Other sources on the same channel can keep arriving. The primary home of the withdrawn source keeps working.
+
+## What a channel is not
+
+It is not a public firehose. It is not a search inbox of stored events. It is not a chat room.
+
+It is a live path, for a user who owns or has been granted the ends, into a local ghost whose service has described its own shape.
+
+See [Morphic services](/docs/architecture/morphic-services) for primary and secondary homes, or [What it can do](/docs/introduction/what-it-can-do) for the temperature and room stories.
+
+<EcosystemLink to="architecture" />

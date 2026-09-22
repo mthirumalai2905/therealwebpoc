@@ -19,7 +19,7 @@ export const glossary: Term[] = [
     id: "morphic-service",
     term: "Morphic service",
     def: "An application-layer service on MAD. When it is created, the service owner is the primary owner of allocated ghosts. After a user confirms a transfer, the user owns the data layer; the service owner keeps the application layer.",
-    href: "/docs/architecture",
+    href: "/docs/architecture/morphic-services",
   },
   {
     id: "domain",
@@ -54,7 +54,8 @@ export const glossary: Term[] = [
   {
     id: "morph",
     term: "Morphing",
-    def: "Transforming data along the linking path to fit a local data model. Each service operates only on local data structures.",
+    def: "Transforming data along the linking path to fit a local data model. Each service operates only on local data structures. Morphing a ghost into a secondary service also grants read access that can be withdrawn.",
+    href: "/docs/architecture/morphic-services",
   },
   {
     id: "normalizer",
@@ -78,6 +79,7 @@ export const glossary: Term[] = [
     id: "micropage",
     term: "Micropage",
     def: "A mini description of a service and its data model. Service providers describe their own data schema availability here.",
+    href: "/docs/architecture/morphic-services",
   },
   {
     id: "ghostid",
@@ -93,6 +95,61 @@ export const glossary: Term[] = [
     id: "heterogeneous",
     term: "Heterogeneous network",
     def: "A network not controlled by a single entity. It evolves as independent participants connect and manage their own domains and services.",
+    href: "/docs/introduction/what-it-can-do",
+  },
+  {
+    id: "endpoint",
+    term: "Endpoint",
+    def: "The actual network resource that participates: a sensor, actuator, application, device, domain resource, AI agent, or a source you control. The ghost is tied to the resource, not to a person.",
+    href: "/docs/architecture/ghost-space",
+  },
+  {
+    id: "bins",
+    term: "Bijective Network System (BiNS)",
+    def: "The network model behind RTW. Each participating endpoint has one corresponding ghost, uniquely addressable from both sides.",
+    href: "/docs/architecture/bijective-network",
+  },
+  {
+    id: "primary-service",
+    term: "Primary service",
+    def: "The Morphic service an endpoint belongs to first. The endpoint inherits that service’s local data model.",
+    href: "/docs/architecture/morphic-services",
+  },
+  {
+    id: "secondary-service",
+    term: "Secondary service",
+    def: "A service that receives a morphed ghost. The owner grants read access. The data is reshaped into this service’s local model and can be withdrawn.",
+    href: "/docs/architecture/morphic-services",
+  },
+  {
+    id: "linking-path",
+    term: "Linking path",
+    def: "The chain of services that collect and reshape live sources. Each node only sees its own local context.",
+    href: "/docs/architecture/data-channels",
+  },
+  {
+    id: "ioe",
+    term: "Internet of Everything",
+    def: "Physical devices, virtual resources, software services, AI agents, sensors, actuators, and people participating in the same connected ecosystem.",
+    href: "/docs/introduction",
+  },
+  {
+    id: "information",
+    term: "Data and information",
+    def: "Data is the live value before it is stored. Once written into a file or database it becomes information: historical, structured, retrieved on request.",
+    href: "/docs/introduction/data-and-information",
+  },
+  {
+    id: "digital-twin",
+    term: "Ghost and digital twin",
+    def: "A digital twin is usually a stored model of a thing. A ghost is a live stand-in for one endpoint and operates across MAD layers.",
+    href: "/docs/architecture/ghosts-and-twins",
+  },
+  {
+    id: "predicate",
+    term: "Predicate",
+    def: "In a link, the predicate is the verb: what the service does with the incoming source so the result fits the local model.",
+    href: "/docs/architecture/morphic-services",
   },
 ];
 

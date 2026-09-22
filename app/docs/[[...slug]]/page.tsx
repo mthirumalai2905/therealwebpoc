@@ -4,6 +4,7 @@ import { getDoc, getDocSlugs } from "@/lib/docs";
 import { mdxComponents } from "@/components/mdx";
 import { SpecStatus } from "@/components/SpecStatus";
 import { OnThisPage } from "@/components/OnThisPage";
+import { DocPager } from "@/components/DocPager";
 
 type Params = { slug?: string[] };
 
@@ -29,6 +30,7 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
   if (!doc) notFound();
 
   const status = doc.frontmatter.status ?? "published";
+  const pathname = slug && slug.length > 0 ? `/docs/${slug.join("/")}` : "/docs";
 
   return (
     <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_220px]">
@@ -45,6 +47,7 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
             <p className="lead">{doc.frontmatter.description}</p>
           ) : null}
           <MDXRemote source={doc.content} components={mdxComponents} />
+          <DocPager pathname={pathname} />
         </div>
       </article>
       <aside className="hidden border-l border-[var(--line)] xl:block">

@@ -1,0 +1,51 @@
+---
+title: Data and information
+description: The World Wide Web is strong at stored information. The Real Time Web is aimed at live data from the source.
+status: published
+---
+
+There is a distinction this architecture depends on. If you treat the two words as synonyms, the rest of the model will look like a faster website. It is not.
+
+<GlossaryTerm id="information">Information</GlossaryTerm> is structured historical data. It has already been written into a file, a page, or a database. A person can retrieve it later, at a human pace, and read it in a chosen context. That is what the World Wide Web does well. You ask for a document. A copy comes back. The page you read may have been assembled from many underlying sources. Sometimes the owner of a page does not know what you are looking at. That is part of the beauty of the existing Web.
+
+<GlossaryTerm id="information">Data</GlossaryTerm>, in this architecture, is the live value before it is stored. It exists at the source. A temperature reading that has not yet been written down is data. The same reading, copied into a table and requested an hour later, is information. Machines that act on a changing world need the first. People who look things up need the second.
+
+<DataVsInfo />
+
+## Why the existing Web stops at information
+
+A hyperlink is a pointer toward stored content: text, images, documents, video. Anyone can link to the past, the present, and the future of that content without installing software or agreeing a session. That is why the World Wide Web became the largest information network in the world.
+
+When you want the value as it changes, the usual answer is a custom interface. You have to know who you are talking to. You miss the underlying sources that a hyperlink would have followed. Each pairing often copies the value into another store. After a few hops, several systems hold a version of the same reading, and it is no longer obvious who has the freshest one. Context decides that, and context is what gets lost when the value is copied away from the source.
+
+The Real Time Web does not ask the World Wide Web to do that job. It sits beside it. Documents stay. Live sources get their own kind of relationship.
+
+## Live data stays with the source
+
+RTW is designed so that a value remains associated with the resource and <GlossaryTerm id="domain">domain</GlossaryTerm> where it was generated. The owner decides whether the resource is available, who may use it, and under which conditions. Applications may process, transform, and combine authorized data into new contexts. The application provider controls that transformation. The owner of the source keeps control of access.
+
+The network itself does not natively store data. A service may attach a database to its <GlossaryTerm id="ghost">local ghosts</GlossaryTerm> after it has received a morph. That local copy is the service’s own context. It is not a required central store in the middle of the path.
+
+This is why the architecture can talk about privacy without adding a product policy on top. If the network does not persist the value, there is less to take from the middle. Persistence is a choice made by a service that has already been granted access, in the shape that service understands.
+
+## Data moves when someone is listening
+
+A linking path can be long. Each service on that path works only on its local structures. How the value was reshaped is unknown outside that service. The path describes the relationship. It does not, by itself, move anything.
+
+Data is consumed at an endpoint when the ghosts at the ends are owned by the same user, or the receiver has approved read access. Same user usually means one person and two of their endpoints: a sensor and a display, a fridge and a list, a lamp and a scheduler. It does not mean two different people are treated as one.
+
+If nobody is listening, the value does not need to travel. That is a different load from a store that must answer every request whether or not the reading has changed.
+
+## Historical data can become live again
+
+The source is not only a sensor. A store of older values can generate new data when something processes it. An analytic service that produces a fresh result from earlier input is itself a live source. The architecture still treats that result as data at the moment it is produced. The older table remains information.
+
+What matters is origin. If you cannot identify the source, you cannot price it, grant it, or withdraw it. Copies without origin lose value in a machine network because nobody can say which one is current.
+
+## What this distinction is for
+
+Humans need information. We cannot process a raw stream at machine speed, so we structure it and look it up. Machines that coordinate with the physical world need the value while it is still data. The World Wide Web already serves the first need. The Real Time Web is the architecture proposed for the second.
+
+The lamp walkthrough is in [Two webs](/docs/introduction/two-webs). Next in this path is [What it can do](/docs/introduction/what-it-can-do).
+
+<EcosystemLink to="architecture" />

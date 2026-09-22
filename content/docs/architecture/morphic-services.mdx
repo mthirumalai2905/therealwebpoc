@@ -1,0 +1,68 @@
+---
+title: Morphic services
+description: An application on MAD that allocates ghosts, keeps its own shape, and can inherit a source from another home.
+status: published
+---
+
+A <GlossaryTerm id="morphic-service">Morphic service</GlossaryTerm> is an application-layer service on MAD. It allocates ghosts. It publishes a local data model. It can link to other services and reshape what arrives so the local model stays intact.
+
+The name comes from biology: morphogenesis, organizing fields. In this architecture it means a system can inherit behavior by tuning into the right live channel. The source compares that to changing a radio frequency. You are not fetching a stored file. You are receiving a stream whose content is determined by your ownership and by the services on the path.
+
+<ServiceSchema />
+
+## Primary home, secondary context
+
+An endpoint belongs first to a <GlossaryTerm id="primary-service">primary service</GlossaryTerm>. It inherits that service’s local model. Sensors that leave a factory with one job still have a home they can speak to.
+
+A <GlossaryTerm id="secondary-service">secondary service</GlossaryTerm> is a different home. The owner morphs the ghost against it. Two things happen at once:
+
+1. The secondary service receives read access. The owner can withdraw it.
+2. The data is reshaped into the secondary service’s local model. How it was reshaped is unknown outside that service.
+
+The sensor does not have to change. A temperature service can keep Celsius. A second service can work in another local shape. Each node only sees its own context.
+
+<MorphToSecondary />
+
+<InheritContext />
+
+## What the service owner keeps
+
+When the service is created, the service owner is the primary owner of allocated ghosts. When a user registers and confirms a transfer, the user owns the data layer. The application layer stays with the service owner. The service owner may keep a local copy.
+
+<GlossaryTerm id="ghost-zero">Ghost id zero</GlossaryTerm> is the service itself. Transferring that handle transfers the service, independent of who owns data layers on other ghosts.
+
+The service owner also decides the protocol. RTW is described as protocol independent. The public description of the model lives on a <GlossaryTerm id="micropage">micropage</GlossaryTerm>: a mini sheet for the service and its schema. If a service does not describe what it offers, other services have no serious basis for linking to it. The source treats that as a market check, not as a central registry.
+
+## Links are sentences
+
+Services connect with links. The source uses the Semantic Web picture of a sentence: a subject, a <GlossaryTerm id="predicate">predicate</GlossaryTerm>, and an object. The subject is the service and its model. The object is the source being linked. The predicate is the verb: what this service does to the incoming value so the local model stays true.
+
+You do not need to learn a notation to use the idea. If every service fits what it links into its own shape, the next service along the path can do the same. The network as a whole stays livable. A service that keeps breaking its model will simply be linked to less.
+
+A <GlossaryTerm id="normalizer">normalizer</GlossaryTerm> is that fit on the way in. A <GlossaryTerm id="materializer">materializer</GlossaryTerm> is a further change after the local model has been updated. Both stay local.
+
+## Channels, not dumps
+
+A <GlossaryTerm id="data-channel">data channel</GlossaryTerm> is how a linking path collects sources into one user’s local ghost. The canonical picture is temperature from several makers, gathered for one person. Only data with a valid morphed ghost is received. Both ends need a user who owns the data or has been granted read access.
+
+The channel is personal. Two people can connect to the same service URI and receive different values, because each is listening through their own ghosts. The structure can be the same. The origin is not.
+
+<DataChannelMorph />
+
+## What can change at runtime
+
+The local model is not required to be frozen for the life of a connection. The source describes services that can change structure while clients remain connected. The connection point stays. The shape of what arrives can change.
+
+That is a large claim and a draft-heavy area. This page will not turn it into a click path. The architectural point is that identity and relationship can remain while access rules and transformation logic evolve. See [Interoperability](/docs/architecture/interoperability).
+
+## What this is not
+
+A Morphic service is not a shared document everyone is editing. It is not a paste that matches formatting. It is not an API you must adopt before you can speak.
+
+It is an application on four independently owned layers, with ghosts for the endpoints that use it, and links that reshape live sources into a local model the owner of that service controls.
+
+## Keep reading
+
+Next in this path is [Data channels](/docs/architecture/data-channels).
+
+<EcosystemLink to="architecture" />

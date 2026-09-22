@@ -36,12 +36,20 @@ export default function HomePage() {
             >
               Explore Real Time Web
             </Link>
-            <Link
-              href="/docs/introduction/two-webs"
-              className="mt-3 font-mono text-[11px] text-white/40 hover:text-white/70 sm:mt-4"
-            >
-              Two webs walkthrough →
-            </Link>
+            <div className="mt-3 flex flex-col items-center gap-2 sm:mt-4">
+              <Link
+                href="/docs/introduction/two-webs"
+                className="font-mono text-[11px] text-white/40 hover:text-white/70"
+              >
+                Two webs walkthrough →
+              </Link>
+              <Link
+                href="/docs/introduction/what-it-can-do"
+                className="font-mono text-[11px] text-white/40 hover:text-white/70"
+              >
+                What it can do →
+              </Link>
+            </div>
           </div>
         </div>
       </section>

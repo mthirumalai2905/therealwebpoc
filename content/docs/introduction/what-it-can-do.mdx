@@ -1,0 +1,75 @@
+---
+title: What it can do
+description: High-level stories of live resources, inherited context, and ownership that can move.
+status: published
+---
+
+The Real Time Web is a network architecture. It is not a single application. The stories below are teaching cases from the source. They show what the architecture is for. They are not product screens, and they are not a path to join anything.
+
+The guiding line from the brand work is simple: let anyone connect anything to the present. The present, here, means a live relationship, not a stored page about a thing.
+
+<ConceptRtw />
+
+## Connect a thing without rewriting the thing
+
+Take a lamp from a shop. It has a light and a switch. That is its body. You bring it home and look for a service that can turn it on from somewhere else. You register the lamp against that service. The lamp sends and receives through a <GlossaryTerm id="ghost">ghost</GlossaryTerm> that stands for that one lamp. The service supplies the intelligence. The lamp supplies the body.
+
+A refrigerator with a camera can do the same job in another context. Register it against a service that watches what leaves the shelf. While you are in a store, that service can tell you the shelf is empty. The fridge did not become a shopping application. It stayed a fridge. The service used a live reading you authorized.
+
+The longer lamp walkthrough, with ghosts, morphing, and ownership, lives in [Two webs](/docs/introduction/two-webs).
+
+## One sensor, many contexts
+
+A temperature sensor only reports a number. That is all its body can do. In a <GlossaryTerm id="heterogeneous">heterogeneous network</GlossaryTerm>, that number can be used in more than one place without changing the sensor.
+
+Morph the sensor’s ghost into a light service and the same reading can stand in for a switch: lights on at one threshold, off at another. Morph it into a heat service and it regulates a room. Withdraw the morph and those services lose the reading. The sensor still reads. Ownership of the <GlossaryTerm id="ghostid">ghostId</GlossaryTerm> did not move.
+
+<InheritContext />
+
+The limit is always the body. An object with only a temperature element cannot grow arms. It can inherit context from any <GlossaryTerm id="morphic-service">Morphic service</GlossaryTerm> the owner authorizes. When more services exist, the same modest object can take part in more stories. The collective gets more useful because the parts stay independently owned.
+
+## Intelligence arrives at the endpoint
+
+An endpoint does not have to ship with a finished program. In MAD, a connection can be kept alive by something that has almost no logic of its own. The application layer can send a self-contained message first. That step is called <GlossaryTerm id="kernelizer">kernelizer</GlossaryTerm>. The live stream follows after. An empty container can receive its program, then its data, without a preinstalled client.
+
+This is how the architecture talks about “dumb” objects becoming useful on the network. The object is identified. It is paired with a ghost. The service describes itself. Behavior can change while the connection is still open. The owner of the ghost decides which layer may be configured.
+
+## A room as a linking path
+
+The partner material uses a living room as a picture, not as a product. A chair, a lamp, a bowl, a radio, and an application can each be a service. The application links to the others. After the links exist, the live values still travel from a specific sensor to a specific application instance owned by the same person.
+
+That is the scale rule. Thousands of chairs can be made. Millions of applications can be open. Data moves for a pair when ownership, or granted read access, matches at both ends. The service providers do not have to run a session table for every pairing. They describe services and links. The <GlossaryTerm id="linking-path">linking path</GlossaryTerm> does the rest for the people who actually own the ends.
+
+<DataChannelMorph />
+
+## Ownership can move with the object
+
+If you leave a home and the washing machine, the lights, and the door stay behind, the interesting question is not how to reinstall each application. It is who owns the ghosts.
+
+A ghost can be transferred. The new holder confirms. After confirm, that person owns the data layer at those endpoints and chooses which services to morph them into. The old holder no longer controls those readings. That is a change of ownership, not a casual share.
+
+Read access is the other action. Morphing a ghost into a secondary service grants a reading that can be withdrawn. The ghostId stays with the owner. Two different people do not open each other’s data because they share an implementation.
+
+<OwnershipGate />
+
+## Past, present, and services that do not exist yet
+
+A service can be described before the data for it exists. The source calls this useful when you want to see whether others will link to a product that is not yet shipping. The service waits. When a live source appears, the channel can start.
+
+The same idea works backward. A light application written for one kind of lamp can keep working when a later lamp appears, if the new lamp can be morphed into the same local model. The application does not have to be rewritten for each manufacturer. Each service keeps its own shape. The <GlossaryTerm id="normalizer">normalizer</GlossaryTerm> fits the incoming source to that shape.
+
+This is the position the brand work aimed for: universal building blocks. Not one vendor’s interface that everyone else must adopt.
+
+## Machines use this the way people use the Web
+
+People follow hyperlinks through information. Machines need a place to exchange live values, change context at runtime, and keep ownership answerable. The source describes RTW as that place: an <GlossaryTerm id="ioe">Internet of Everything</GlossaryTerm> network that can sit next to the World Wide Web.
+
+AI agents in the source are participants, not the product. A service can have one or several agents. They work on the live channel the owner authorized. The network does not become a single mind owned by one company. It grows as independent domains and services are added.
+
+Anyone can develop an implementation of MAD or the Real Time Web. This site does not designate a vendor and does not onboard anyone.
+
+## Keep reading
+
+Next in this path is [How it works](/docs/introduction/how-it-works). The pairing and the services come after that, under Morphic Architecture.
+
+<EcosystemLink to="architecture" />
