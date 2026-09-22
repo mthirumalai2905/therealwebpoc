@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const starts = [
   {
+    href: "/docs/introduction/two-webs",
+    label: "Two webs",
+    text: "WWW for documents. RTW for live things. Ghosts, morphing, ownership, MAD.",
+  },
+  {
     href: "/docs/introduction",
     label: "What is RTW?",
     text: "What the Real Time Web is, in specification language.",
-  },
-  {
-    href: "/docs/introduction/why",
-    label: "Why RTW?",
-    text: "Why live resources need a different architecture than documents.",
   },
   {
     href: "/docs/architecture",

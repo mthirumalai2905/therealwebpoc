@@ -12,6 +12,13 @@ import { MessageExample } from "@/components/diagrams/MessageExample";
 import { ConceptRtw } from "@/components/diagrams/ConceptRtw";
 import { OnboardingFlow } from "@/components/diagrams/OnboardingFlow";
 import { NetworkGraph } from "@/components/diagrams/NetworkGraph";
+import { Figure } from "@/components/Figure";
+import { TwoWebsCompare } from "@/components/diagrams/TwoWebsCompare";
+import { LampGhost } from "@/components/diagrams/LampGhost";
+import { ServiceSchema } from "@/components/diagrams/ServiceSchema";
+import { MorphToSecondary } from "@/components/diagrams/MorphToSecondary";
+import { OwnershipGate } from "@/components/diagrams/OwnershipGate";
+import { MadLayerTable } from "@/components/diagrams/MadLayerTable";
 import { GlossaryTerm } from "@/components/Glossary";
 import { GlossaryTable } from "@/components/GlossaryTable";
 
@@ -45,6 +52,13 @@ export const mdxComponents: MDXRemoteProps["components"] = {
   ConceptRtw,
   OnboardingFlow,
   NetworkGraph,
+  Figure,
+  TwoWebsCompare,
+  LampGhost,
+  ServiceSchema,
+  MorphToSecondary,
+  OwnershipGate,
+  MadLayerTable,
   GlossaryTerm,
   GlossaryTable,
 };

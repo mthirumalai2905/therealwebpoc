@@ -30,6 +30,7 @@ export function useNavPalette() {
 }
 
 const pages = [
+  { title: "Two webs", href: "/docs/introduction/two-webs", trail: "Documentation" },
   { title: "How participation works", href: "/docs/introduction/onboarding", trail: "Documentation" },
   { title: "Journal", href: "/blog", trail: "Site" },
   { title: "Architecture", href: "/docs/architecture", trail: "Documentation" },
