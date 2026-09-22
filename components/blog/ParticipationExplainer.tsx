@@ -5,6 +5,7 @@ import { GhostBijection } from "@/components/diagrams/GhostBijection";
 import { DataChannelMorph } from "@/components/diagrams/DataChannelMorph";
 import { TermHint } from "@/components/TermHint";
 import { Figure } from "@/components/Figure";
+import { ContributorInvite } from "@/components/blog/ContributorInvite";
 
 function Faq({ question, children }: { question: string; children: React.ReactNode }) {
   return (
@@ -215,6 +216,7 @@ export function ParticipationExplainer() {
           Same map in the documentation →
         </Link>
       </p>
+      <ContributorInvite />
       <div className="mt-14 border-t border-[var(--line)] pt-8">
         <Link href="/blog" className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent)]">
           ← All articles

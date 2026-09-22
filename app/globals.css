@@ -56,6 +56,40 @@ body[data-theme="light"] {
 
 html {
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  scroll-padding-top: calc(3.5rem + env(safe-area-inset-top) + 0.75rem);
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--muted) 38%, transparent) transparent;
+}
+
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--muted) 34%, transparent);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--ink) 36%, transparent);
+  background-clip: padding-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.lenis) {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

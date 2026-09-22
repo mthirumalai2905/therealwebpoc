@@ -7,6 +7,7 @@ import { CornerMarks } from "@/components/CornerMarks";
 import { ParticipationExplainer } from "@/components/blog/ParticipationExplainer";
 import { LastITProject } from "@/components/blog/LastITProject";
 import { SmartShoes } from "@/components/blog/SmartShoes";
+import { ContributorInvite } from "@/components/blog/ContributorInvite";
 
 type Params = { slug: string };
 
@@ -88,6 +89,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
               {paragraph}
             </p>
           ))}
+          <ContributorInvite />
           <div className="mt-14 border-t border-[var(--line)] pt-8">
             <Link href="/blog" className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent)]">
               ← All articles

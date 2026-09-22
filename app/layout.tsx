@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { NavPaletteProvider } from "@/components/NavPalette";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 const sans = Instrument_Sans({
   subsets: ["latin"],
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen font-sans antialiased">
+        <SmoothScroll>
         <ThemeProvider>
           <NavPaletteProvider>
             <a
@@ -87,6 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SiteFooter />
           </NavPaletteProvider>
         </ThemeProvider>
+        </SmoothScroll>
       </body>
     </html>
   );

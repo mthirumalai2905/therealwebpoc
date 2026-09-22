@@ -5,6 +5,7 @@ import { Figure } from "@/components/Figure";
 import { ShoeInherit } from "@/components/diagrams/ShoeInherit";
 import { ShoeKeyboard } from "@/components/diagrams/ShoeKeyboard";
 import { ShoeManyServices } from "@/components/diagrams/ShoeManyServices";
+import { ContributorInvite } from "@/components/blog/ContributorInvite";
 
 export function SmartShoes() {
   return (
@@ -160,6 +161,8 @@ export function SmartShoes() {
         <TermHint id="mad">Morphic Architecture Design</TermHint>. Anyone can develop an
         implementation. This page is not a product signup.
       </p>
+
+      <ContributorInvite />
 
       <div className="mt-14 border-t border-[var(--line)] pt-8">
         <Link href="/blog" className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent)]">
