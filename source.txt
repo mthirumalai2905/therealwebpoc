@@ -58,9 +58,11 @@ Public copy rule for RealTimeWeb.org:
 
 - RealTimeWeb.org is a standalone nonprofit site. It explains what RTW is, why it exists, and introduces MAD.
 - It is not owned by a company. Anyone can develop an implementation of MAD or RTW.
-- Public pages on RealTimeWeb.org must not mention Morph.Space or Synx.
+- Public pages may explain MAD in full at the conceptual level.
+- Synx may be named at high level only: a known toolchain to configure, administer, secure, and maintain RTW services. Not the architecture. Not the only implementation.
+- Do not publish low-level Synx detail here: tokens, BIOS, protocols, APIs, screens, or click paths.
+- Do not promote Morph.Space. No outbound product links, join buttons, lead capture, or marketplace copy.
 - Morph.Space and synx.tools may reference RealTimeWeb.org. synx.tools may describe the model used in that implementation.
-- No join button, lead capture, or product funnel on this site.
 - MAD terms (Morphic Architecture Design, morphing, Morphic service) stay. They are architecture language, not product names.
 
 ### Recommended main section: Introduction to the Real-Time Web
@@ -680,7 +682,7 @@ Avoid duplicating long answers across the three locations. Give each question a 
 - Account, marketplace and onboarding questions belong on Morph.Space.
 - Configuration and operational questions belong in Synx documentation.
 
-Public RealTimeWeb.org pages still must not mention Morph.Space or Synx. Those other sites may link to RTW.
+Public RealTimeWeb.org pages may name Synx at high level only. They must not promote Morph.Space or publish low-level Synx procedures. Those other sites may link to RTW.
 
 ## Suggested implementation order
 

@@ -8,19 +8,16 @@ import { clsx } from "clsx";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const links = [
-  { href: "/docs/introduction", label: "Documentation" },
-  { href: "/blog", label: "Journal" },
-  { href: "/docs/architecture", label: "Architecture" },
-  { href: "/docs/specification", label: "Specification" },
-  { href: "/docs/reference/glossary", label: "Glossary" },
+  { href: "/docs", label: "Real Time Web", match: ["/docs/introduction", "/docs/architecture", "/docs"] },
+  { href: "/blog", label: "Articles", match: ["/blog"] },
+  { href: "/docs/implementation", label: "Implementation", match: ["/docs/implementation"] },
+  { href: "/docs/reference/glossary", label: "Summary", match: ["/docs/reference/glossary"] },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const onLanding = pathname === "/";
-  const onDocs = pathname.startsWith("/docs");
-  const onBlog = pathname.startsWith("/blog");
   const overHero = onLanding;
 
   useEffect(() => {
@@ -42,11 +39,15 @@ export function SiteHeader() {
   }, [menuOpen]);
 
   return (
+    <>
+    {!onLanding ? (
+      <div className="h-[calc(3.5rem+env(safe-area-inset-top))]" aria-hidden />
+    ) : null}
     <header
       className={
         onLanding
           ? "absolute inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)]"
-          : "sticky top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_86%,transparent)] pt-[env(safe-area-inset-top)] backdrop-blur-md"
+          : "fixed inset-x-0 top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_86%,transparent)] pt-[env(safe-area-inset-top)] backdrop-blur-md"
       }
     >
       <div className="mx-auto flex h-14 max-w-[1400px] items-center justify-between px-4 md:px-6">
@@ -57,30 +58,40 @@ export function SiteHeader() {
               (overHero ? "text-white/70" : "text-[var(--accent)]")
             }
           >
-            REALTIMEWEB.ORG
+            REAL TIME WEB
           </span>
         </Link>
         <nav
           className={
-            "hidden items-center gap-6 text-[13px] md:flex " +
-            (overHero ? "text-white/55" : "text-[var(--muted)]")
+            "relative z-10 hidden shrink-0 items-center gap-5 text-[13px] whitespace-nowrap md:flex lg:gap-6 " +
+            (overHero ? "text-white/55" : "text-muted")
           }
         >
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={clsx(
-                "hover:text-[var(--ink)]",
-                !onLanding &&
-                  ((link.href === "/blog" && onBlog) ||
-                    (link.href !== "/blog" && onDocs && pathname.startsWith(link.href))) &&
-                  "text-[var(--ink)]",
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {links.map((link) => {
+            const active =
+              !onLanding &&
+              link.match.some((prefix) =>
+                prefix === "/docs" ? pathname === "/docs" : pathname.startsWith(prefix),
+              );
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={clsx(
+                  "shrink-0",
+                  overHero
+                    ? active
+                      ? "text-white"
+                      : "hover:text-white"
+                    : active
+                      ? "text-accent"
+                      : "hover:text-ink",
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <ThemeToggle light={overHero} />
         </nav>
         <div className="flex shrink-0 items-center gap-2 md:hidden">
@@ -136,5 +147,6 @@ export function SiteHeader() {
         </div>
       ) : null}
     </header>
+    </>
   );
 }

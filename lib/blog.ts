@@ -15,18 +15,16 @@ export const posts: BlogPost[] = [
     slug: "how-a-user-joins",
     title: "How participation works on the Real Time Web",
     excerpt:
-      "Ghosts, morphing, and live channels are the relationship. This site explains the architecture. Anyone can implement it.",
+      "MAD, ghosts, morphing, and live channels at high level. Synx is a known toolchain, not a product pitch. No account is created here.",
     date: "2026-09-18",
     category: "Field notes",
     cover: "/join-hands.png",
     coverAlt: "Two pixelated hands reaching toward each other across a dark field.",
-    readingMinutes: 8,
+    readingMinutes: 10,
     body: [
-      "People keep asking where to create an account. Not here. RealTimeWeb.org is a standalone nonprofit architecture site. It tells you what the Real Time Web is, why it exists, and introduces MAD.",
-      "The sequence that is actually written down is short. You need a network identity. You work inside a domain, which is an address space. A service owner transfers a ghost to you. You confirm it. After that, the data layer of that ghost is yours. The application layer of the service is still theirs.",
-      "Sharing is a morph, not a copy into a platform. You can give a service read access and take it back.",
-      "Anyone can develop an implementation of MAD or the Real Time Web. This site is not owned by a company and does not collect leads.",
-      "Read the architectural path in How participation works.",
+      "This site explains the architecture. It does not create an account.",
+      "MAD is the blueprint. Ghosts, morphing, and ownership are the relationship.",
+      "Synx is a known toolchain for running services. This page stays high level.",
     ],
   },
   {
@@ -145,7 +143,7 @@ export const posts: BlogPost[] = [
       "Real Time Web is an architecture for interconnected real time digital spaces. That is the shortest true sentence we have.",
       "A space is not a page. It persists. People can enter it, leave it, and return to find it still there. Interconnection means those spaces can point at each other without collapsing into a single company's map.",
       "The World Wide Web gave us linked documents. This work is about linked presence: rooms, objects, and the channels between them.",
-      "Start with the introduction in the documentation if you want the structure. This journal is for the reasons we are building it.",
+      "Start with the introduction in the documentation if you want the structure. These articles are for the reasons we are building it.",
     ],
   },
   {
@@ -230,7 +228,7 @@ export const posts: BlogPost[] = [
       "Interconnection does not mean sameness. The Web failed people when every room was forced into one feed, one profile, one company's gravity.",
       "Real Time Web is the opposite bet: many spaces, linked, real time, owned widely enough that no single disk can turn off the sun.",
       "You can plant a forest next to a city. You can leave. You can come back. The axis is the architecture. The worlds are yours.",
-      "That is the work. That is why the journal exists beside the specification. Come make the next disk.",
+      "That is the work. That is why the articles exist beside the specification. Come make the next disk.",
     ],
   },
 ];

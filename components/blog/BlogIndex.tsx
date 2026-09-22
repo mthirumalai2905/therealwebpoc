@@ -29,12 +29,12 @@ export function BlogIndex({ posts }: { posts: BlogPost[] }) {
     <div>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--accent)]">Journal</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--accent)]">Articles</p>
           <h1 className="mt-2 font-serif text-4xl tracking-tight text-[var(--ink)] md:text-5xl">
             Worlds worth keeping
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-6 text-[var(--muted)]">
-            Twelve frames. Twelve essays. Ownership, presence, and the rooms we want to inhabit.
+            Twelve frames. Twelve articles. Ownership, presence, and the rooms we want to inhabit.
           </p>
         </div>
         <div className="flex items-center gap-1 rounded-full border border-[var(--line)] p-1">

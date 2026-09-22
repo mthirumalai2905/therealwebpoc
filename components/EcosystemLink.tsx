@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 type Props = {
-  to: "introduction" | "architecture" | "specification";
+  to: "introduction" | "architecture" | "specification" | "implementation";
   children?: React.ReactNode;
 };
 
@@ -19,10 +19,16 @@ const config = {
     label: "Read Morphic Architecture",
   },
   specification: {
-    kicker: "Specification",
-    title: "Want to understand how this architecture is specified?",
-    href: "/docs/specification",
-    label: "Explore the technical specification",
+    kicker: "Implementation",
+    title: "Want to see who is implementing the architecture?",
+    href: "/docs/implementation",
+    label: "Read implementations",
+  },
+  implementation: {
+    kicker: "Implementation",
+    title: "Want to see who is implementing the architecture?",
+    href: "/docs/implementation",
+    label: "Read implementations",
   },
 };
 

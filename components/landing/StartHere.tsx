@@ -18,8 +18,8 @@ const starts = [
   },
   {
     href: "/blog",
-    label: "Journal",
-    text: "Essays on ownership, presence, and interconnected space.",
+    label: "Articles",
+    text: "Writing on ownership, presence, and interconnected space.",
   },
 ];
 

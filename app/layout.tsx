@@ -71,7 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-screen overflow-x-hidden font-sans antialiased">
+      <body className="min-h-screen font-sans antialiased">
         <ThemeProvider>
           <NavPaletteProvider>
             <a

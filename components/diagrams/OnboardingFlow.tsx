@@ -8,7 +8,7 @@ const steps = [
   {
     id: "understand",
     title: "Understand the architecture",
-    where: "RealTimeWeb.org",
+    where: "Real Time Web",
     text: "RTW is the network model. This site explains principles, layers, and ownership. Nothing here creates an account or designates a vendor.",
     href: "/docs/introduction",
   },

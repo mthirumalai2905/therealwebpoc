@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost, getRelated, posts } from "@/lib/blog";
 import { CornerMarks } from "@/components/CornerMarks";
+import { ParticipationExplainer } from "@/components/blog/ParticipationExplainer";
 
 type Params = { slug: string };
 
@@ -45,7 +46,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
             <div className="relative z-10 flex h-full max-w-[780px] flex-col justify-end px-5 pb-6 md:px-8 md:pb-8">
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/70">
                 <Link href="/blog" className="hover:text-white">
-                  Journal
+                  Articles
                 </Link>
                 <span className="mx-2">/</span>
                 {post.category}
@@ -64,25 +65,29 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         </div>
       </header>
 
-      <div className="mx-auto max-w-[640px] px-4 py-12 md:px-0">
-        {post.body.map((paragraph, index) => (
-          <p
-            key={index}
-            className={
-              index === 0
-                ? "text-[18px] leading-8 text-[var(--ink)]"
-                : "mt-6 text-[17px] leading-8 text-[var(--ink)]/90"
-            }
-          >
-            {paragraph}
-          </p>
-        ))}
-        <div className="mt-14 border-t border-[var(--line)] pt-8">
-          <Link href="/blog" className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent)]">
-            ← All essays
-          </Link>
+      {post.slug === "how-a-user-joins" ? (
+        <ParticipationExplainer />
+      ) : (
+        <div className="mx-auto max-w-[640px] px-4 py-12 md:px-0">
+          {post.body.map((paragraph, index) => (
+            <p
+              key={index}
+              className={
+                index === 0
+                  ? "text-[18px] leading-8 text-[var(--ink)]"
+                  : "mt-6 text-[17px] leading-8 text-[var(--ink)]/90"
+              }
+            >
+              {paragraph}
+            </p>
+          ))}
+          <div className="mt-14 border-t border-[var(--line)] pt-8">
+            <Link href="/blog" className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--accent)]">
+              ← All articles
+            </Link>
+          </div>
         </div>
-      </div>
+      )}
 
       {related.length ? (
         <aside className="mx-auto max-w-[1100px] px-4 md:px-6">

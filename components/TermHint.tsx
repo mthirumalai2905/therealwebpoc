@@ -79,6 +79,14 @@ const terms: Record<string, { title: string; lines: string[] }> = {
       "Both ends need a user who owns or has read access to the data.",
     ],
   },
+  synx: {
+    title: "Synx",
+    lines: [
+      "A known toolchain for configuring, administering, securing, and maintaining RTW services.",
+      "It is one implementation, not the Real Time Web itself.",
+      "This site does not document Synx procedures or send readers to a product.",
+    ],
+  },
   bijective: {
     title: "Bijective relationship",
     lines: [

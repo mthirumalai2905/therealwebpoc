@@ -11,6 +11,16 @@ const nextConfig: NextConfig = {
         destination: "/docs/architecture/authentication",
         permanent: true,
       },
+      {
+        source: "/docs/specification",
+        destination: "/docs/implementation",
+        permanent: true,
+      },
+      {
+        source: "/docs/specification/:path*",
+        destination: "/docs/implementation",
+        permanent: true,
+      },
     ];
   },
 };

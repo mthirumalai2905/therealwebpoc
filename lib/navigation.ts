@@ -13,7 +13,7 @@ export type NavGroup = {
 
 export const nav: NavGroup[] = [
   {
-    title: "Introduction",
+    title: "Real Time Web",
     items: [
       { title: "What is Real Time Web?", href: "/docs/introduction" },
       { title: "Two webs", href: "/docs/introduction/two-webs" },
@@ -21,11 +21,6 @@ export const nav: NavGroup[] = [
       { title: "How it works", href: "/docs/introduction/how-it-works" },
       { title: "How participation works", href: "/docs/introduction/onboarding", status: "draft" },
       { title: "Vision and principles", href: "/docs/introduction/vision" },
-    ],
-  },
-  {
-    title: "Architecture",
-    items: [
       { title: "Morphic Architecture", href: "/docs/architecture" },
       { title: "Infrastructure Layer", href: "/docs/architecture/infrastructure" },
       { title: "Network / Security Layer", href: "/docs/architecture/network" },
@@ -56,15 +51,12 @@ export const nav: NavGroup[] = [
     ],
   },
   {
-    title: "Specification",
+    title: "Implementation",
     items: [
-      { title: "Protocol Overview", href: "/docs/specification", status: "pending" },
-      { title: "Network Specification", href: "/docs/specification/network", status: "pending" },
-      { title: "Identity Specification", href: "/docs/specification/identity", status: "pending" },
-      { title: "Data Channels", href: "/docs/specification/data-channels", status: "pending" },
-      { title: "Communication", href: "/docs/specification/communication", status: "pending" },
-      { title: "Security", href: "/docs/specification/security", status: "pending" },
-      { title: "Version History", href: "/docs/specification/versions", status: "pending" },
+      { title: "Overview", href: "/docs/implementation" },
+      { title: "Synx", href: "/docs/implementation/synx" },
+      { title: "Morph Space", href: "/docs/implementation/morph" },
+      { title: "Skalle", href: "/docs/implementation/skalle", status: "draft" },
     ],
   },
   {
@@ -72,13 +64,13 @@ export const nav: NavGroup[] = [
     items: [
       { title: "Technical Resources", href: "/docs/research", status: "pending" },
       { title: "Experiments", href: "/docs/research/experiments", status: "pending" },
-      { title: "Reference Implementations", href: "/docs/research/implementations", status: "pending" },
+      { title: "Reference Implementations", href: "/docs/research/implementations" },
     ],
   },
   {
     title: "Reference",
     items: [
-      { title: "Glossary", href: "/docs/reference/glossary" },
+      { title: "Summary", href: "/docs/reference/glossary" },
       { title: "FAQ", href: "/docs/reference/faq" },
       { title: "Governance", href: "/docs/reference/governance", status: "pending" },
       { title: "Contributing", href: "/docs/reference/contributing", status: "pending" },
@@ -89,7 +81,7 @@ export const nav: NavGroup[] = [
 export const explorePaths = [
   {
     href: "/docs/architecture",
-    label: "Architecture",
+    label: "Real Time Web",
     text: "Understand how the Real Time Web is structured.",
   },
   {
@@ -103,9 +95,9 @@ export const explorePaths = [
     text: "Understand real-time data channels and shared state.",
   },
   {
-    href: "/docs/specification",
-    label: "Specification",
-    text: "Explore the evolving technical specification.",
+    href: "/docs/implementation",
+    label: "Implementation",
+    text: "Named implementations: Synx, Morph Space, and others planning to build.",
   },
   {
     href: "/docs/research",

@@ -3,8 +3,8 @@ import { BlogIndex } from "@/components/blog/BlogIndex";
 import { posts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Journal",
-  description: "Essays from the Real Time Web on ownership, presence, and interconnected digital spaces.",
+  title: "Articles",
+  description: "Articles from the Real Time Web on ownership, presence, and interconnected digital spaces.",
 };
 
 export default function BlogPage() {

@@ -48,7 +48,7 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
         </div>
       </article>
       <aside className="hidden border-l border-[var(--line)] xl:block">
-        <div className="sticky top-14 px-4 py-10">
+        <div className="sticky top-[calc(3.5rem+env(safe-area-inset-top))] px-4 py-10">
           <OnThisPage />
         </div>
       </aside>

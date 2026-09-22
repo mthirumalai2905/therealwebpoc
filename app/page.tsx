@@ -34,7 +34,7 @@ export default function HomePage() {
               href="/docs"
               className="mt-6 rounded-full border border-white/20 bg-black/40 px-5 py-2.5 text-[13px] text-[#f2efe8] backdrop-blur-md transition-colors hover:border-white/40 hover:bg-black/55 sm:mt-8"
             >
-              Read the documentation
+              Explore Real Time Web
             </Link>
             <Link
               href="/docs/introduction/two-webs"

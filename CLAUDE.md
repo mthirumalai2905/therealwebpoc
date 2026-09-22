@@ -12,9 +12,18 @@ If a claim is not in that corpus, say it is unspecified. Do not invent Morph.Spa
 
 This repository (`rtwp` / therealwebpoc) is a **documentation and journal prototype** for RealTimeWeb.org.
 
-**Public copy on this site must not mention Morph.Space, Synx, SynxPass, or synx.tools.** Morph.Space and synx.tools may reference RealTimeWeb.org. synx.tools may describe the model used in that implementation. MAD terms (Morphic Architecture Design, morphing, Morphic service) stay.
+**Public copy rule:** this site explains architecture. It does not promote a product, collect leads, or add a join button.
 
-RealTimeWeb.org is a standalone nonprofit explainer of what RTW is, why it exists, and MAD. It is not owned by a company. Anyone can develop an implementation of MAD or RTW. No join button, lead capture, or product funnel.
+- **MAD** (and RTW terms: ghost, morph, transfer, Ghost Space) may be explained in full at the conceptual level.
+- **Synx** may be named at **high level only**: a known toolchain to configure, administer, secure, and maintain RTW services. One implementation, not the architecture, not the only possible implementation.
+- **Do not publish low-level Synx detail** on this site: tokens, refresh intervals, BIOS, XML/JSON, protocols, APIs, screens, click paths, or SynxPass walkthroughs. Those belong in Synx documentation.
+- **Morph Space** may be named at **high level only** on Implementation pages: marketplace and environment for domains, resources, and participation. No outbound product links, no join button, no screens or account copy.
+- **Skalle** may be named as a party planning an implementation. Do not invent its product, protocol, or screens.
+- **Do not promote** any implementation. No outbound product links, no “join here,” no lead capture.
+
+Morph.Space and synx.tools may reference RealTimeWeb.org.
+
+RealTimeWeb.org is a standalone nonprofit explainer of what RTW is, why it exists, and MAD. It is not owned by a company. Anyone can develop an implementation of MAD or RTW.
 
 Do not use em dashes in user-facing copy.
 
@@ -30,7 +39,7 @@ Do not use em dashes in user-facing copy.
 
 Teaching analogy (rough, not architecture): RealTimeWeb.org is reading how email works. Morph.Space is where you get an identity and join. Synx is how you run and secure the connection afterward.
 
-Current implementation of MAD in the internal source: **Synx.tools** and marketplace **Morph.Space**. Those names do not appear on RealTimeWeb.org public pages. This site does not link to them.
+Current implementation of MAD in the internal source: **Synx.tools** and marketplace **Morph.Space**. On this site, Synx may appear at high level only. Morph.Space is not promoted and is not linked.
 
 ---
 
@@ -49,7 +58,7 @@ It is not a single app, not a replacement for the Internet, and not the World Wi
 A change in one layer does not have to redefine the whole relationship. Different parties can own different layers.
 
 1. **Infrastructure layer** — physical or virtual infrastructure: processing, connectivity, storage where required, energy.
-2. **Network and security layer** — addressing, identity, authentication, authorization, trust, secure communication. Auth system is **optional** in MAD. Any token system that generates a token for identity can be used. Do not name a vendor on this site.
+2. **Network and security layer** — addressing, identity, authentication, authorization, trust, secure communication. Auth system is **optional** in MAD. Any token system that generates a token for identity can be used. Synx may be named as a known toolchain at high level only.
 3. **Domain and application layer** — domains, services, applications, transformation logic.
 4. **Resource and ownership layer** — person, organization, machine, or device that generates or owns the resource and controls whether it may be accessed or shared.
 
@@ -181,7 +190,7 @@ NTNU-style 24h PoCs assumed an **existing channel platform**. Without Morph/Synx
 
 ## Editorial split for any copy or product UX
 
-- Conceptual questions → RealTimeWeb.org public pages. **No Morph.Space or Synx names. No join or lead CTAs.**
+- Conceptual questions, MAD, and high-level Synx → RealTimeWeb.org. No join or lead CTAs. No low-level Synx.
 - Account, marketplace, onboarding → Morph.Space (that site may link to RTW)
 - Configuration and operations → Synx documentation (that site may link to RTW and describe the model it implements)
 

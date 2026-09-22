@@ -30,12 +30,12 @@ export function useNavPalette() {
 }
 
 const pages = [
-  { title: "Two webs", href: "/docs/introduction/two-webs", trail: "Documentation" },
-  { title: "How participation works", href: "/docs/introduction/onboarding", trail: "Documentation" },
-  { title: "Journal", href: "/blog", trail: "Site" },
-  { title: "Architecture", href: "/docs/architecture", trail: "Documentation" },
-  { title: "Specification", href: "/docs/specification", trail: "Documentation" },
-  { title: "Glossary", href: "/docs/reference/glossary", trail: "Reference" },
+  { title: "Real Time Web", href: "/docs", trail: "Site" },
+  { title: "Two webs", href: "/docs/introduction/two-webs", trail: "Real Time Web" },
+  { title: "How participation works", href: "/docs/introduction/onboarding", trail: "Real Time Web" },
+  { title: "Articles", href: "/blog", trail: "Site" },
+  { title: "Implementation", href: "/docs/implementation", trail: "Site" },
+  { title: "Summary", href: "/docs/reference/glossary", trail: "Reference" },
 ];
 
 export function NavPaletteProvider({ children }: { children: ReactNode }) {
