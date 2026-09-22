@@ -100,6 +100,56 @@ RealTimeWeb.org is a standalone nonprofit architecture site. It is not owned by 
 
 [Reference implementations](/docs/research/implementations)
 
+### Can other companies build compatible RTW implementations?
+
+Yes. RTW is the architecture. Compatible protocols, tools, services, and commercial products can be built on it.
+
+This site does not designate a vendor and does not onboard anyone.
+
+[Implementation](/docs/implementation)
+
+### Is there a reference implementation?
+
+The source names one known implementation at high level: a marketplace for domains and participation, and a toolchain used to configure, administer, secure, and maintain services.
+
+Those names sit under Implementation. This site does not publish their screens, APIs, or a join path. Other parties may implement MAD.
+
+[Implementation](/docs/implementation)
+
+## Architecture
+
+### How does the RTW network topology work?
+
+MAD constructs data channels from sources that have been morphed along a linking path. Each service only sees local context. How a value was morphed is unknown outside that service.
+
+There is no centralized API or database required to build RTW services. Data is consumed when the ghosts at the ends are owned by the same user, or the receiver has approved read access. This answer follows draft architecture notes.
+
+[Network topology](/docs/architecture/topology)
+
+### How are services, devices and AI agents identified?
+
+They are identified as endpoints with one corresponding ghost. The pairing is bijective and addressable from both sides.
+
+A Morphic service is itself a ghost in the application layer. Ghost id zero is the service. How identifiers are written on the wire is not specified in the current source.
+
+[Identity](/docs/architecture/identity)
+
+### What is an RTW domain?
+
+A domain is an address space you control. It is not a website URL.
+
+If you own the whole stack of a domain, you also control ownership of allocated ghosts for endpoints connecting against that address space. How a public name is registered remains unanswered.
+
+[Domains](/docs/architecture/domains)
+
+### How does RTW reduce unnecessary network traffic?
+
+If nobody is listening, the value does not need to travel. Data stays associated with the resource where it was generated, rather than being copied into a central store that answers whether or not the reading changed.
+
+That is the architectural claim in the draft notes. It is not a congestion-control specification.
+
+[Network topology](/docs/architecture/topology)
+
 ## Trust, control and security
 
 ### Who owns data exchanged through RTW?
@@ -143,13 +193,6 @@ The user needs to control who has access to the data source, and data is not per
 ## Pending questions
 
 These are listed in the source FAQ plan and do not yet have answers. Related draft notes exist for some architecture topics and still need team approval before they are used as public FAQ answers.
-
-Architecture, unanswered:
-
-- How does the RTW network topology work?
-- How are services, devices and AI agents identified?
-- What is an RTW domain?
-- How does RTW reduce unnecessary network traffic?
 
 Standards and implementation, unanswered:
 

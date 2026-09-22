@@ -6,6 +6,16 @@ status: draft
 
 There is no centralized API or database in use when building RTW services.
 
+## How are services, devices, and AI agents identified?
+
+At the architectural level they are identified the same way: as endpoints with one corresponding ghost. The pairing is bijective. One resource, one ghost, addressable from both sides.
+
+A device, a sensor, an application, and an AI agent can each be an endpoint. A person participates in the ecosystem. A person is not a ghost.
+
+A Morphic service is itself a ghost in the application layer. Ghost id zero is the service. Transferring that handle transfers the service, independent of who owns data layers on other ghosts.
+
+How those identities are written on the wire, and how names resolve, is not specified in the current source.
+
 When ghosts are allocated for the first time, all allocated ghosts are owned by the service owner. Once a new user has been registered to the service the service owner can transfer the ghost id to the user. When the user approves the transfer the user now controls the data layer of the specific ghost.
 
 The service itself is also a ghost in the application layer. Independently from the data layer, ownership of the service can also be transferred to another person. There are four layers of ownership in the vertical communication stack that independently from each other can be changing ownership.

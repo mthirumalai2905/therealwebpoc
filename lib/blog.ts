@@ -57,12 +57,71 @@ export const posts: BlogPost[] = [
     category: "Demo",
     cover: "/blog/rtw-anime-02-rain-neon-alley.png",
     coverAlt: "A wet night street under a gold lattice in the rain.",
-    readingMinutes: 6,
+    readingMinutes: 9,
     author: "Paal Kristian Levang",
     authorRole: "Inventor of AI Network Infrastructure",
     authorImage: "/blog/paal-kristian-levang.jpg",
     body: [
       "This is an umbrella. It looks like an umbrella. The brain is not in the handle.",
+    ],
+  },
+  {
+    slug: "playing-with-oranges",
+    title: "How many oranges are left?",
+    excerpt:
+      "A bowl, a light sensor, and a rough count. The point is not precision. It is that a live reading can enter a channel without the bowl knowing who is listening.",
+    date: "2014-09-02",
+    category: "Demo",
+    cover: "/blog/rtw-cyberpunk-05-market-stalls.png",
+    coverAlt: "A night market aisle with hanging lamps and a crowd in silhouette.",
+    readingMinutes: 8,
+    author: "Paal Kristian Levang",
+    authorRole: "Inventor of AI Network Infrastructure",
+    authorImage: "/blog/paal-kristian-levang.jpg",
+    body: [
+      "A bowl, a handful of oranges, and a single light sensor.",
+    ],
+  },
+  {
+    slug: "scan-and-post-wifi",
+    title: "A blink, a scan, a live list",
+    excerpt:
+      "A cheap ESP8266 scans nearby Wi-Fi and posts SSID names and signal strength while it is still listening. Two windows move together. That is the demonstration.",
+    date: "2026-09-23",
+    category: "Demo",
+    cover: "/blog/rtw-theme-06-forest-iot.png",
+    coverAlt: "A forest of sensors under a gold lattice, lights in the trees.",
+    readingMinutes: 8,
+    body: [
+      "A cheap board. A blink. A list that is still moving.",
+    ],
+  },
+  {
+    slug: "link-the-fridge",
+    title: "Link the fridge, not only the page",
+    excerpt:
+      "A founder talk on AI and the Real Time Web. This page keeps the architecture: live objects, a body in the room, a mind on the network. The product pitch stays on the tape.",
+    date: "2026-09-23",
+    category: "Field notes",
+    cover: "/blog/rtw-launch-01-ai-awakening.png",
+    coverAlt: "A gold lattice figure waking among dark servers.",
+    readingMinutes: 8,
+    body: [
+      "What if a fridge, a chair, or a bicycle could be linked the same way as a page, while it is still a live object?",
+    ],
+  },
+  {
+    slug: "twenty-four-hours-at-ntnu",
+    title: "Twenty-four hours at NTNU",
+    excerpt:
+      "A 2023 student weekend, a public recording, and a written account of live proofs versus slides. The architecture point is smaller than the boast: a weekend is a service only if the channel already exists.",
+    date: "2026-09-23",
+    category: "Field notes",
+    cover: "/blog/rtw-anime-11-classroom-after-rain.png",
+    coverAlt: "A classroom of desks after rain, gold light through tall windows.",
+    readingMinutes: 9,
+    body: [
+      "A proof of the Real Time Web is not a slide. It is one live service.",
     ],
   },
   {

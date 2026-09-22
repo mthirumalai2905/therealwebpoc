@@ -39,18 +39,18 @@ export function SmartUmbrella() {
       />
 
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
-        In the recording, Paal Kristian Levang holds a closed black umbrella in a
-        workshop. Behind him a map is already open. He is not showing a gadget with a
-        built-in weather app. He is showing a live{" "}
+        In the recording, Paal Kristian Levang walks through a closed black umbrella in a
+        workshop. A map is already open behind the object. He is not showing a gadget
+        with a weather app burned into the handle. He is showing a live{" "}
         <TermHint id="endpoint">endpoint</TermHint>. The object stays an umbrella. The
         service supplies the property.
       </p>
-
-      <Figure
-        src="/blog/smart-umbrella-demo.jpg"
-        alt="Paal Kristian Levang holding the smart umbrella in front of a live map."
-        caption="The object in the room. The map is a service it is already talking to."
-      />
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        That distinction is the whole article. Most “smart” products ship with one job
+        sealed in. You buy a weather umbrella, or you do not. Real Time Web treats the
+        object as a body that can inherit a mind. The mind can be changed. The body does
+        not have to be replaced.
+      </p>
 
       <h2 className="mt-14 border-t border-[var(--line)] pt-8 font-serif text-[1.7rem] leading-tight text-[var(--ink)]">
         The brain is chosen, not installed
@@ -64,8 +64,17 @@ export function SmartUmbrella() {
         registered against.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        In the demo the buttons are a teaching shortcut. Each button stands for a
+        different service sending a message to the same object. Press one and the
+        umbrella turns blue. Press another and it turns white. The point is not the
+        button. The point is that a live service, somewhere else on the network, is
+        allowed to speak, and the umbrella is allowed to answer.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         That is the Real Time Web move. Intelligence is defined on the network. The
-        physical thing only has to stay connected and report what it can sense.
+        physical thing only has to stay connected and report what it can sense. If you
+        later attach it to a door service, or a television service, you have not bought a
+        new umbrella. You have given the same endpoint a new context.
       </p>
 
       <UmbrellaInherit />
@@ -81,7 +90,15 @@ export function SmartUmbrella() {
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         The colour is not a setting stored in the handle. It is a live message. The
-        weather service speaks. The umbrella answers by changing state.
+        weather service speaks. The umbrella answers by changing state. If the service
+        goes quiet, or the owner withdraws the link, the colour has no meaning left. The
+        canopy is still fabric. The handle is still a handle.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        A stored weather app would keep yesterday’s forecast on the device. This
+        umbrella does not need yesterday. It needs the current grant. That is why the
+        demo can switch behaviours in the room without opening the object or installing
+        another program on it.
       </p>
 
       <UmbrellaSignals />
@@ -98,7 +115,7 @@ export function SmartUmbrella() {
       <p className="mt-5 text-[17px] leading-8 text-[var(--ink)]">
         This is not a one-way alert. When the umbrella is opened, it appears on the map.
         It tells the weather service: it is raining here. The object is a sensor as well
-        as a display.
+        as a display. The network is holding a live place, not a photograph of a place.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         It can also sense rain hitting the canopy and count the drops. From that count
@@ -106,12 +123,17 @@ export function SmartUmbrella() {
         back to the weather station. The station is not polling a stored dump. It is
         hearing a live source.
       </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        That return path matters. A thing that only receives orders is a remote control
+        target. A thing that can report is a participant. The umbrella does both. The
+        service can say “rain.” The umbrella can say “here, this hard, now.”
+      </p>
 
       <UmbrellaReturn />
 
       <Figure
         src="/blog/rtw-film-03-port-fog.png"
-        alt="A fogged harbour with lights smeared across wet ground."
+        alt="A fogged harbour with a gold sphere above the cranes."
         caption="A live place has a counterpart on the network. The umbrella is one more source."
       />
 
@@ -126,11 +148,23 @@ export function SmartUmbrella() {
         umbrella can sense and signal.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        A door service does not need the umbrella to grow a lock. It needs a live grant
+        and a way for the object to send a simple act. A television service does not need
+        a screen in the handle. It needs a channel of events. The body stays modest. The
+        network supplies the rest.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         That is the same rule as the shoe that becomes a keyboard. The object stays
         itself.{" "}
         <TermHint id="morph">Morphing</TermHint> into another service grants that
         service a shape of the data. Withdraw the morph and that brain goes dark. The
         umbrella is still an umbrella.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        Two different people do not open each other’s umbrella because they share an
+        implementation. Read access is a morph. Ownership is a transfer, and a transfer
+        has to be confirmed. The demo shows the happy path: one owner, one object,
+        several services taking turns as the brain.
       </p>
 
       <Figure
@@ -138,6 +172,27 @@ export function SmartUmbrella() {
         alt="A night forest and river joined by a thin living network of light."
         caption="Any live thing can join. The service names what it is allowed to mean."
       />
+
+      <h2 className="mt-14 border-t border-[var(--line)] pt-8 font-serif text-[1.7rem] leading-tight text-[var(--ink)]">
+        What the object can and cannot be
+      </h2>
+      <p className="mt-5 text-[17px] leading-8 text-[var(--ink)]">
+        The umbrella cannot become a telescope. It cannot become a stove. The virtual
+        property has to fit inside the physical limit: a canopy that can change colour, a
+        handle that can be opened or closed, sensors that can feel rain, a radio that can
+        stay on.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        Inside that limit the range is wide. Colour is a message. Open is a location.
+        Drops are a rate. A nearby person is a match. A door is an act. None of those
+        jobs require the manufacturer to guess every future use and solder it in at the
+        factory.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        That is why Paal calls it the world’s smartest umbrella in the recording. Not
+        because the handle contains a large model. Because any service online can become
+        its brain, and you can change that brain without replacing the object.
+      </p>
 
       <h2 className="mt-14 border-t border-[var(--line)] pt-8 font-serif text-[1.7rem] leading-tight text-[var(--ink)]">
         Why this is Real Time Web
@@ -148,6 +203,14 @@ export function SmartUmbrella() {
         it is not the ghost. The umbrella is the endpoint. The ghost is the live
         stand-in so weather, map, and owner can observe authorized updates without one
         party owning the whole stack.
+      </p>
+      <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
+        The four layers of{" "}
+        <TermHint id="mad">Morphic Architecture Design</TermHint> stay separable here.
+        The radio and the sensors are infrastructure. Identity and the grant sit in
+        network and security. The weather or date logic is application. The owner of the
+        umbrella decides whether those services may keep reading. A change in one layer
+        does not have to redefine the whole relationship.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         That is how Real Time Web treats objects. Not a smarter product line. A network
@@ -164,8 +227,7 @@ export function SmartUmbrella() {
 
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">
         This page explains a public demo of the architecture. It is not a product
-        signup. Anyone can develop an implementation of{" "}
-        <TermHint id="mad">Morphic Architecture Design</TermHint>.
+        signup. Anyone can develop an implementation of Morphic Architecture Design.
       </p>
 
       <ContributorInvite />

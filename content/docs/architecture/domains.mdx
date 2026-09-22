@@ -1,8 +1,20 @@
 ---
 title: Domains
-description: Bijective network resources, domains, and empty endpoints that receive a ghost.
+description: A domain is an address space you control, not a website URL.
 status: draft
 ---
+
+<SpecStatus status="draft">
+  Domain naming, public DNS, and how an existing name is attached remain unanswered in the source. This page states what a domain is in MAD.
+</SpecStatus>
+
+## What is an RTW domain?
+
+A domain here is an address space you control. It is not “the website URL.”
+
+If an identified user owns and controls the whole stack of a domain, that user also controls ownership of allocated ghosts for endpoints connecting against that domain address space.
+
+Whether you need a public DNS name, can register a name through a marketplace, or can attach a domain you already own is not answered in the current source. Those are implementation and onboarding questions. They do not live on this architecture site.
 
 MAD is a bijective network system that allows anything to be connected. Physical or virtual network resources can be connected. Even an endpoint without any implementation that is able to keep a connection alive can receive program execution and data from its ghost.
 
@@ -10,8 +22,4 @@ This kernelization process allows empathy devices to connect and get their intel
 
 In practice any object can be a participant in the heterogeneous network without any library or deployment prior to connecting. The ghostID can be mapped to the mac address and there will be a bijective relationship between the object and its ghost.
 
-If an identified user owns and controls the whole stack of his domain he also controls ownership of allocated ghosts for all endpoints connecting against his domain address space.
-
-<SpecStatus status="pending">
-  The FAQ question “What is an RTW domain?” does not yet have a dedicated public answer. Related draft notes appear above.
-</SpecStatus>
+See [How participation works](/docs/introduction/onboarding) for the conceptual path, or [Discovery](/docs/architecture/discovery) for what remains unanswered about names.

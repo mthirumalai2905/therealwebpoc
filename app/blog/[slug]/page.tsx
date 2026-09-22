@@ -8,6 +8,10 @@ import { ParticipationExplainer } from "@/components/blog/ParticipationExplainer
 import { LastITProject } from "@/components/blog/LastITProject";
 import { SmartShoes } from "@/components/blog/SmartShoes";
 import { SmartUmbrella } from "@/components/blog/SmartUmbrella";
+import { PlayingWithOranges } from "@/components/blog/PlayingWithOranges";
+import { ScanWifi } from "@/components/blog/ScanWifi";
+import { LinkTheFridge } from "@/components/blog/LinkTheFridge";
+import { TwentyFourHoursNtnu } from "@/components/blog/TwentyFourHoursNtnu";
 import { ContributorInvite } from "@/components/blog/ContributorInvite";
 
 type Params = { slug: string };
@@ -76,6 +80,14 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         <SmartShoes />
       ) : post.slug === "smart-umbrella" ? (
         <SmartUmbrella />
+      ) : post.slug === "playing-with-oranges" ? (
+        <PlayingWithOranges />
+      ) : post.slug === "scan-and-post-wifi" ? (
+        <ScanWifi />
+      ) : post.slug === "link-the-fridge" ? (
+        <LinkTheFridge />
+      ) : post.slug === "twenty-four-hours-at-ntnu" ? (
+        <TwentyFourHoursNtnu />
       ) : post.slug === "how-a-user-joins" ? (
         <ParticipationExplainer />
       ) : (

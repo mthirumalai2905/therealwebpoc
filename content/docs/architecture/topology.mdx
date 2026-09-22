@@ -1,0 +1,37 @@
+---
+title: Network topology
+description: Data channels built along a linking path. Each node only sees local context.
+status: draft
+---
+
+<SpecStatus status="draft">
+  Network topology is described in the architecture notes and is still marked draft. This page states that model. It does not invent a wire format or a central graph.
+</SpecStatus>
+
+The horizontal topology in MAD is not a request-and-response tree, and it is not a stored Linked Data graph that everyone queries. It is a <GlossaryTerm id="linking-path">linking path</GlossaryTerm>. Sources are collected into a <GlossaryTerm id="data-channel">data channel</GlossaryTerm>. Along that path, data is <GlossaryTerm id="morph">morphed</GlossaryTerm> into each service’s local model.
+
+Each service or node operates on local data structures. It can persist and access data only in local context. How a value was morphed is unknown outside that service or domain.
+
+<DataChannelMorph />
+
+## No central API in the middle
+
+There is no centralized API or database required to build RTW services in this model. You construct a link from your local service against a secondary service whose data structure has been publicly announced. The path can be long. The network does not natively store the channel.
+
+Data is consumed at an endpoint when the ghosts at the ends are owned by the same user, or the receiver has approved read access. Same user usually means one person and two of their endpoints. Two different people do not open each other’s data because they share an implementation.
+
+<NetworkGraph />
+
+## Why traffic does not have to be a dump
+
+If nobody is listening, the value does not need to travel. That is a different cost from a store that answers whether or not the reading changed.
+
+RTW is designed to keep data associated with the resource and domain where it was generated, rather than copying every reading into a centrally controlled platform. Authorized updates can move as they occur, for the user instance that owns or has been granted the ends.
+
+This is the architectural answer to unnecessary traffic in the source notes. It is not a congestion-control specification.
+
+## Keep reading
+
+See [Data channels](/docs/architecture/data-channels) for the temperature picture, or [Bijective network](/docs/architecture/bijective-network) for the pairing the path sits on.
+
+<EcosystemLink to="architecture" />

@@ -34,6 +34,7 @@ export const nav: NavGroup[] = [
       { title: "Bijective network", href: "/docs/architecture/bijective-network", chapter: "The architecture" },
       { title: "Morphic services", href: "/docs/architecture/morphic-services", chapter: "The architecture" },
       { title: "Data Channels", href: "/docs/architecture/data-channels", status: "draft", chapter: "The architecture" },
+      { title: "Network topology", href: "/docs/architecture/topology", status: "draft", chapter: "The architecture" },
       { title: "Identity", href: "/docs/architecture/identity", status: "draft", chapter: "Still open" },
       { title: "Domains", href: "/docs/architecture/domains", status: "draft", chapter: "Still open" },
       { title: "Discovery", href: "/docs/architecture/discovery", status: "draft", chapter: "Still open" },

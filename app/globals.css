@@ -390,12 +390,26 @@ footer a:hover {
 :root {
   --theme-duration: 1.45s;
   --ease-theme: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --vt-x: 50%;
+  --vt-y: 28px;
+  --vt-r: 150vmax;
+}
+
+html {
+  view-transition-name: root;
+  scrollbar-gutter: stable;
+}
+
+::view-transition-group(root) {
+  animation: none;
 }
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
+  height: 100%;
+  width: 100%;
 }
 
 ::view-transition-old(root) {
@@ -409,10 +423,10 @@ footer a:hover {
 
 @keyframes theme-reveal {
   0% {
-    clip-path: circle(0 at var(--vt-x) var(--vt-y));
+    clip-path: circle(0px at var(--vt-x) var(--vt-y));
   }
   to {
-    clip-path: circle(var(--vt-r, 150vmax) at var(--vt-x) var(--vt-y));
+    clip-path: circle(var(--vt-r) at var(--vt-x) var(--vt-y));
   }
 }
 

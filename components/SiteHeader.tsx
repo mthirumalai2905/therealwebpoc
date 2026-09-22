@@ -92,14 +92,13 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <ThemeToggle light={overHero} />
         </nav>
-        <div className="flex shrink-0 items-center gap-2 md:hidden">
+        <div className="flex shrink-0 items-center gap-2">
           <ThemeToggle light={overHero} />
           <button
             type="button"
             className={
-              "flex h-9 w-9 items-center justify-center rounded-full border " +
+              "flex h-9 w-9 items-center justify-center rounded-full border md:hidden " +
               (overHero
                 ? "border-white/25 text-white"
                 : "border-[var(--line)] text-[var(--ink)]")

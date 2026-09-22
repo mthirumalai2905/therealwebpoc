@@ -6,7 +6,8 @@ export function TwoWebsCompare() {
     { label: "Data", www: "Retrieved, and often copied into a platform", rtw: "Stays with the source, then morphed into local models" },
     { label: "Integration", www: "A custom API for each pairing", rtw: "A link between services" },
     { label: "Identity", www: "Each application builds its own login", rtw: "Authentication is optional in MAD" },
-    { label: "Control", www: "Often one company owns the stack", rtw: "Four independently owned layers" },
+    { label: "Sessions", www: "Each application builds its own session and integration", rtw: "A network relationship can persist across participating services" },
+    { label: "Control", www: "Application providers commonly control both data and processing", rtw: "Data access and transformation logic can be controlled separately" },
   ];
 
   return (
