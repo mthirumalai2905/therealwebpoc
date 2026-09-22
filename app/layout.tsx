@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Instrument_Sans, Instrument_Serif, Pixelify_Sans, Syne } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -35,6 +35,12 @@ const display = Syne({
   variable: "--font-display",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: {
     default: "Real Time Web",
@@ -65,7 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-screen font-sans antialiased">
+      <body className="min-h-screen overflow-x-hidden font-sans antialiased">
         <ThemeProvider>
           <NavPaletteProvider>
             <a

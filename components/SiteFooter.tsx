@@ -3,7 +3,7 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="border-t border-[var(--line)] bg-[var(--bg-elev)]">
-      <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-14 md:grid-cols-4 md:px-6">
+      <div className="mx-auto grid max-w-[1400px] gap-8 px-4 py-10 sm:gap-10 sm:py-14 md:grid-cols-4 md:px-6">
         <div className="md:col-span-1">
           <p className="font-mono text-[11px] tracking-[0.18em] text-[var(--accent)]">REALTIMEWEB.ORG</p>
           <p className="mt-4 max-w-xs text-[13px] leading-6 text-[var(--muted)]">
@@ -59,7 +59,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-[var(--line)]">
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-2 px-4 py-5 text-[12px] text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-6">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-2 px-4 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] text-[12px] leading-6 text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-6">
           <p>
             RealTimeWeb.org is not owned by a company. Anyone can develop an implementation of MAD
             or the Real Time Web.

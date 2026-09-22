@@ -30,8 +30,8 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
   return (
     <article className="pb-20">
       <header className="border-b border-[var(--line)]">
-        <div className="relative mx-auto mt-8 max-w-[1100px] overflow-hidden rounded-[4px]">
-          <div className="relative h-[260px] md:h-[360px]">
+        <div className="relative mx-auto mt-4 max-w-[1100px] overflow-hidden rounded-[4px] sm:mt-8">
+          <div className="relative h-[min(78vw,340px)] min-h-[260px] md:h-[360px]">
             <Image
               src={post.cover}
               alt={post.coverAlt}
@@ -50,10 +50,12 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
                 <span className="mx-2">/</span>
                 {post.category}
               </p>
-              <h1 className="mt-3 font-serif text-3xl leading-tight tracking-tight text-white md:text-[42px] md:leading-[1.08]">
+              <h1 className="mt-3 font-serif text-[1.7rem] leading-tight tracking-tight text-white sm:text-3xl md:text-[42px] md:leading-[1.08]">
                 {post.title}
               </h1>
-              <p className="mt-3 max-w-2xl text-[15px] leading-7 text-white/80">{post.excerpt}</p>
+              <p className="mt-3 line-clamp-4 max-w-2xl text-[14px] leading-6 text-white/80 sm:text-[15px] sm:leading-7 md:line-clamp-none">
+                {post.excerpt}
+              </p>
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.14em] text-white/55">
                 Real Time Web · {formatPostDate(post.date)} · {post.readingMinutes} min read
               </p>

@@ -134,7 +134,7 @@ function NavPalette() {
         role="dialog"
         aria-modal="true"
         aria-label="Search documentation"
-        className="absolute inset-x-3 top-[10vh] mx-auto flex max-h-[78vh] w-auto max-w-[560px] flex-col overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--bg-elev)] shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:inset-x-auto sm:left-1/2 sm:w-[560px] sm:-translate-x-1/2"
+        className="absolute inset-x-3 top-[max(0.75rem,env(safe-area-inset-top))] mx-auto flex max-h-[min(78dvh,calc(100dvh-1.5rem))] w-auto max-w-[560px] flex-col overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--bg-elev)] shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:inset-x-auto sm:left-1/2 sm:top-[10vh] sm:w-[560px] sm:-translate-x-1/2 sm:max-h-[78vh]"
       >
         <div className="flex items-center gap-3 border-b border-[var(--line)] px-4">
           <Search size={16} className="shrink-0 text-[var(--muted)]" />

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <main className="mx-auto max-w-[1240px] px-4 py-14 md:px-6 md:py-16">
+    <main className="mx-auto max-w-[1240px] px-4 py-10 sm:py-14 md:px-6 md:py-16">
       <BlogIndex posts={posts} />
     </main>
   );
