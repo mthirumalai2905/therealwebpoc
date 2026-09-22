@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CornerMarks } from "@/components/CornerMarks";
 
 type Props = {
   src: string;
@@ -18,6 +19,7 @@ export function Figure({ src, alt, caption, fit = "cover" }: Props) {
           className={fit === "contain" ? "object-contain" : "object-cover"}
           sizes="(min-width: 768px) 736px, 100vw"
         />
+        <CornerMarks />
       </div>
       {caption ? (
         <figcaption className="border-t border-[var(--line)] px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">

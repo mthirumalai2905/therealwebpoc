@@ -49,6 +49,23 @@ export const posts: BlogPost[] = [
     ],
   },
   {
+    slug: "smart-umbrella",
+    title: "The world's smartest umbrella",
+    excerpt:
+      "An umbrella that inherits its brain from the service you attach it to. Weather, a map, a door, a date nearby. Same object. Different property.",
+    date: "2014-08-12",
+    category: "Demo",
+    cover: "/blog/rtw-anime-02-rain-neon-alley.png",
+    coverAlt: "A wet night street under a gold lattice in the rain.",
+    readingMinutes: 6,
+    author: "Paal Kristian Levang",
+    authorRole: "Inventor of AI Network Infrastructure",
+    authorImage: "/blog/paal-kristian-levang.jpg",
+    body: [
+      "This is an umbrella. It looks like an umbrella. The brain is not in the handle.",
+    ],
+  },
+  {
     slug: "how-a-user-joins",
     title: "How participation works on the Real Time Web",
     excerpt:

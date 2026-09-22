@@ -7,6 +7,7 @@ import { CornerMarks } from "@/components/CornerMarks";
 import { ParticipationExplainer } from "@/components/blog/ParticipationExplainer";
 import { LastITProject } from "@/components/blog/LastITProject";
 import { SmartShoes } from "@/components/blog/SmartShoes";
+import { SmartUmbrella } from "@/components/blog/SmartUmbrella";
 import { ContributorInvite } from "@/components/blog/ContributorInvite";
 
 type Params = { slug: string };
@@ -73,6 +74,8 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         <LastITProject />
       ) : post.slug === "smart-shoes" ? (
         <SmartShoes />
+      ) : post.slug === "smart-umbrella" ? (
+        <SmartUmbrella />
       ) : post.slug === "how-a-user-joins" ? (
         <ParticipationExplainer />
       ) : (
