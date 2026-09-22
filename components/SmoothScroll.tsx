@@ -9,10 +9,11 @@ function ScrollLock() {
 
   useEffect(() => {
     if (!lenis) return;
+    const scroller = lenis;
 
     function sync() {
-      if (document.body.style.overflow === "hidden") lenis.stop();
-      else lenis.start();
+      if (document.body.style.overflow === "hidden") scroller.stop();
+      else scroller.start();
     }
 
     sync();
