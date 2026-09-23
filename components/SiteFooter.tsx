@@ -47,7 +47,7 @@ export function SiteFooter() {
               <Link href="/docs/introduction/vision">Vision</Link>
             </li>
             <li>
-              <Link href="/docs/brand">Brand strategy</Link>
+              <Link href="/docs/introduction/tomorrow">The Internet of tomorrow</Link>
             </li>
           </ul>
         </div>

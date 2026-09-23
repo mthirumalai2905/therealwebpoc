@@ -52,7 +52,8 @@ export function DocsNav() {
                       <Link
                         href={item.href}
                         className={clsx(
-                          "flex items-center justify-between gap-2 rounded-sm px-2 py-[5px] text-[13px] leading-snug",
+                          "flex items-center justify-between gap-2 rounded-sm py-[5px] text-[13px] leading-snug",
+                          item.nested ? "pl-5 pr-2" : "px-2",
                           active
                             ? "bg-[var(--accent-dim)] text-[var(--ink)]"
                             : "text-[var(--muted)] hover:text-[var(--ink)]",

@@ -11,7 +11,7 @@ const links = [
   {
     href: "/docs",
     label: "About RTW",
-    match: ["/docs/introduction", "/docs/architecture", "/docs/reference", "/docs/research", "/docs/brand", "/docs"],
+    match: ["/docs/introduction", "/docs/architecture", "/docs/reference", "/docs/research", "/docs/summary", "/docs"],
   },
   { href: "/blog", label: "Journals", match: ["/blog"] },
   { href: "/docs/implementation", label: "Under the hood", match: ["/docs/implementation"] },

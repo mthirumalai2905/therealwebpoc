@@ -26,6 +26,21 @@ const nextConfig: NextConfig = {
         destination: "/blog/two-webs",
         permanent: true,
       },
+      {
+        source: "/docs/brand",
+        destination: "/docs/introduction/tomorrow",
+        permanent: true,
+      },
+      {
+        source: "/docs/brand/:path*",
+        destination: "/docs/introduction/tomorrow/:path*",
+        permanent: true,
+      },
+      {
+        source: "/docs/reference/glossary",
+        destination: "/docs/implementation/dictionary",
+        permanent: true,
+      },
     ];
   },
 };

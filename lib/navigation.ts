@@ -5,6 +5,7 @@ export type NavItem = {
   href: string;
   status?: DocStatus;
   chapter?: string;
+  nested?: boolean;
 };
 
 export type NavGroup = {
@@ -18,6 +19,16 @@ export const nav: NavGroup[] = [
     items: [
       { title: "What is Real Time Web?", href: "/docs/introduction", chapter: "Start here" },
       { title: "Why Real Time Web?", href: "/docs/introduction/why", chapter: "Start here" },
+      { title: "The Internet of tomorrow", href: "/docs/introduction/tomorrow", chapter: "Start here" },
+      { title: "Vision", href: "/docs/introduction/tomorrow/vision", chapter: "Start here", nested: true },
+      { title: "Mission", href: "/docs/introduction/tomorrow/mission", chapter: "Start here", nested: true },
+      { title: "Values", href: "/docs/introduction/tomorrow/values", chapter: "Start here", nested: true },
+      { title: "Personality", href: "/docs/introduction/tomorrow/personality", chapter: "Start here", nested: true },
+      { title: "Audience", href: "/docs/introduction/tomorrow/audience", chapter: "Start here", nested: true },
+      { title: "Position", href: "/docs/introduction/tomorrow/position", chapter: "Start here", nested: true },
+      { title: "Promise", href: "/docs/introduction/tomorrow/promise", chapter: "Start here", nested: true },
+      { title: "Proof", href: "/docs/introduction/tomorrow/proof", chapter: "Start here", nested: true },
+      { title: "Concept", href: "/docs/introduction/tomorrow/concept", chapter: "Start here", nested: true },
       { title: "Data and information", href: "/docs/introduction/data-and-information", chapter: "Start here" },
       { title: "What it can do", href: "/docs/introduction/what-it-can-do", chapter: "Start here" },
       { title: "How it works", href: "/docs/introduction/how-it-works", chapter: "How it works" },
@@ -34,35 +45,22 @@ export const nav: NavGroup[] = [
       { title: "Morphic services", href: "/docs/architecture/morphic-services", chapter: "The architecture" },
       { title: "Data Channels", href: "/docs/architecture/data-channels", status: "draft", chapter: "The architecture" },
       { title: "Network topology", href: "/docs/architecture/topology", status: "draft", chapter: "The architecture" },
-      { title: "Identity", href: "/docs/architecture/identity", status: "draft", chapter: "Still open" },
-      { title: "Domains", href: "/docs/architecture/domains", status: "draft", chapter: "Still open" },
-      { title: "Discovery", href: "/docs/architecture/discovery", status: "draft", chapter: "Still open" },
-      { title: "Authentication", href: "/docs/architecture/authentication", status: "draft", chapter: "Still open" },
-      { title: "Interoperability", href: "/docs/architecture/interoperability", status: "draft", chapter: "Still open" },
+      { title: "Summary", href: "/docs/summary", chapter: "Summary" },
     ],
   },
   {
-    title: "Brand",
-    items: [
-      { title: "Introduction", href: "/docs/brand" },
-      { title: "Vision", href: "/docs/brand/vision" },
-      { title: "Mission", href: "/docs/brand/mission" },
-      { title: "Values", href: "/docs/brand/values" },
-      { title: "Brand Personality", href: "/docs/brand/personality" },
-      { title: "Target Audience", href: "/docs/brand/audience" },
-      { title: "Position", href: "/docs/brand/position" },
-      { title: "Brand Promise", href: "/docs/brand/promise" },
-      { title: "Brand Proof", href: "/docs/brand/proof" },
-      { title: "Brand Concept", href: "/docs/brand/concept" },
-    ],
-  },
-  {
-    title: "Implementation",
+    title: "Under the hood",
     items: [
       { title: "Overview", href: "/docs/implementation" },
       { title: "Synx", href: "/docs/implementation/synx" },
       { title: "Morph Space", href: "/docs/implementation/morph" },
       { title: "Skalle", href: "/docs/implementation/skalle", status: "draft" },
+      { title: "Dictionary", href: "/docs/implementation/dictionary" },
+      { title: "Identity", href: "/docs/architecture/identity", status: "draft", chapter: "Still open" },
+      { title: "Domains", href: "/docs/architecture/domains", status: "draft", chapter: "Still open" },
+      { title: "Discovery", href: "/docs/architecture/discovery", status: "draft", chapter: "Still open" },
+      { title: "Authentication", href: "/docs/architecture/authentication", status: "draft", chapter: "Still open" },
+      { title: "Interoperability", href: "/docs/architecture/interoperability", status: "draft", chapter: "Still open" },
     ],
   },
   {
@@ -76,7 +74,6 @@ export const nav: NavGroup[] = [
   {
     title: "Reference",
     items: [
-      { title: "Summary", href: "/docs/reference/glossary" },
       { title: "FAQ", href: "/docs/reference/faq" },
       { title: "Governance", href: "/docs/reference/governance" },
       { title: "Contributing", href: "/docs/reference/contributing" },
@@ -123,7 +120,7 @@ export const explorePaths = [
   },
   {
     href: "/docs/implementation",
-    label: "Implementation",
+    label: "Under the hood",
     text: "Named implementations: Synx, Morph Space, and others planning to build.",
   },
   {

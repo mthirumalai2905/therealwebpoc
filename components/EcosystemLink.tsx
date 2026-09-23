@@ -19,16 +19,16 @@ const config = {
     label: "Read Morphic Architecture",
   },
   specification: {
-    kicker: "Implementation",
+    kicker: "Under the hood",
     title: "Want to see who is implementing the architecture?",
     href: "/docs/implementation",
-    label: "Read implementations",
+    label: "Read under the hood",
   },
   implementation: {
-    kicker: "Implementation",
+    kicker: "Under the hood",
     title: "Want to see who is implementing the architecture?",
     href: "/docs/implementation",
-    label: "Read implementations",
+    label: "Read under the hood",
   },
 };
 

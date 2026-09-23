@@ -33,6 +33,7 @@ const pages = [
   { title: "About RTW", href: "/docs", trail: "Site" },
   { title: "What is Real Time Web?", href: "/docs/introduction", trail: "Start here" },
   { title: "Why Real Time Web?", href: "/docs/introduction/why", trail: "Start here" },
+  { title: "The Internet of tomorrow", href: "/docs/introduction/tomorrow", trail: "Start here" },
   { title: "Two webs", href: "/blog/two-webs", trail: "Journals" },
   { title: "Data and information", href: "/docs/introduction/data-and-information", trail: "Start here" },
   { title: "What it can do", href: "/docs/introduction/what-it-can-do", trail: "Start here" },
@@ -44,7 +45,8 @@ const pages = [
   { title: "Journals", href: "/blog", trail: "Site" },
   { title: "Under the hood", href: "/docs/implementation", trail: "Site" },
   { title: "Contact", href: "/contact", trail: "Site" },
-  { title: "Summary", href: "/docs/reference/glossary", trail: "Reference" },
+  { title: "Summary", href: "/docs/summary", trail: "About RTW" },
+  { title: "Dictionary", href: "/docs/implementation/dictionary", trail: "Under the hood" },
 ];
 
 export function NavPaletteProvider({ children }: { children: ReactNode }) {
