@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const starts = [
   {
-    href: "/docs/introduction/two-webs",
+    href: "/blog/two-webs",
     label: "Two webs",
     text: "WWW for documents. RTW for live things. Ghosts, morphing, ownership, MAD.",
   },

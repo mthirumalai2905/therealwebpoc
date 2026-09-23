@@ -30,10 +30,10 @@ export function useNavPalette() {
 }
 
 const pages = [
-  { title: "Real Time Web", href: "/docs", trail: "Site" },
+  { title: "About RTW", href: "/docs", trail: "Site" },
   { title: "What is Real Time Web?", href: "/docs/introduction", trail: "Start here" },
   { title: "Why Real Time Web?", href: "/docs/introduction/why", trail: "Start here" },
-  { title: "Two webs", href: "/docs/introduction/two-webs", trail: "Start here" },
+  { title: "Two webs", href: "/blog/two-webs", trail: "Journals" },
   { title: "Data and information", href: "/docs/introduction/data-and-information", trail: "Start here" },
   { title: "What it can do", href: "/docs/introduction/what-it-can-do", trail: "Start here" },
   { title: "How it works", href: "/docs/introduction/how-it-works", trail: "How it works" },
@@ -41,8 +41,9 @@ const pages = [
   { title: "Morphic services", href: "/docs/architecture/morphic-services", trail: "The architecture" },
   { title: "Bijective network", href: "/docs/architecture/bijective-network", trail: "The architecture" },
   { title: "How participation works", href: "/docs/introduction/onboarding", trail: "How it works" },
-  { title: "Articles", href: "/blog", trail: "Site" },
-  { title: "Implementation", href: "/docs/implementation", trail: "Site" },
+  { title: "Journals", href: "/blog", trail: "Site" },
+  { title: "Under the hood", href: "/docs/implementation", trail: "Site" },
+  { title: "Contact", href: "/contact", trail: "Site" },
   { title: "Summary", href: "/docs/reference/glossary", trail: "Reference" },
 ];
 

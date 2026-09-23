@@ -14,4 +14,16 @@ When a new Morphic service is created, the owner of the service becomes the prim
 
 The data source is owned by the user that controls the endpoint and has registered it against the endpoint ghost. The ghost can be transferred to another person. By morphing the ghost against a secondary service the owner gives read access to the service provider. The read access can anytime be withdrawn by the owner.
 
-Data is not natively stored in the network. The RTW network natively does not store data, but a service provider has the option to connect a database to their local ghosts.
+## Where data is stored
+
+Data is not natively stored in the network. Based on how the linking relationship is set up between services, data is dynamically morphed into local data models along the linking path. If data has been shared with a service, the service owner may persist it in the local context they receive.
+
+For data to pass through the linking path and be consumed at an endpoint, the sender and receiver ghosts must belong to a user who owns the data or has been granted read access. The RTW network natively does not store data, but a service provider may connect a database to their local ghosts.
+
+## Service providers and trust
+
+A service provider that gains read access to several users’ data may decide to share that data with other users. The service provider needs to be trusted and responsible for how they use the data, even when each user approved the morph individually.
+
+## Privacy and sovereignty
+
+Supporting privacy and sovereignty means the user can control who has access to the data source, and that data is not persisted in the network space unless the user has agreed to it. Ownership of a ghost and a direct path to the original source lets the user morph that ghost into a secondary service and share data with them.

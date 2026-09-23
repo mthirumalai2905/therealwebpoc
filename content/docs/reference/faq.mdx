@@ -46,7 +46,7 @@ The Real-Time Web extends this model from static or request-based resources to l
 
 <WwwVsRtw />
 
-[Two webs](/docs/introduction/two-webs)
+[Two webs](/blog/two-webs)
 
 ### What does bijective network architecture mean?
 
@@ -149,6 +149,54 @@ If nobody is listening, the value does not need to travel. Data stays associated
 That is the architectural claim in the draft notes. It is not a congestion-control specification.
 
 [Network topology](/docs/architecture/topology)
+
+### What is Ghost Space?
+
+Ghost Space is the shared coordination environment around a network resource. A ghost is a shared-memory representation of one endpoint.
+
+The four layers can observe authorized updates without one party owning the whole stack. Ghost Space is not a chat room. The ghost is tied to a resource, not to a person.
+
+[Ghost Space](/docs/architecture/ghost-space)
+
+### What is a Morphic service?
+
+A Morphic service is an application-layer service on MAD that allocates ghosts for users.
+
+When the service is created, the service owner is primary owner of those ghosts. After a user confirms a transfer, the user owns the data layer. The service owner keeps the application layer and may keep a local copy.
+
+[Morphic services](/docs/architecture/morphic-services)
+
+### What is the difference between morph and transfer?
+
+Transfer moves ownership of the ghostId after the user confirms. Morph grants read access into another service and can be withdrawn.
+
+Two different people do not open each other’s data because they share an implementation. One of them morphs or transfers.
+
+[Morphic services](/docs/architecture/morphic-services)
+
+### What is a micropage?
+
+A micropage is a mini description a service owner publishes of the service and its data model.
+
+RTW is protocol independent. The service owner chooses the protocol. If a service does not describe itself, other services have no serious basis for linking to it.
+
+[Morphic services](/docs/architecture/morphic-services)
+
+### What is a kernelizer?
+
+A kernelizer lets an endpoint receive a self-contained message before the data stream. An empty endpoint can get a program first, then data, without a preinstalled application.
+
+Ownership of the ghost decides which layer can be configured at runtime. This answer follows draft architecture notes.
+
+[Interoperability](/docs/architecture/interoperability)
+
+### Is RTW protocol independent?
+
+Yes. The service owner decides their own protocol. How data is structured is described on the micropage.
+
+This site does not publish encodings, command tables, or a required schema language.
+
+[Interoperability](/docs/architecture/interoperability)
 
 ## Trust, control and security
 

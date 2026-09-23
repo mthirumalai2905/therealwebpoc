@@ -18,7 +18,6 @@ export const nav: NavGroup[] = [
     items: [
       { title: "What is Real Time Web?", href: "/docs/introduction", chapter: "Start here" },
       { title: "Why Real Time Web?", href: "/docs/introduction/why", chapter: "Start here" },
-      { title: "Two webs", href: "/docs/introduction/two-webs", chapter: "Start here" },
       { title: "Data and information", href: "/docs/introduction/data-and-information", chapter: "Start here" },
       { title: "What it can do", href: "/docs/introduction/what-it-can-do", chapter: "Start here" },
       { title: "How it works", href: "/docs/introduction/how-it-works", chapter: "How it works" },
@@ -110,7 +109,7 @@ export const explorePaths = [
   {
     href: "/docs/introduction",
     label: "Real Time Web",
-    text: "Start with what it is, then why, then the two webs.",
+    text: "Start with what it is, then why, then data and information.",
   },
   {
     href: "/docs/architecture/identity",

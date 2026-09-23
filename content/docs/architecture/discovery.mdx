@@ -6,7 +6,17 @@ status: draft
 
 In MAD, the vertical communication stack layers are segregated. The stack is also distributed to the endpoint on activation. The endpoint prior to the communication does not need to contain any protocol, libraries or pre-defined program behaviour.
 
+If an identified user owns and controls the whole stack of a domain, that user also controls ownership of allocated ghosts for endpoints connecting against that domain address space. See [Domains](/docs/architecture/domains).
+
+## Protocol independence
+
 RTW is protocol independent. The service owner decides their own protocol. An implementation may use common Internet transports such as TCP/IP, HTTPS, and websocket, so an endpoint can connect using a native TCP connection and send or receive data. That is a possible implementation choice, not a requirement of the architecture.
+
+Information about how data is structured lives on each <GlossaryTerm id="micropage">micropage</GlossaryTerm>. This site does not publish encodings or command tables.
+
+## Name resolution
+
+How an RTW name resolves to a network resource, how that relates to conventional DNS, and whether an existing internet domain can be attached are not answered in the current source. Those questions belong with an implementation’s naming system, not as invented protocol here.
 
 <SpecStatus status="proposal">
   A general discovery and name-resolution specification, including how RTW names relate to conventional DNS, is not provided as public copy yet.

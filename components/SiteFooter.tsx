@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ContactDialog } from "@/components/ContactDialog";
 
 export function SiteFooter() {
   return (
@@ -13,7 +12,7 @@ export function SiteFooter() {
           </p>
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">Real Time Web</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">About RTW</p>
           <ul className="mt-3 space-y-2 text-[13px] text-[var(--ink)]">
             <li>
               <Link href="/docs">Overview</Link>
@@ -33,16 +32,16 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">About</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">Also here</p>
           <ul className="mt-3 space-y-2 text-[13px] text-[var(--ink)]">
             <li>
-              <Link href="/docs/implementation">Implementation</Link>
+              <Link href="/blog">Journals</Link>
             </li>
             <li>
-              <Link href="/docs/reference/glossary">Summary</Link>
+              <Link href="/docs/implementation">Under the hood</Link>
             </li>
             <li>
-              <Link href="/blog">Articles</Link>
+              <Link href="/contact">Contact</Link>
             </li>
             <li>
               <Link href="/docs/introduction/vision">Vision</Link>
@@ -50,44 +49,20 @@ export function SiteFooter() {
             <li>
               <Link href="/docs/brand">Brand strategy</Link>
             </li>
-            <li>
-              <Link href="/docs/research/implementations">Implementations</Link>
-            </li>
           </ul>
         </div>
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">Status</p>
           <ul className="mt-3 space-y-2 text-[13px] leading-6 text-[var(--muted)]">
             <li>Architecture: public</li>
-            <li>Implementation: named, high level</li>
-            <li>Implementations: open</li>
+            <li>Under the hood: named, high level</li>
             <li>Not owned by a company</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-[var(--line)]">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-5 px-4 py-8 sm:flex-row sm:items-center md:px-6">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--accent)]">
-              Contact
-            </p>
-            <p className="mt-2 text-[17px] leading-7 text-[var(--ink)]">
-              Have a question about the Real Time Web?
-            </p>
-            <p className="mt-1 text-[13px] leading-6 text-[var(--muted)]">
-              Send a message. This is not a product signup.
-            </p>
-          </div>
-          <ContactDialog />
-        </div>
-      </div>
-      <div className="border-t border-[var(--line)]">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-1.5 px-4 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] text-[12px] leading-6 text-[var(--muted)] md:px-6">
-          <p>Copyright © 2026 Real Time Web.</p>
-          <p>
-            A standalone nonprofit architecture explainer. Not owned by a company. Anyone may
-            implement MAD or the Real Time Web. This site does not designate a vendor.
-          </p>
+          <p>Copyright © 2026 Real Time Web org. 836 603 362</p>
         </div>
       </div>
     </footer>

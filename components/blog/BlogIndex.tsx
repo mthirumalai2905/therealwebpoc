@@ -29,7 +29,7 @@ export function BlogIndex({ posts }: { posts: BlogPost[] }) {
     <div>
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--accent)]">Articles</p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--accent)]">Journals</p>
           <h1 className="mt-2 font-serif text-4xl tracking-tight text-[var(--ink)] md:text-5xl">
             Worlds worth keeping
           </h1>

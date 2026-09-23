@@ -6,11 +6,19 @@ status: draft
 
 MAD treats the authentication system as optional when constructing an RTW network.
 
-The MAD network does not natively persist data into databases or filesystems. It is designed as a distributed machine network. The network can be tokenized and limited to the system that issues the token and how this is mapped to the user or network resource. Any token system that generates a token for identity can be used.
+## Security and trust model
+
+The MAD network does not natively persist data into databases or filesystems. It is designed as a distributed machine network. A machine network does not operate with trust in the same way as people do. The network can be tokenized and limited to the system that issues the token and how this is mapped to the user or network resource.
+
+Any token system that generates a token for identity can be used. The source names examples such as blockchain systems and Keycloak. Those are examples of the class, not a required vendor.
 
 Once a user has been registered in an implementation, they may participate in RTW and become members of services by getting access to ghosts.
 
-Access can be revoked. Morphing a ghost against a secondary service grants read access that the owner can withdraw. Implementations may also revoke tokens.
+## How access is withdrawn
+
+Morphing a ghost against a secondary service grants read access that the owner can withdraw at any time. A ghost can also be transferred, which is a change of ownership and requires confirm.
+
+Implementations may also revoke tokens or end sessions. Those operational steps belong with each implementation, not on this architecture site.
 
 <IdentityFlow />
 

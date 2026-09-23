@@ -4,7 +4,7 @@ const paths = [
   {
     step: "01",
     name: "What",
-    href: "/docs/introduction/two-webs",
+    href: "/docs/introduction",
     host: "Real Time Web",
     text: "A network architecture for live, bidirectional relationships between physical and virtual resources.",
   },

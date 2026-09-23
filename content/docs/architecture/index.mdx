@@ -14,7 +14,9 @@ MAD defines a minimum of four logical ownership and operational layers.
 
 ## Independent control
 
-In the conventional Web, standards primarily define how resources are identified, described, requested, and presented at the Web and application layers. Identity, sessions, payments, and access control are then frequently implemented separately by each application or domain.
+In the conventional Web, standards primarily define how resources are identified, described, requested, and presented at the Web and application layers. The underlying networking infrastructure is provided through technologies and standards operated by hardware manufacturers, telecommunications providers, Internet service providers, and network operators.
+
+Identity, sessions, payments, and access control are then frequently implemented separately by each application or domain. The result is millions of independent login systems, user accounts, payment integrations, and proprietary trust mechanisms.
 
 MAD proposes a multi-layer network stack in which the four logical layers can be configured and updated independently at runtime.
 
@@ -40,5 +42,7 @@ Consider sending a message to a friend. All four layers participate, but they do
 MAD introduces a shared state model called Ghost Space. The actual endpoint has a unique bijective relationship with its Ghost. See [Ghost Space](/docs/architecture/ghost-space), [Ghosts and twins](/docs/architecture/ghosts-and-twins), and [Bijective network](/docs/architecture/bijective-network).
 
 A Morphic service is the application-layer home that allocates those ghosts. See [Morphic services](/docs/architecture/morphic-services).
+
+The service owner decides the protocol. RTW is protocol independent. The public description of a service lives on a micropage. See [Interoperability](/docs/architecture/interoperability).
 
 <GhostBijection />

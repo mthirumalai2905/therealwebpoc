@@ -1,10 +1,25 @@
 ---
 title: Communication Specification
+description: Protocol independence and service description. Wire formats are not specified here.
 status: pending
 ---
 
-Planned section.
+This section is listed in the source as specifications and version history. Written protocol text has not been supplied.
 
-RTW as an architecture is described as protocol independent. The service owner decides their own protocol. An implementation may use common Internet transports and more than one encoding.
+## What the architecture says
 
-Specification under development.
+RTW is protocol independent. The service owner decides their own protocol.
+
+Information about how data is structured lives on each micropage: a mini description of the service and its data model. Any service that wants to be linked should describe its schema. If that description is missing, other services have no serious basis for linking to it.
+
+An implementation may use common Internet transports and more than one encoding. Format details, command tables, and default encodings belong with that implementation.
+
+## What is not written
+
+- A required schema language
+- A versioned protocol document
+- A discovery or name-resolution specification
+
+See [Interoperability](/docs/architecture/interoperability) for normalizer, materializer, and kernelizer, and [Morphic services](/docs/architecture/morphic-services) for the micropage.
+
+<SpecStatus status="pending" />

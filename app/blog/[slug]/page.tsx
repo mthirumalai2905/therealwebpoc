@@ -12,6 +12,7 @@ import { PlayingWithOranges } from "@/components/blog/PlayingWithOranges";
 import { ScanWifi } from "@/components/blog/ScanWifi";
 import { LinkTheFridge } from "@/components/blog/LinkTheFridge";
 import { TwentyFourHoursNtnu } from "@/components/blog/TwentyFourHoursNtnu";
+import { TwoWebs } from "@/components/blog/TwoWebs";
 import { ContributorInvite } from "@/components/blog/ContributorInvite";
 
 type Params = { slug: string };
@@ -54,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
             <div className="relative z-10 flex h-full max-w-[780px] flex-col justify-end px-5 pb-6 md:px-8 md:pb-8">
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/70">
                 <Link href="/blog" className="hover:text-white">
-                  Articles
+                  Journals
                 </Link>
                 <span className="mx-2">/</span>
                 {post.category}
@@ -90,6 +91,8 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         <TwentyFourHoursNtnu />
       ) : post.slug === "how-a-user-joins" ? (
         <ParticipationExplainer />
+      ) : post.slug === "two-webs" ? (
+        <TwoWebs />
       ) : (
         <div className="mx-auto max-w-[640px] px-4 py-12 md:px-0">
           {post.body.map((paragraph, index) => (

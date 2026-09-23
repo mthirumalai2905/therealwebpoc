@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Contact is not configured." }, { status: 503 });
   }
 
-  let body: { name?: string; email?: string; message?: string; company?: string };
+  let body: { name?: string; email?: string; topic?: string; message?: string; company?: string };
   try {
     body = await request.json();
   } catch {
@@ -19,9 +19,11 @@ export async function POST(request: Request) {
 
   const name = String(body.name ?? "").trim();
   const email = String(body.email ?? "").trim();
+  const topic = String(body.topic ?? "").trim();
   const message = String(body.message ?? "").trim();
+  const allowed = new Set(["Legal", "Media"]);
 
-  if (!name || !email || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (!name || !email || !message || !allowed.has(topic) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ ok: false, error: "Check the fields and try again." }, { status: 400 });
   }
 
@@ -32,7 +34,7 @@ export async function POST(request: Request) {
   const response = await fetch(scriptUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, message }),
+    body: JSON.stringify({ name, email, message: `[${topic}] ${message}` }),
     redirect: "follow",
   });
 

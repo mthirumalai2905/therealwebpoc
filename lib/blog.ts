@@ -125,6 +125,20 @@ export const posts: BlogPost[] = [
     ],
   },
   {
+    slug: "two-webs",
+    title: "Two webs",
+    excerpt:
+      "The World Wide Web is for documents you retrieve. The Real Time Web is for a lamp that is still on. Same Internet. Two jobs.",
+    date: "2026-09-23",
+    category: "Essay",
+    cover: "/blog/rtw-anime-25-two-on-the-catwalk.png",
+    coverAlt: "Two figures on a night catwalk under a gold sphere.",
+    readingMinutes: 8,
+    body: [
+      "There are two kinds of web on the same Internet. They are not the same job.",
+    ],
+  },
+  {
     slug: "how-a-user-joins",
     title: "How participation works on the Real Time Web",
     excerpt:

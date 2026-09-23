@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         destination: "/docs/implementation",
         permanent: true,
       },
+      {
+        source: "/docs/introduction/two-webs",
+        destination: "/blog/two-webs",
+        permanent: true,
+      },
     ];
   },
 };

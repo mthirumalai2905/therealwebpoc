@@ -8,10 +8,14 @@ import { clsx } from "clsx";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const links = [
-  { href: "/docs", label: "Real Time Web", match: ["/docs/introduction", "/docs/architecture", "/docs"] },
-  { href: "/blog", label: "Articles", match: ["/blog"] },
-  { href: "/docs/implementation", label: "Implementation", match: ["/docs/implementation"] },
-  { href: "/docs/reference/glossary", label: "Summary", match: ["/docs/reference/glossary"] },
+  {
+    href: "/docs",
+    label: "About RTW",
+    match: ["/docs/introduction", "/docs/architecture", "/docs/reference", "/docs/research", "/docs/brand", "/docs"],
+  },
+  { href: "/blog", label: "Journals", match: ["/blog"] },
+  { href: "/docs/implementation", label: "Under the hood", match: ["/docs/implementation"] },
+  { href: "/contact", label: "Contact", match: ["/contact"] },
 ];
 
 export function SiteHeader() {
