@@ -1,8 +1,75 @@
 ---
 title: Governance
-status: pending
+description: Who controls what on the Real Time Web, and what this site is allowed to decide.
+status: published
 ---
 
-Planned section: governance and contribution process. No body copy was provided.
+<SpecStatus status="draft">
+  The source lists a governance and contribution section. It does not provide a process, a board, or a versioned specification. This page states only what is already written: how ownership is split, and what this nonprofit site is for.
+</SpecStatus>
 
-How researchers and developers can contribute is an unanswered FAQ item.
+Governance, on the Real Time Web, is not a company login. It is the question of who may change a layer without taking the rest.
+
+This site answers that question at the architectural level. It does not run the network. It does not onboard anyone. It does not designate a vendor.
+
+<EcosystemMap />
+
+## Two different jobs
+
+Keep these separate. Mixing them is how people think this page is a product.
+
+**This site** is a standalone nonprofit explainer. It is not owned by a company. It publishes what the Real Time Web is, why it exists, and Morphic Architecture Design.
+
+**An implementation** is software someone builds on that architecture. Anyone can develop an implementation of MAD or RTW. Tools, marketplaces, and services sit there. They are not this site.
+
+Conceptual questions live here. Account, marketplace, and onboarding questions live with whichever implementation a person chooses. Configuration and operations live with that implementation’s own documentation.
+
+## Who controls which layer
+
+MAD was introduced in 2008 by Paal Kristian Levang. It splits the stack so a change in one layer does not have to redefine the whole relationship.
+
+<MadLayerTable />
+
+- Infrastructure providers control processing, connectivity, and energy.
+- Network and security providers manage addressing, identity, and trust. Authentication is optional in the model.
+- Service developers own their applications and transformation logic.
+- Resource owners control whether a source may be accessed or shared.
+
+The hardware provider, the network operator, the application developer, and the end user do not have to be the same party. That is the design. A heterogeneous network is not controlled by a single entity. It grows as independent participants add their own domains and services.
+
+## Who owns the data
+
+Ownership of data at an endpoint is given by the ghostId. Whoever owns the ghostId owns the data at that endpoint.
+
+When a Morphic service is created, the service owner is the primary owner of allocated ghosts. After a user registers and confirms a transfer, the data layer belongs to the user. The application layer stays with the service owner. The service owner may keep a local copy.
+
+Two different people do not open each other’s data because they share an implementation. Read access is a morph. It can be withdrawn. Ownership is a transfer, and a transfer has to be confirmed.
+
+The network does not natively store data. A service may attach a database to its local ghosts. That local copy is the service’s context. It is not a required central store.
+
+<OwnershipGate />
+
+## Eternal widespread ownership
+
+The guiding principle is eternal widespread ownership of the Web.
+
+That means the Web should not be permanently captured by a small number of platforms. Ownership, intelligence, access control, and economic opportunity should remain distributed among the people and organizations that contribute resources.
+
+This site exists so that sentence has a public home. It is not a marketplace. It is the architecture those marketplaces would have to remain compatible with.
+
+## What is not decided here
+
+These questions appear in the source plan. They do not yet have answers.
+
+- Is RTW an open specification?
+- Which specifications are currently available?
+- How are specifications versioned?
+- Where is the technical documentation for an implementation?
+
+Writing for this site has a review path. That is editorial, not a standards process. See [Contributing](/docs/reference/contributing).
+
+Until those are written, this site will not invent a standards body, a voting process, or a contribution workflow. Publishing the architecture is not the same as running a specification program.
+
+If you want the layers, read [Morphic Architecture](/docs/architecture). If you want named implementations at high level, read [Implementation](/docs/implementation). If you want the terms, read [Summary](/docs/reference/glossary).
+
+<EcosystemLink to="architecture" />

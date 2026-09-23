@@ -79,8 +79,8 @@ export const nav: NavGroup[] = [
     items: [
       { title: "Summary", href: "/docs/reference/glossary" },
       { title: "FAQ", href: "/docs/reference/faq" },
-      { title: "Governance", href: "/docs/reference/governance", status: "pending" },
-      { title: "Contributing", href: "/docs/reference/contributing", status: "pending" },
+      { title: "Governance", href: "/docs/reference/governance" },
+      { title: "Contributing", href: "/docs/reference/contributing" },
     ],
   },
 ];

@@ -40,8 +40,8 @@ export function TwentyFourHoursNtnu() {
       </p>
 
       <Figure
-        src="/blog/rtw-anime-11-classroom-after-rain.png"
-        alt="A classroom of desks after rain, gold light through tall windows."
+        src="/blog/rtw-anime-15-infinite-library.png"
+        alt="An infinite library of shelves under a gold lattice of light."
         caption="A weekend is enough only if the channel is already there."
       />
 
@@ -162,8 +162,8 @@ export function TwentyFourHoursNtnu() {
       </p>
 
       <Figure
-        src="/blog/rtw-launch-08-grid-handshake.png"
-        alt="Two gold lattice structures meeting across a dark grid."
+        src="/blog/rtw-voxel-03-overworld-nether-bridge.png"
+        alt="A blocky bridge joining two worlds under a gold sky."
         caption="A handshake is a live grant. A slide is a description of one."
       />
 

@@ -269,8 +269,8 @@ export function LastITProject() {
       </p>
 
       <Figure
-        src="/blog/rtw-launch-01-ai-awakening.png"
-        alt="A city under a gold eye of light, intelligence arriving as a shared field."
+        src="/blog/rtw-mood-02-deep-signal.png"
+        alt="A dark harbour city under a blue signal ring in the sky."
         caption="Streamed intelligence becomes personal the moment it meets a life."
       />
 

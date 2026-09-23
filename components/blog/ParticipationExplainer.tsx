@@ -119,8 +119,8 @@ export function ParticipationExplainer() {
         with the service owner, who may keep a local copy.
       </p>
       <Figure
-        src="/blog/join/ghost-layers.png"
-        alt="A ghost split into application layer held by the service owner and data layer held by the user after confirm."
+        src="/blog/rtw-metaverse-10-twin-layer-city.png"
+        alt="A city stacked in two layers, one physical and one live."
         caption="Ownership splits on the same ghost. Confirm moves the data layer. The service keeps the application layer."
         fit="contain"
       />
@@ -143,8 +143,8 @@ export function ParticipationExplainer() {
       </p>
       <DataChannelMorph />
       <Figure
-        src="/blog/join/live-channel.png"
-        alt="A source endpoint morphed along a path into one user's local ghost data channel."
+        src="/blog/rtw-mood-04-emerald-grid.png"
+        alt="An emerald grid stretching through a dark city, one live path."
         caption="A data channel is personal. Data moves when ownership or granted read access matches at both ends."
         fit="contain"
       />

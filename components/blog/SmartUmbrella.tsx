@@ -104,8 +104,8 @@ export function SmartUmbrella() {
       <UmbrellaSignals />
 
       <Figure
-        src="/blog/rtw-anime-02-rain-neon-alley.png"
-        alt="A wet night street under a gold lattice in the rain."
+        src="/blog/rtw-anime-08-lantern-spirit-alley.png"
+        alt="A lantern-lit alley at night, gold light in the wet street."
         caption="Rain is a live condition. The umbrella only needs to hear it."
       />
 
@@ -168,8 +168,8 @@ export function SmartUmbrella() {
       </p>
 
       <Figure
-        src="/blog/rtw-theme-06-forest-iot.png"
-        alt="A night forest and river joined by a thin living network of light."
+        src="/blog/rtw-film-02-rooftop-dusk.png"
+        alt="A rooftop at dusk looking over a city and a gold sphere."
         caption="Any live thing can join. The service names what it is allowed to mean."
       />
 

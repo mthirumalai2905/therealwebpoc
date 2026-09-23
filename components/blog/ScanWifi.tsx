@@ -56,8 +56,8 @@ export function ScanWifi() {
       <WifiCeiling />
 
       <Figure
-        src="/blog/rtw-theme-06-forest-iot.png"
-        alt="A forest of sensors under a gold lattice, lights in the trees."
+        src="/blog/rtw-theme-09-turbine-nodes.png"
+        alt="Gold turbine nodes standing in a dark field."
         caption="The board stays a scanner. Place it somewhere else and it is still a scanner."
       />
 
@@ -104,8 +104,8 @@ export function ScanWifi() {
       <WifiTwoWindows />
 
       <Figure
-        src="/blog/rtw-launch-02-decentralized-network.png"
-        alt="A gold lattice network stretching between dark towers."
+        src="/blog/rtw-launch-05-grid-goes-live.png"
+        alt="A city grid lighting up as the network comes live."
         caption="The bench and the other window are not two copies. They are one live update."
       />
 
@@ -149,8 +149,8 @@ export function ScanWifi() {
       </p>
 
       <Figure
-        src="/blog/rtw-theme-07-observatory.png"
-        alt="A ridge of dishes under a gold lattice sphere at night."
+        src="/blog/rtw-cyberpunk-10-antenna-farm.png"
+        alt="A farm of antennas on a dark ridge, dishes aimed at the sky."
         caption="One honest radio is enough, if the link is live and authorized."
       />
 

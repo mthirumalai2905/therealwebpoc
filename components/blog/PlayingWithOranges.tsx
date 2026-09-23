@@ -80,8 +80,8 @@ export function PlayingWithOranges() {
       <BowlLimit />
 
       <Figure
-        src="/blog/rtw-theme-07-observatory.png"
-        alt="A ridge of dishes under a gold lattice sphere at night."
+        src="/blog/rtw-print-04-node-lanterns.png"
+        alt="Paper lanterns hanging in a night street, gold light on the stalls."
         caption="One honest signal is enough, if the link is live and authorized."
       />
 
@@ -111,8 +111,8 @@ export function PlayingWithOranges() {
       <BowlChannels />
 
       <Figure
-        src="/blog/rtw-cyberpunk-05-market-stalls.png"
-        alt="A night market aisle with hanging lamps and a crowd in silhouette."
+        src="/blog/rtw-anime-12-konbini-night.png"
+        alt="A night convenience-store street, warm light and a quiet counter."
         caption="The bowl does not shop. A linked service may care that the bowl is emptying."
       />
 

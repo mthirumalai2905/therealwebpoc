@@ -63,8 +63,8 @@ export function LinkTheFridge() {
       <WwwVsRtw />
 
       <Figure
-        src="/blog/rtw-launch-01-ai-awakening.png"
-        alt="A gold lattice figure waking among dark servers."
+        src="/blog/rtw-theme-01-ghost-space.png"
+        alt="A gold ghost-form standing in a dark hall of light."
         caption="Intelligence is not sealed in the object. It arrives over a live link."
       />
 
@@ -123,8 +123,8 @@ export function LinkTheFridge() {
       <CollectiveAgents />
 
       <Figure
-        src="/blog/rtw-theme-03-orbital-earth-web.png"
-        alt="Earth wrapped in a gold orbital lattice."
+        src="/blog/rtw-metaverse-04-digital-twin.png"
+        alt="A physical street and its live digital twin sharing one light."
         caption="Many services can share a live source. None of them own the planet."
       />
 
