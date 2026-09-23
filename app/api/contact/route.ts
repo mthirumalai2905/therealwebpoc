@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { CONTACT_TOPICS } from "@/lib/contact";
 
 export async function POST(request: Request) {
   const scriptUrl = process.env.CONTACT_SCRIPT_URL;
@@ -21,7 +22,7 @@ export async function POST(request: Request) {
   const email = String(body.email ?? "").trim();
   const topic = String(body.topic ?? "").trim();
   const message = String(body.message ?? "").trim();
-  const allowed = new Set(["Legal", "Media"]);
+  const allowed = new Set<string>(CONTACT_TOPICS);
 
   if (!name || !email || !message || !allowed.has(topic) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ ok: false, error: "Check the fields and try again." }, { status: 400 });

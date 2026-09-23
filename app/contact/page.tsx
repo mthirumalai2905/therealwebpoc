@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Legal and media contact for RealTimeWeb.org. Not a support desk or a signup.",
+  title: "Contact us",
+  description: "Contact Real Time Web for technical, commercial, media, and related inquiries.",
 };
 
 export default function ContactPage() {
@@ -13,11 +13,11 @@ export default function ContactPage() {
         Contact
       </p>
       <h1 className="font-serif mt-3 text-[2rem] leading-tight tracking-tight text-[var(--ink)] md:text-[2.6rem]">
-        Legal and media
+        Contact us
       </h1>
       <p className="mt-4 max-w-[36rem] text-[16px] leading-7 text-[var(--muted)]">
-        This form is for legal matters, press, and official media requests. It is not
-        for product questions, accounts, or joining anything.
+        Please use the contact form below for any inquiries you may have regarding Real
+        Time Web. We will get back to you as soon as possible.
       </p>
       <ContactForm />
     </main>
