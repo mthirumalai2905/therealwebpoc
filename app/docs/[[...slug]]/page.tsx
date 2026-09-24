@@ -36,7 +36,7 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
     <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_220px]">
       <article className="min-w-0 px-4 py-8 sm:px-5 sm:py-12 md:px-8 lg:px-10 lg:py-16">
         <p className="mb-3 font-mono text-[11px] tracking-[0.16em] text-[var(--muted)]">
-          DOCUMENTATION
+          {pathname === "/docs" ? "ABOUT RTW" : "DOCUMENTATION"}
         </p>
         <div className="prose-rtw">
           {status !== "published" ? (
