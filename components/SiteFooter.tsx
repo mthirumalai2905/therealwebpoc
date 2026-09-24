@@ -38,7 +38,7 @@ export function SiteFooter() {
               <Link href="/blog">Journals</Link>
             </li>
             <li>
-              <Link href="/docs/implementation">Under the hood</Link>
+              <Link href="/docs/introduction/how-it-works">Under the hood</Link>
             </li>
             <li>
               <Link href="/contact">Contact</Link>
@@ -55,7 +55,7 @@ export function SiteFooter() {
           <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">Status</p>
           <ul className="mt-3 space-y-2 text-[13px] leading-6 text-[var(--muted)]">
             <li>Architecture: public</li>
-            <li>Under the hood: named, high level</li>
+            <li>Under the hood: how live channels work</li>
             <li>Not owned by a company</li>
           </ul>
         </div>

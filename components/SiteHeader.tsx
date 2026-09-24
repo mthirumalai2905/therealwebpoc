@@ -12,9 +12,14 @@ const links = [
     href: "/docs",
     label: "About RTW",
     match: ["/docs/introduction", "/docs/architecture", "/docs/reference", "/docs/research", "/docs/summary", "/docs"],
+    exclude: ["/docs/introduction/how-it-works"],
   },
   { href: "/blog", label: "Journals", match: ["/blog"] },
-  { href: "/docs/implementation", label: "Under the hood", match: ["/docs/implementation"] },
+  {
+    href: "/docs/introduction/how-it-works",
+    label: "Under the hood",
+    match: ["/docs/introduction/how-it-works", "/docs/implementation"],
+  },
   { href: "/contact", label: "Contact", match: ["/contact"] },
 ];
 
@@ -72,8 +77,10 @@ export function SiteHeader() {
           }
         >
           {links.map((link) => {
+            const excluded = "exclude" in link && link.exclude?.some((prefix) => pathname.startsWith(prefix));
             const active =
               !onLanding &&
+              !excluded &&
               link.match.some((prefix) =>
                 prefix === "/docs" ? pathname === "/docs" : pathname.startsWith(prefix),
               );

@@ -20,15 +20,15 @@ const config = {
   },
   specification: {
     kicker: "Under the hood",
-    title: "Want to see who is implementing the architecture?",
-    href: "/docs/implementation",
-    label: "Read under the hood",
+    title: "Want to see how live channels work?",
+    href: "/docs/introduction/how-it-works",
+    label: "Read how it works",
   },
   implementation: {
     kicker: "Under the hood",
-    title: "Want to see who is implementing the architecture?",
-    href: "/docs/implementation",
-    label: "Read under the hood",
+    title: "Want to see how live channels work?",
+    href: "/docs/introduction/how-it-works",
+    label: "Read how it works",
   },
 };
 

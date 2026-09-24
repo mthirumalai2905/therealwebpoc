@@ -43,7 +43,7 @@ const pages = [
   { title: "Bijective network", href: "/docs/architecture/bijective-network", trail: "The architecture" },
   { title: "How participation works", href: "/docs/introduction/onboarding", trail: "How it works" },
   { title: "Journals", href: "/blog", trail: "Site" },
-  { title: "Under the hood", href: "/docs/implementation", trail: "Site" },
+  { title: "Under the hood", href: "/docs/introduction/how-it-works", trail: "Site" },
   { title: "Contact", href: "/contact", trail: "Site" },
   { title: "Summary", href: "/docs/summary", trail: "About RTW" },
   { title: "Dictionary", href: "/docs/implementation/dictionary", trail: "Under the hood" },

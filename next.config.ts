@@ -13,12 +13,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/docs/specification",
-        destination: "/docs/implementation",
+        destination: "/docs/introduction/how-it-works",
         permanent: true,
       },
       {
         source: "/docs/specification/:path*",
-        destination: "/docs/implementation",
+        destination: "/docs/introduction/how-it-works",
+        permanent: true,
+      },
+      {
+        source: "/docs/implementation",
+        destination: "/docs/introduction/how-it-works",
         permanent: true,
       },
       {

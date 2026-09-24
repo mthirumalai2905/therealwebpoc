@@ -51,7 +51,7 @@ export const nav: NavGroup[] = [
   {
     title: "Under the hood",
     items: [
-      { title: "Overview", href: "/docs/implementation" },
+      { title: "How it works", href: "/docs/introduction/how-it-works" },
       { title: "Synx", href: "/docs/implementation/synx" },
       { title: "Morph Space", href: "/docs/implementation/morph" },
       { title: "Skalle", href: "/docs/implementation/skalle", status: "draft" },
@@ -119,9 +119,9 @@ export const explorePaths = [
     text: "Understand real-time data channels and shared state.",
   },
   {
-    href: "/docs/implementation",
+    href: "/docs/introduction/how-it-works",
     label: "Under the hood",
-    text: "Named implementations: Synx, Morph Space, and others planning to build.",
+    text: "Live channels, bidirectional addressing, and how RTW sits beside the World Wide Web.",
   },
   {
     href: "/docs/research",
