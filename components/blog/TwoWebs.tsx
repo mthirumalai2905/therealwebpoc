@@ -43,8 +43,7 @@ export function TwoWebs() {
       <p className="mt-5 text-[17px] leading-8 text-[var(--ink)]">
         Take a smart lamp. It has a light and a switch. Treat it as an{" "}
         <TermHint id="endpoint">endpoint</TermHint>: the actual network resource. The
-        walkthrough below builds the vocabulary as that lamp participates. It is a
-        teaching story, not a product click path.
+        walkthrough below builds the vocabulary as that lamp participates.
       </p>
 
       <Figure
@@ -123,8 +122,7 @@ export function TwoWebs() {
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         Underneath is Morphic Architecture Design, introduced in 2008 by Paal Kristian
         Levang. Four independently owned layers. A change in one layer does not have to
-        redefine the whole relationship. Anyone can develop an implementation. This site
-        does not name a vendor.
+        redefine the whole relationship.
       </p>
 
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">

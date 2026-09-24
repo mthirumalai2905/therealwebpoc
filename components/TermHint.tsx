@@ -84,7 +84,7 @@ const terms: Record<string, { title: string; lines: string[] }> = {
     lines: [
       "A known toolchain for configuring, administering, securing, and maintaining RTW services.",
       "It is one implementation, not the Real Time Web itself.",
-      "This site does not document Synx procedures or send readers to a product.",
+      "The operating details live with Synx. This site names the role, not the screens.",
     ],
   },
   bijective: {

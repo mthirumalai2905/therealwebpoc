@@ -9,7 +9,7 @@ const steps = [
     id: "understand",
     title: "Understand the architecture",
     where: "Real Time Web",
-    text: "RTW is the network model. This site explains principles, layers, and ownership. Nothing here creates an account or designates a vendor.",
+    text: "RTW is the network model. Start with the principles, the layers, and who owns what.",
     href: "/docs/introduction",
   },
   {
@@ -44,7 +44,7 @@ const steps = [
     id: "implement",
     title: "Implement independently",
     where: "Open implementations",
-    text: "Anyone can develop an implementation of MAD or the Real Time Web. This site does not name a vendor, collect leads, or send readers to a join path.",
+    text: "The architecture can have more than one builder. A service owner chooses their own tools and protocol.",
     href: "/docs/research/implementations",
   },
 ];

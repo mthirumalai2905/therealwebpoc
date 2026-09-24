@@ -226,8 +226,8 @@ export function SmartUmbrella() {
       </p>
 
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">
-        This page explains a public demo of the architecture. It is not a product
-        signup. Anyone can develop an implementation of Morphic Architecture Design.
+        This page follows a public demo of the architecture. The same idea sits under
+        Morphic Architecture Design.
       </p>
 
       <ContributorInvite />

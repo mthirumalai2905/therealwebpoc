@@ -158,8 +158,7 @@ export function SmartShoes() {
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">
         This is an essay by Paal Kristian Levang. The architecture it describes is
         introduced on this site as{" "}
-        <TermHint id="mad">Morphic Architecture Design</TermHint>. Anyone can develop an
-        implementation. This page is not a product signup.
+        <TermHint id="mad">Morphic Architecture Design</TermHint>.
       </p>
 
       <ContributorInvite />

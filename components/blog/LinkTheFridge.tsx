@@ -21,14 +21,13 @@ export function LinkTheFridge() {
       <VideoEmbed
         videoId="d2IRi_QVXUk"
         title="How AI powers the Real Time Web"
-        caption="Watch the talk. This page keeps the architecture and leaves the product pitch on the tape."
+        caption="Watch the talk. The useful split is a live object, a body in the room, and a mind on the network."
       />
 
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
-        The recording is titled as a founder explainer of how AI powers the Real Time
-        Web, and it names a company product in the same breath. This site is not that
-        company. RealTimeWeb.org explains the architecture. It does not sell a toolkit,
-        promise minutes instead of months, or treat a product name as the network.
+        The recording is a founder explainer of how AI powers the Real Time Web. It also
+        names a company product. This page follows the idea that matters for the
+        architecture: a live object, a body in the room, and a mind on the network.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         What is worth keeping from the talk is not the sales sentence. It is the split
@@ -167,14 +166,12 @@ export function LinkTheFridge() {
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         Watch the talk for the spoken picture. Then read the last IT project if you
         want the longer essay on agents, or the umbrella if you want the same idea
-        in a room with an object. Anyone can develop an implementation of MAD.
+        in a room with an object.
       </p>
 
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">
         This page follows the spoken explainer and the architecture notes it
-        overlaps. Product claims, tool names, and speed-to-market sentences stay on
-        the recording. They are not verified here and they are not a signup. This
-        site is not owned by the company that uploaded the video.
+        overlaps. Product claims and speed-to-market sentences stay on the recording.
       </p>
 
       <ContributorInvite />

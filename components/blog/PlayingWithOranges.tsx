@@ -164,9 +164,8 @@ export function PlayingWithOranges() {
       </p>
 
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">
-        This page follows the written description of the Playing with Oranges demo and
-        the architecture it sits on. Watch the video for the room itself. This is not a
-        product signup. Anyone can develop an implementation of MAD.
+        This page follows the written description of the Playing with Oranges demo.
+        Watch the video for the room itself.
       </p>
 
       <ContributorInvite />

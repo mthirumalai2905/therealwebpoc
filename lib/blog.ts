@@ -100,7 +100,7 @@ export const posts: BlogPost[] = [
     slug: "link-the-fridge",
     title: "Link the fridge, not only the page",
     excerpt:
-      "A founder talk on AI and the Real Time Web. This page keeps the architecture: live objects, a body in the room, a mind on the network. The product pitch stays on the tape.",
+      "A founder talk on AI and the Real Time Web. Live objects, a body in the room, a mind on the network.",
     date: "2026-09-23",
     category: "Field notes",
     cover: "/blog/rtw-launch-01-ai-awakening.png",
@@ -142,16 +142,16 @@ export const posts: BlogPost[] = [
     slug: "how-a-user-joins",
     title: "How participation works on the Real Time Web",
     excerpt:
-      "MAD, ghosts, morphing, and live channels at high level. Synx is a known toolchain, not a product pitch. No account is created here.",
+      "A ghost for each resource, a morph for read access, and a channel that stays live.",
     date: "2026-09-18",
     category: "Field notes",
     cover: "/blog/rtw-launch-08-grid-handshake.png",
     coverAlt: "Two gold lattice structures meeting across a dark grid.",
     readingMinutes: 10,
     body: [
-      "This site explains the architecture. It does not create an account.",
+      "Identity, a domain, a ghost you confirm, then a live channel.",
       "MAD is the blueprint. Ghosts, morphing, and ownership are the relationship.",
-      "Synx is a known toolchain for running services. This page stays high level.",
+      "Synx is a known toolchain for running services.",
     ],
   },
   {
@@ -202,7 +202,7 @@ export const posts: BlogPost[] = [
       "We let anyone connect anything to the present. That line is the whole brief, written before the interface, before the diagrams, before the site.",
       "The old Web asked documents to wait. You requested a page, it arrived, you left. Real time means the surface stays open. Things can appear while you are still looking.",
       "Connecting anything is not a promise of magic. It is a refusal to decide, in advance, which objects are allowed to exist in public digital space. People will invent the rest.",
-      "If you want to understand the network, start in the documentation. Anyone can develop an implementation of MAD or the Real Time Web.",
+      "If you want to understand the network, start in the documentation.",
     ],
   },
   {

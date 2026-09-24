@@ -168,20 +168,17 @@ export function TwentyFourHoursNtnu() {
       />
 
       <h2 className="mt-14 border-t border-[var(--line)] pt-8 font-serif text-[1.7rem] leading-tight text-[var(--ink)]">
-        What this site will not do with the story
+        How far this page goes
       </h2>
       <p className="mt-5 text-[17px] leading-8 text-[var(--ink)]">
-        This is not a vendor comparison page. The written account names a toolchain
-        used at that event. On RealTimeWeb.org a toolchain may be mentioned at high
-        level as one way to configure, administer, secure, and maintain services. It is
-        not the architecture, and it is not the only possible implementation. This page
-        does not walk through tokens, screens, or a join path.
+        The written account names a toolchain used at that event. A toolchain can
+        configure and secure a service. It is not the architecture, and it is not the
+        only way to run one.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
-        Anyone can develop an implementation of MAD or the Real Time Web. A student
-        weekend is one place that sentence was tested in a room. The recording is
+        A student weekend is one place the idea was tested in a room. The recording is
         public. The comparison to an earlier IoT weekend remains the account of the
-        people who ran this one. That is as far as this site will take it.
+        people who ran this one.
       </p>
 
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">
@@ -189,7 +186,7 @@ export function TwentyFourHoursNtnu() {
         written account that travels with it. Claims about student numbers, completion
         rates, and an earlier Microsoft IoT weekend are attributed to that account.
         They are not independently verified in the corpus this site uses. Watch the
-        video for the room itself. This is not a product signup.
+        video for the room itself.
       </p>
 
       <ContributorInvite />

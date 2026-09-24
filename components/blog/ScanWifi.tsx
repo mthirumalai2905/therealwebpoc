@@ -155,10 +155,8 @@ export function ScanWifi() {
       />
 
       <p className="mt-10 text-[15px] leading-7 text-[var(--muted)]">
-        This page follows what is said and shown in the recording. It does not invent a
-        protocol, a floor-plan product, or an account you create on this site. Watch the
-        video for the bench itself. Anyone can develop an implementation of{" "}
-        <TermHint id="mad">MAD</TermHint>.
+        This page follows what is said and shown in the recording. Watch the video for
+        the bench itself.
       </p>
 
       <ContributorInvite />

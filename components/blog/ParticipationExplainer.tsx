@@ -27,9 +27,9 @@ export function ParticipationExplainer() {
   return (
     <div className="mx-auto max-w-[720px] px-4 py-12 md:px-0">
       <p className="text-[18px] leading-8 text-[var(--ink)]">
-        This site does not create an account. RealTimeWeb.org explains what the Real Time
-        Web is, why it exists, and how <TermHint id="mad">Morphic Architecture Design</TermHint>{" "}
-        is structured. Anyone can develop an implementation.
+        This article is about how someone takes part in the Real Time Web: identity, a
+        domain, a ghost you confirm, then a live channel. The blueprint underneath is{" "}
+        <TermHint id="mad">Morphic Architecture Design</TermHint>.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
         WWW linking was built for documents you request and get back. RTW is for live
@@ -45,11 +45,11 @@ export function ParticipationExplainer() {
         What this site is for
       </h2>
       <p className="mt-5 text-[17px] leading-8 text-[var(--ink)]">
-        Keep the jobs separate. Mixing them is how people think this page is a product.
+        Three different jobs sit next to each other. It helps to keep them straight.
       </p>
       <div className="diagram-block my-8 overflow-hidden border border-[var(--line)]">
         <div className="border-b border-[var(--line)] px-4 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--muted)]">
-          High level only. No product funnel.
+          Three places, three jobs
         </div>
         <div className="grid gap-px bg-[var(--line)] md:grid-cols-3">
           {[
@@ -94,7 +94,7 @@ export function ParticipationExplainer() {
       </h2>
       <p className="mt-5 text-[17px] leading-8 text-[var(--ink)]">
         Identity, a domain as an address space, a ghost you confirm, then morph for read
-        access. This is the model. It is not a click-through signup.
+        access. That is the path the architecture describes.
       </p>
       <OnboardingFlow />
 
@@ -153,7 +153,7 @@ export function ParticipationExplainer() {
         id="synx"
         className="mt-14 border-t border-[var(--line)] pt-8 text-[1.35rem] font-medium tracking-tight text-[var(--ink)]"
       >
-        Synx, at high level
+        Synx
       </h2>
       <p className="mt-5 text-[17px] leading-8 text-[var(--ink)]">
         <TermHint id="synx">Synx</TermHint> is a known set of tools used to configure,
@@ -161,9 +161,8 @@ export function ParticipationExplainer() {
         optional. An implementation may use any token system that issues identity.
       </p>
       <p className="mt-6 text-[17px] leading-8 text-[var(--ink)]">
-        This page does not document Synx procedures, tokens, protocols, or screens. Those
-        belong with the implementation that uses them. Naming Synx here is a fact about
-        the known toolchain, not an invitation to buy or join anything.
+        The procedures, tokens, and screens belong with Synx itself. Here it is enough
+        to know that a toolchain exists, and that MAD does not require this one.
       </p>
 
       <h2
@@ -174,7 +173,7 @@ export function ParticipationExplainer() {
       </h2>
       <div className="mt-6 border-t border-[var(--line)]">
         <Faq question="Do I create an account on this website?">
-          <p>No. This site explains the architecture. It does not onboard anyone.</p>
+          <p>No. This page only explains how participation works in the architecture.</p>
         </Faq>
         <Faq question="What is MAD?">
           <p>
@@ -204,9 +203,8 @@ export function ParticipationExplainer() {
         </Faq>
         <Faq question="What is Synx?">
           <p>
-            A known toolchain for running RTW services. It is not the architecture, and
-            it is not the only possible implementation. This site does not sell it or
-            walk through its internals.
+            A known toolchain for running RTW services. It is one way to operate a
+            service. It is not the architecture itself.
           </p>
         </Faq>
       </div>

@@ -6,8 +6,7 @@ export function ClarificationBanner() {
         it exists, and introduces Morphic Architecture Design (MAD).
       </p>
       <p className="mt-2">
-        This site is not owned by a company. Anyone can develop an implementation of MAD or the
-        Real Time Web.
+        The site is independent. The idea can be built by more than one party.
       </p>
     </div>
   );
