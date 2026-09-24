@@ -1,10 +1,7 @@
 export function ContributorInvite() {
   return (
     <aside className="mt-14 border border-[var(--line)] bg-[var(--bg-elev)] px-5 py-6 md:px-6">
-      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--accent)]">
-        Write for this site
-      </p>
-      <h2 className="mt-3 font-serif text-[1.45rem] leading-tight text-[var(--ink)]">
+      <h2 className="font-serif text-[1.45rem] leading-tight text-[var(--ink)]">
         Are you a creator?
       </h2>
       <p className="mt-3 text-[16px] leading-7 text-[var(--ink)]">
