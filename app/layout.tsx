@@ -57,6 +57,9 @@ export const metadata: Metadata = {
     description: "An architecture for interconnected real time digital spaces.",
     type: "website",
   },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
